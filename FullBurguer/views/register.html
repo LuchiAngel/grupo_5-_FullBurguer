@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullBurguer</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="link rel=preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8d886df13f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-superior">
+            <img class="Logo" src="/images/Logo.png" width="30%" alt="Logo">
+            <div class="buscador">
+                <div class="input"> <label for="Buscar"></label>
+                    <input type="text" name="Buscar" id="Buscar" placeholder="Buscar productos, marca">
+                </div>
+                <button class="search-button" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+            </div>
+            <div class="formasdepago"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de
+                crédito</div>
+
+        </div>
+        <nav class="nav-bar">
+            <ul class="compras">
+                <li><a href="#">Ofertas para vos</a></li>
+               <li><a href="#">Para compartir</a></li>
+            </ul>
+
+            <ul class="cuenta">
+                <li>
+                    <a href="/registro">Creá tu cuenta <i class="far fa-id-card"></i></a>
+                </li>
+                <li>
+                    <a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+                </li>
+                <li>
+                    <a href="/productCart">Mi compra <i class="fas fa-shopping-basket"></i></a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <section>
+            <form action="/" method="get">
+                <h3 class="cuenta">Creá tu cuenta</h3>
+                <div><label for="Nombre y apellido"></label>
+                    <input type="text" name="Nombre y apellido" id="Nombre y apellido" placeholder="Nombre y Apellido">
+                    <span class="feedback"></span>
+                </div>                
+                <h4 class="form">Fecha de nacimiento</h4>
+                <div><label for="fecha"></label>
+                    <input type="date" name="fecha" id="fecha">
+                    <span class="feedback"></span>
+                </div>
+                <div><label for="Domicilio"></label>
+                    <input type="text" name="Domicilio" id="Domicilio" placeholder="Domicilio">
+                    <span class="feedback"></span>
+                </div>
+                <div> <label for="Usuario"></label>
+                    <input type="text" name="Usuario" id="Usuario" placeholder="Nombre de usuario">
+                    <span class="feedback"></span>
+                </div>                
+                    <div><label for="Contrasenia"></label>
+                    <input type="password" name="Contrasenia" id="Contrasenia" placeholder="Creá una contraseña">
+                    <span class="feedback"></span>
+                </div>
+
+                <div><label for="ConfirmarContrasenia"></label>
+                    <input type="password" name="ConfirmarContrasenia" id="ConfirmarContrasenia"
+                        placeholder="Confirmar contraseña">
+                </div>
+
+                <div><button type="submit">Enviar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>
