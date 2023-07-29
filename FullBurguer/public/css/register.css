@@ -1,0 +1,160 @@
+.logo {
+    width: 10%;
+    padding: 5px;
+
+}
+.formasdepago{
+    color:#E7C934;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+.compras {
+    display: flex;
+}
+
+.cuenta {
+    display: flex;
+}
+a { text-decoration: none;
+    color: wheat;
+}
+a:hover{
+    font-weight: bold;
+    font-size: 18px;
+}
+a:hover i{
+    font-weight: bold;
+    font-size: 20px;
+}
+h2.cuenta {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+
+}
+
+main {
+   display: flex;
+   
+}
+
+.registro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 3%;
+}
+.combo{
+    flex-grow: 1;
+    padding: 10%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: solid 1 px grey;
+    width:100%;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+input[type="text"]:focus {
+    border: 5px groove grey;
+}
+
+input[type="password"]:focus {
+    border: 5px groove grey;
+}
+input[type="date"]:focus {
+    border: 5px groove grey;
+}
+
+input {
+    margin: 15px;
+    padding: 10px;}
+    h4.form {
+        margin: 15px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    button[type="submit"] {
+       
+        padding: 10px;
+        background-color: gray;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin: 15px;
+        transition: all 0.3s;
+    }
+    
+    button[type="reset"] {
+               padding: 10px;
+        background-color: gray;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin: 15px;
+    }    
+    button[type="submit"]:hover {
+        background-color: #0022AA;
+        border: 2px inset #0022AA;
+    }
+
+
+    @media (min-width: 361px) {
+
+      
+       
+    
+}
+
+@media (min-width: 769px){
+    
+    .nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 15px;
+           display: block;
+    }
+
+    header nav ul {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    header nav ul:nth-child(1) {
+        padding-left: 50px;
+        justify-content: flex-start;
+    }
+
+    header nav ul:nth-child(2) {
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+    .registro{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
