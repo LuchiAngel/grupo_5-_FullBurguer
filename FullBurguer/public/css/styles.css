@@ -8,8 +8,15 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--gris-claro);
-}
+    
+  background-color: #3B3A3A;}
 header{
 background-color: black;
+}
+main {
+    width: 90vw;
+    margin: auto;
+    height: 100%;
+    padding-bottom: 20px;
+  
 }

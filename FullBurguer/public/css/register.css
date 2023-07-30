@@ -1,9 +1,9 @@
 .logo {
-    width: 10%;
-    padding: 5px;
-
+    width: 25%;
+ 
 }
 .formasdepago{
+    padding: 15px;
     color:#E7C934;
 }
 .nav-bar {
@@ -31,42 +31,43 @@ a:hover i{
     font-weight: bold;
     font-size: 20px;
 }
-h2.cuenta {
+h3.cuenta {
     text-align: center;
     font-size: 24px;
     width: 100%;
-
+    color: wheat;
 }
 
-main {
-   display: flex;
-   
-}
+
 
 .registro{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-grow: 1;
-    padding: 3%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ 
+
 }
 .combo{
-    flex-grow: 1;
-    padding: 10%;
+width: 100%;
+padding: 5%;
 }
+
 form {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     border: solid 1 px grey;
     width:100%;
+    padding: 10%;
+    color: wheat;
 }
 
 
 input[type="text"],
 input[type="password"],
 input[type="date"] {
-  
+  width: 100%;
     padding: 10px;
     margin: 15px;
     border-radius: 5px;
@@ -85,17 +86,18 @@ input[type="date"]:focus {
 }
 
 input {
-    margin: 15px;
-    padding: 10px;}
+  
+    padding: 10px;
+}
     h4.form {
         margin: 15px;
         font-weight: bold;
         font-size: 15px;
     }
     button[type="submit"] {
-       
+       width: 100%;
         padding: 10px;
-        background-color: gray;
+        background-color: #DFDEDE;
         color: white;
         border: none;
         border-radius: 5px;
@@ -104,17 +106,23 @@ input {
     }
     
     button[type="reset"] {
-               padding: 10px;
-        background-color: gray;
+        padding: 10px;
+        background-color: #DFDEDE;
         color: white;
         border: none;
         border-radius: 5px;
         margin: 15px;
+        width: 100%;
     }    
     button[type="submit"]:hover {
-        background-color: #0022AA;
-        border: 2px inset #0022AA;
+        
+         background-color: greenyellow;
+        border: 2px inset ;
+        
     }
+ 
+       
+
 
 
     @media (min-width: 361px) {
@@ -133,7 +141,7 @@ input {
         justify-content: center;
         justify-content: space-around;
         padding: 15px;
-           display: block;
+        display: block;
     }
 
     header nav ul {
@@ -154,7 +162,15 @@ input {
     }
     .registro{
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
     }
+    .combo{
+        width: 45%;
+        }
+        
+        form {
+            width:45%;
+           
+        }
 }
