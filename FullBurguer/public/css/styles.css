@@ -13,6 +13,10 @@ body {
 header{
 background-color: black;
 }
+.logo{
+    width: 50%;
+    padding: 10px;
+}
 main {
     width: 90vw;
     margin: auto;
