@@ -6,12 +6,29 @@
     padding: 15px;
     color:#E7C934;
 }
-.nav-bar {
+.navRegisto{
     width: 100%;
     display: flex;
     flex-direction: row;
     display: none;
+    font-family: 'Lekton', sans-serif;
 }
+.burger-menu {
+    text-align: right;
+    padding-right: 5%;
+
+}
+
+.burger-menu i {
+    background-color: yellowgreen;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+}
+
+
 
 .compras {
     display: flex;
@@ -75,14 +92,15 @@ input[type="date"] {
 }
 
 input[type="text"]:focus {
-    border: 5px groove grey;
+    border: 5px groove yellowgreen;
 }
 
 input[type="password"]:focus {
-    border: 5px groove grey;
+    border: 5px groove yellowgreen;
+    
 }
 input[type="date"]:focus {
-    border: 5px groove grey;
+    border: 5px groove yellowgreen;
 }
 
 input {
@@ -118,6 +136,7 @@ input {
         
          background-color: greenyellow;
         border: 2px inset ;
+        color: black;
         
     }
  
@@ -133,14 +152,18 @@ input {
 }
 
 @media (min-width: 769px){
-    
-    .nav-bar {
+    .burger-menu i {
+        display: none;
+    }
+
+    .navRegisto{
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: 75%;
         justify-content: center;
         justify-content: space-around;
         padding: 15px;
+        
         display: block;
     }
 
@@ -166,8 +189,8 @@ input {
         justify-content: space-between;
     }
     .combo{
-        width: 45%;
-        }
+        width: 50%;
+               }
         
         form {
             width:45%;
