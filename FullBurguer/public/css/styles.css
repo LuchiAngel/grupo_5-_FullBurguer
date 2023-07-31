@@ -1,26 +1,138 @@
-@import "register.css";
-
-* {
+@charset "UTF-8";
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+html{
+    font-family: 'Lekton', sans-serif;
+    background-color: #000;
+    color: yellowgreen;
+}
+
+                /*HEADER*/
+header {
+    background-color: #000;
+    position:sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid yellowgreen;
+    align-items: center;
+  }
+header img{
+    width: 150px;
+    
+}
+header img:hover{
+    transform: scale(1.05);
+}
+nav{
+    width: 85%;
+}
+header ul {
+    list-style: none;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  header ul a {
+    color: yellowgreen;
+    font-size: 1.8rem;
+    display: flex;
+    text-decoration: none;
+  }
+  header ul a:hover {
+    color:greenyellow;
+    transform: scale(1.25);
+  }
+
+                /*INTRODUCCION*/
+main{
+    color: yellowgreen;
 
 }
-body {
-    font-family: 'Roboto', sans-serif;
+.wrap{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
     
-  background-color: #3B3A3A;}
-header{
-background-color: black;
+    background: linear-gradient(to bottom, rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/Burguer1.jpg);
+    background-size: cover;
+    background-position: center;
 }
-.logo{
-    width: 50%;
-    padding: 10px;
+.wrap-texto h1{
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 25px;
+
 }
-main {
-    width: 90vw;
-    margin: auto;
-    height: 100%;
-    padding-bottom: 20px;
-  
+.wrap-texto p{
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 250px;
+    margin-left: 155px;
+
+}
+/*SEGUNDA PARTE*/
+.wrap2{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    
+    background: linear-gradient(to bottom, rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/Burger2Desarmada.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.wrap-texto2 h2{
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 155px;
+
+}
+.wrap-texto2 p{
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 250px;
+    margin-left: 155px;
+
+}
+/*PARTE FINAL*/
+.wrap3{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    
+    background: linear-gradient(to bottom, rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/Burger3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.wrap-texto3 h2{
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 155px;
+
+}
+.wrap-texto3 p{
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 250px;
+    margin-left: 155px;
+
 }
