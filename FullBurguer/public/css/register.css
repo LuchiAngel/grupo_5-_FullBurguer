@@ -148,7 +148,14 @@ input {
         
     }
  
-       
+.pieReg{
+    display: flex;
+    flex-direction: column;
+    background-color: yellowgreen;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+} 
 
 
 
@@ -206,4 +213,8 @@ nav{
             width:45%;
            
         }
+       .pieReg{ background-color: yellowgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;}
 }
