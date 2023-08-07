@@ -48,18 +48,17 @@ header ul {
     color:greenyellow;
     transform: scale(1.25);
   }
-
-                /*INTRODUCCION*/
+  /*INTRODUCCION*/
 main{
     color: yellowgreen;
 
 }
 .wrap{
     width: 100vw;
-    height: 100vw;
+    height: 40vw;
     display: flex;
     
-    background: linear-gradient(to bottom, rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/Burguer1.jpg);
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGER1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -68,59 +67,60 @@ main{
     text-transform: uppercase;
     font-size: 4rem;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 25px;
+    border: 2px yellowgreen solid;
 
 }
 .wrap-texto p{
     color: yellowgreen;
-    text-transform: uppercase;
+    text-transform:lowercase;
     font-size: 2rem;
-    text-align: center;
-    margin-left: 5px;
+    text-align: end;
+    margin-left: 680px;
+    border: 2px yellowgreen solid;
 
 }
 .wrap-texto a{
     color: yellowgreen;
     text-transform: uppercase;
     font-size: 4rem;
-    text-align: center;
-    margin-top: 5px;
-    margin-left: 25px;
+    text-align: end;
     -webkit-text-stroke: 2px yellowgreen;
-    color: transparent; 
-
+    color: transparent;
 }
 .wrap-texto a:hover{
     color:greenyellow;
-    transform: scale(1.5);
+    transform: scale(2.5);
 
 }
 /*SEGUNDA PARTE*/
 .wrap2{
     width: 100vw;
-    height: 100vw;
+    height: 40vw;
     display: flex;
-    
-    background: linear-gradient(to bottom, rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/Burger2Desarmada.jpg);
+    background: linear-gradient(to right, rgb(0 0 0/ 1), rgb(0 0 0/ .5)), url(../images/BURGERR2.jpg);
     background-size: cover;
     background-position: center;
 }
 .wrap-texto2 h2{
     color: yellowgreen;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
-    margin-top: 50px;
-    margin-left: 25px;
+    margin-top: 80px;
+    margin-left: 10px;
+    border: 2px yellowgreen solid;
 
 }
 .wrap-texto2 p{
     color: yellowgreen;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 2rem;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
+    border: 2px yellowgreen solid;
 
 }
 .wrap-texto2 a{
@@ -128,7 +128,7 @@ main{
     text-transform: uppercase;
     font-size: 4rem;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 50px;
     margin-left: 25px;
     -webkit-text-stroke: 2px yellowgreen;
     color: transparent; 
@@ -139,6 +139,93 @@ main{
     transform: scale(1.5);
 
 }
+/**/
+/*USUARIO LOGIN*/
+.usuarios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to left , rgb(0 0 0/ 1), rgb(0 0 0/ .5)), url(../images/ReunionBurger.jpg);
+    border: 3px solid yellowgreen;
+}
+.form-login{ 
+    min-width: 300px;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 10px;
+    border: 2px solid yellowgreen;
+    
+}
+.form-login img{
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid yellowgreen;
+}
+
+.text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: yellowgreen;
+    margin-bottom: 25px;
+}
+.form-login input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    font-size: 1rem;
+    outline: none;
+}
+.form-login input[type="password"]{
+    margin-top: 20px;
+}
+
+::placeholder{
+    font-size: 1rem;
+    color: rgba(yellowgreen, 0, 0, .5);
+
+}
+.form-login input:hover{
+    transition: .5s;
+    border:5px solid yellowgreen;
+    color: yellowgreen;
+
+}
+.form-login button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: yellowgreen;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5s ease;
+    border: 1px solid yellowgreen;
+}
+
+.form-login button:hover{
+    color:yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
+}
+/**/          
 
 /*PIE FOOTER*/
 
@@ -175,8 +262,44 @@ footer .direccion iframe {
     margin-left: 50px;
 
 }
+/**/
 
 footer .direccion p{
     text-align: center;
     color: black;
+}
+
+h3.titular-detail{
+    font-size: 35px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+h4.detail{
+    font-size: 25px;
+    font-style: italic;
+    padding: 10px;
+    margin: 10px;
+    line-height: 10px;
+}
+
+.descripcion{
+    font-size: 18px;
+    font-style: normal;
+    padding: 2px;
+    margin: 2px;
+
+}
+
+.precio{
+    font-size: 16px; 
+    font-style: normal;
+    padding: 2px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.fotos{
+    border: solid 3px rgb(6, 223, 6);
+    margin: 15px;
 }
