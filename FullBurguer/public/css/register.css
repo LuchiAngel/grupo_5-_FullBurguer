@@ -1,18 +1,66 @@
-body{
+html {
+    font-family: 'Lekton', sans-serif;
+    background-color: #000;
+    color: yellowgreen;
+}
+
+body {
     font-family: 'Lekton', sans-serif;
 }
 
 
 .logo {
     width: 25%;
- 
+
 }
-.formasdepago{
+
+.formasdepago {
     padding: 15px;
-    color:#E7C934;
+    color: #E7C934;
 }
-nav{
+
+header {
+    background-color: #000;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid yellowgreen;
+    align-items: center;
+}
+
+header img {
+    width: 150px;
+
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    width: 85%;
     display: none;
+}
+
+header ul {
+    list-style: none;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header ul a {
+    color: yellowgreen;
+    font-size: 1.8rem;
+    display: flex;
+    text-decoration: none;
+}
+
+header ul a:hover {
+    color: greenyellow;
+    transform: scale(1.25);
 }
 
 .burger-menu {
@@ -30,8 +78,6 @@ nav{
     margin: 10px 0 20px 0;
 }
 
-
-
 .compras {
     display: flex;
 }
@@ -39,17 +85,12 @@ nav{
 .cuenta {
     display: flex;
 }
-a { text-decoration: none;
+
+a {
+    text-decoration: none;
     color: wheat;
 }
-a:hover{
-    font-weight: bold;
-    font-size: 18px;
-}
-a:hover i{
-    font-weight: bold;
-    font-size: 20px;
-}
+
 h3.cuenta {
     text-align: center;
     font-size: 24px;
@@ -57,19 +98,19 @@ h3.cuenta {
     color: wheat;
 }
 
-
-
-.registro{
+.registro {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
- 
+
 
 }
-.combo{
-width: 100%;
-padding: 5%;
+
+.combo {
+    width: 100%;
+    padding: 5%;
+   
 }
 
 form {
@@ -77,7 +118,7 @@ form {
     flex-direction: column;
     border-radius: 5px;
     border: solid 1 px yellowgreen;
-    width:100%;
+    width: 100%;
     padding: 10%;
     color: wheat;
 }
@@ -86,12 +127,13 @@ form {
 input[type="text"],
 input[type="password"],
 input[type="date"] {
-  width: 100%;
+    width: 100%;
     padding: 10px;
     margin: 15px;
     border-radius: 5px;
     transition: all 0.5s;
-    border: solid 3px yellowgreen;;
+    border: solid 3px yellowgreen;
+    ;
 }
 
 input[type="text"]:focus {
@@ -100,106 +142,112 @@ input[type="text"]:focus {
 
 input[type="password"]:focus {
     border: 5px groove yellowgreen;
-    
+
 }
+
 input[type="date"]:focus {
     border: 5px groove yellowgreen;
 }
 
 input {
-  
+
     padding: 10px;
 }
-    h4.form {
-        margin: 15px;
-        font-weight: bold;
-        font-size: 15px;
-    }
-    button[type="submit"] {
-       width: 100%;
-        padding: 10px;
-        background-color: #DFDEDE;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        margin: 15px;
-        transition: all 0.3s;
-    }
-    
-    button[type="reset"] {
-        padding: 10px;
-        background-color: #DFDEDE;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        margin: 15px;
-        width: 100%;
-    }    
-    button[type="submit"]:hover {
-        
-         background-color: greenyellow;
-        border: 2px inset ;
-        color: black;
-        
-    }
- 
-.pieReg{
+
+h4.form {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #DFDEDE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    transition: all 0.3s;
+}
+
+button[type="reset"] {
+    padding: 10px;
+    background-color: #DFDEDE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+
+    background-color: greenyellow;
+    border: 2px inset;
+    color: black;
+
+}
+
+.pieReg {
     display: flex;
     flex-direction: column;
     background-color: yellowgreen;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: center;
-} 
-
-
-
-    @media (min-width: 361px) {
-
-      
-       
-    
 }
 
-@media (min-width: 769px){
+
+
+@media (min-width: 361px) {}
+
+@media (min-width: 769px) {
     .burger-menu i {
         display: none;
     }
-nav{
-    display: block;
-}
+
+    nav {
+        display: block;
+    }
 
     header nav ul {
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: row;
-        gap: 24px;
+        gap: 15%;
+        justify-content: space-around;
     }
 
     header nav ul:nth-child(1) {
         padding-left: 50px;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     header nav ul:nth-child(2) {
-        justify-content: flex-end;
+        justify-content: center;
         padding-right: 50px;
     }
-    .registro{
+
+    .registro {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-    .combo{
+
+    .combo {
         width: 50%;
-               }
-        
-        form {
-            width:45%;
-           
-        }
-       .pieReg{ background-color: yellowgreen;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;}
+    }
+
+    form {
+        width: 45%;
+
+    }
+
+    .pieReg {
+        background-color: yellowgreen;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
