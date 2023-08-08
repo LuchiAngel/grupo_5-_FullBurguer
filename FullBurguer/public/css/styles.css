@@ -319,38 +319,4 @@ main{
     }
 
 }
-/**/
-h3.titular-detail{
-    font-size: 35px;
-    padding: 10px;
-    font-weight: 500;
-}
 
-h4.detail{
-    font-size: 25px;
-    font-style: italic;
-    padding: 10px;
-    margin: 10px;
-    line-height: 10px;
-}
-
-.descripcion{
-    font-size: 18px;
-    font-style: normal;
-    padding: 2px;
-    margin: 2px;
-
-}
-
-.precio{
-    font-size: 16px; 
-    font-style: normal;
-    padding: 2px;
-    margin: 2px;
-    font-weight: bold;
-}
-
-.fotos{
-    border: solid 3px rgb(6, 223, 6);
-    margin: 15px;
-}

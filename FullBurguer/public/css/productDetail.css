@@ -1,0 +1,140 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lekton', sans-serif;
+    background-color: #000;
+    color: yellowgreen;
+}
+
+                /*HEADER*/
+header {
+    background-color: #000;
+    position:sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid yellowgreen;
+    align-items: center;
+  }
+header img{
+    width: 150px;
+    
+}
+header img:hover{
+    transform: scale(1.05);
+}
+nav{
+    width: 85%;
+}
+header ul {
+    list-style: none;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  header ul a {
+    color: yellowgreen;
+    font-size: 1.8rem;
+    display: flex;
+    text-decoration: none;
+  }
+  header ul a:hover {
+    color:greenyellow;
+    transform: scale(1.25);
+  }
+
+
+
+
+
+h3.titular-detail{
+    font-size: 35px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+h4.detail{
+    font-size: 25px;
+    font-style: italic;
+    padding: 10px;
+    margin: 10px;
+    line-height: 10px;
+}
+
+.descripcion{
+    font-size: 18px;
+    font-style: normal;
+    padding: 2px;
+    margin: 2px;
+
+}
+
+.precio{
+    font-size: 16px; 
+    font-style: normal;
+    padding: 2px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.fotos{
+    border: solid 3px rgb(6, 223, 6);
+    margin: 15px;
+}
+
+.pie{
+    background-color: yellowgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    
+}
+.pieParrafo p{
+    color: yellowgreen;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: black;
+}
+
+.redes {
+    color:black;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.redes p{
+    text-align: center;
+    color: yellowgreen;
+    background-color: black;
+    width: 30%;
+    margin-left: 150px;
+}
+.redes img {
+    width: 70px;
+    transition: 0.4s;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.redes img:hover {
+    scale: 1.15;
+}
+
+.direccion iframe {
+    width: 250px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 50px;
+
+}
+.direccion p{
+    text-align: center;
+    color: yellowgreen;
+    background-color: black;
+    width: 80%;
+    margin-top: 20px;
+}
