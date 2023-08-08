@@ -49,15 +49,70 @@ main {
         background-position: center;
     }
 
-.fotoProducto{
-    width: 10vw;
-    margin-left: 1vw;
-    margin-top: 3vw ;
+h3.titular{
+    font-size: 30px;
+    margin-left: 6vw;
+    margin-top: 4vw;
 }
 
-article li {
-    width: 30vw;
-    list-style: none;
+article ul {
+    width: 80%;
     display: flex;
+    list-style: none;
     justify-content: space-between;
+    align-items: center;
+}
+
+.fotoProducto { 
+    width: 10vw;
+    margin-left: 3vw;
+    margin-top: 3vw;
+    margin-right: 4vw;
+}
+
+.nombreHamburguesa{
+    width: 10vw;
+    font-size: 22px;
+    margin-top: 3vw;
+    margin-right: 2vw;
+}
+
+.descripcionHamburguesa{
+    width:38vw;
+    margin-top: 3vw;
+    margin-right: 3vw;
+    font-size: 20px;
+}
+
+.cantidad{
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.mas{
+    margin-left: 4vw;
+}
+
+.mas i{
+    font-size: 12px;
+}
+
+.menos i{
+    font-size: 12px;
+}
+
+.precioTotal{
+    font-size: 20px;
+    text-align: right;
+    width: 10vw;
+}
+
+.descuentoYPrecioFinal{
+    margin-top: 5vw;
+    margin-left: 50%;
+    width: 50vw;
+    font-size: 30px;
 }
