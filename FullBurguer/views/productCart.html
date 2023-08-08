@@ -5,52 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FullBurguer</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/productCart.css">
     <link rel="stylesheet" href="link rel=preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/8d886df13f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/styles.css">
 </head>
 <body>
-    <header>
-        <a href="index"><img src="/images/Logo.png" alt="Logo del negocio"></a>    
-     <nav>
-        <ul>
-        <li><a href="/login"> Log In</a></li>
-        <li><a href="/productDetail"> Productos</a></li>
-        <li><a href="/register"> Registrarse</a></li>
-    </ul>
-    </nav>
+     <!--HEADER-->
+     <header>
+        <!--LOGO CON INDEX-->
+        <a href="index">
+            <img src="/images/Logo.jpeg" alt="Logo de la empresa">
+        </a>
+        <!--MENU,LINKS-->
+        <nav>
+            <ul>
+                <li><a href="/login" > LogIn </a> </li>
+                <li><a href="/productDetail" > Productos </a> </li> 
+                <li><a href="/productCart" > Carrito de Compras </a> </li>
+                <li><a href="/register" > Registrarse </a> </li>             
+            </ul>
+        </nav>
     </header>
 
     <main>
      <section>
-            <h3 class="titular">Mis Compras</h3>
+           <h3 class="titular">Mis Compras</h3>
 
-        <article>
-            <img src="/images/PolloBacon.jpg" alt=''>
-            <h4 class="NombreHamburguesa">Pollo Bacon</h4>
-            <p class="DescripcionHamburgesa">Medallón de pollo crispy, con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares</p>
-            <div><label for="cantidad"></label>
-            <input type="text"></div>
-            <p class="Precio Total">$2.200</p>
+       <article>
+             <img class= "fotoProducto" src="/images/PolloBacon.jpg" alt=''>   
+                <ul> 
+                    <li><h4 class="nombreHamburguesa">Pollo Bacon</h4></li>
+                    <li><p class="descripcionHamburgesa">Medallón de pollo crispy, con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares</p></li>
+                    <li><div><label for="cantidad"></label>
+                        <input type="text"></div></li>
+                    <li><p class="precioTotal">$2.200</p></li>
+                </ul>
         </article>
         <article>
-            <img src="/images/Nuggets.jpg" alt=''>
-            <h4 class="NombreHamburguesa">Nuggets x10</h4>
-            <p class="DescripcionHamburgesa">10 bocaditos del más delicioso pollo crispy, acompañado con la salsa que más te guste: cheddar, aioli, mostaza dulce, y papas regulares</p>
-            <p class="Cantidad">1</p>
-            <p class="Precio Total">$2.500</p>
+            <img class= "fotoProducto" src="/images/Nuggets.jpg" alt=''>
+            <h4 class="nombreHamburguesa">Nuggets x10</h4>
+            <p class="descripcionHamburgesa">10 bocaditos del más delicioso pollo crispy, acompañado con la salsa que más te guste: cheddar, aioli, mostaza dulce, y papas regulares</p>
+            <p class="cantidad">1</p>
+            <p class="precioTotal">$2.500</p>
         </article>
         <article>
-            <img src="/images/MegaCheddar.jpg" alt=''>
-            <h4 class="NombreHamburguesa">Mega Cheddar Deluxe</h4>
-            <p class="DescripcionHamburgesa">Para los amantes del cheddar: Doble medallón de 200 gr de pura carne, con delicioso baño de queso cheddar y lluvia de bacon, con más cheddar por dentro, papas regulares</p>
-            <p class="Cantidad">2</p>
-            <p class="Precio Total">$5.400</p>
+            <img class= "fotoProducto" src="/images/MegaCheddar.jpg" alt=''>
+            <h4 class="nombreHamburguesa">Mega Cheddar Deluxe</h4>
+            <p class="descripcionHamburgesa">Para los amantes del cheddar: Doble medallón de 200 gr de pura carne, con delicioso baño de queso cheddar y lluvia de bacon, con más cheddar por dentro, papas regulares</p>
+            <p class="cantidad">2</p>
+            <p class="precioTotal">$5.400</p>
         </article> 
         
       </section>
+
       <section>
         <div><label for="codigoDescuento"></label>
             <input type="text" name="Código de descuento" id="Código de descuento" placeholder="Código de descuento">
@@ -58,18 +69,24 @@
         </div>
          <div><label for="subtotal"></label>
                 <input type="text" name="Subtotal" id="Subtotal" placeholder="Subtotal">
-                <label for="descuento"></label>
+            </div>
+             <div><label for="descuento"></label>
                 <input type="text" name="Descuento" id="Descuento" placeholder="Descuento">
-                <label for="total"></label>
+            </div>   
+            <div><label for="total"></label>
                 <input type="text" name="Total" id="Total" placeholder="Total">
-        </div>
+            </div>
+        
         <div>
             <button type="submit">Finalizar Compra</button>
         </div>
+   
       </section>
     </main>
 
-    <footer class="pie">
+      <!--FOOTER (PIE DE PAGINA)-->
+
+      <footer class="pie">
         <div class="pieParrafo">
         <p>Nuestra Misión es servir comida de calidad 
         generando momentos deliciosos y accesibles para todos.
@@ -101,6 +118,6 @@
                 </iframe>
         </div>
     </footer>
-  
+</main>
 </body>
 </html>
