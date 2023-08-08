@@ -4,6 +4,43 @@ html {
     color: yellowgreen;
 }
 
+header {
+    background-color: #000;
+    position:sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid yellowgreen;
+    align-items: center;
+  }
+header img{
+    width: 150px;
+    
+}
+header img:hover{
+    transform: scale(1.05);
+}
+nav{
+    width: 85%;
+}
+header ul {
+    list-style: none;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  header ul a {
+    color: yellowgreen;
+    font-size: 1.8rem;
+    display: flex;
+    text-decoration: none;
+  }
+  header ul a:hover {
+    color:greenyellow;
+    transform: scale(1.25);
+  }
+
 main {
     width: 100vw;
     height: 80vw;    
