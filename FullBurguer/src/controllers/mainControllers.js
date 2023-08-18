@@ -2,20 +2,20 @@ const path = require ('path')
 
 const controller = {
     index: (req,res) =>{
-        return res.sendFile(path.resolve(__dirname,'../views/index.html'))
+        res.render('index')
     },
 
     productCart: (req,res) =>{
-        return res.sendFile(path.resolve(__dirname,'../views/productCart.html'))
+        res.render('productCart')
     },
     productDetail: (req,res) =>{
-        return res.sendFile(path.resolve(__dirname,'../views/productDetail.html'))
+        res.render('productDetail')
     },
     register: (req,res) =>{
-        return res.sendFile(path.resolve(__dirname,'../views/register.html'))
+        res.render('register')
     },
     login: (req,res) =>{
-        return res.sendFile(path.resolve(__dirname,'../views/login.html'))
+        res.render('login')
     }
 }
 
