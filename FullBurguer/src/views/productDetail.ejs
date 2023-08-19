@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullBurguer</title>
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="link rel=preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/8d886df13f.js" crossorigin="anonymous"></script>
-</head>
+    <%- include('./partials/head.ejs')%><link rel="stylesheet" href="/css/productDetail.css">
 <body>
- <!--HEADER-->
- <header>
-    <!--LOGO CON INDEX-->
-    <a href="index">
-        <img src="/images/Logo.jpeg" alt="Logo de la empresa">
-    </a>
-    <!--MENU,LINKS-->
-    <nav>
-        <ul>
-            <li><a href="/login" > LogIn </a> </li>
-            <li><a href="/productCart" > Carrito de Compras </a> </li>
-            <li><a href="/register" > Registrarse </a> </li>             
-        </ul>
-    </nav>
-</header>
+    <%- include('./partials/header.ejs')%>
  <main>
     <section>
         <h3 class="titular-detail">Hamburguesas 100% hechas con carne de verdad</h3>

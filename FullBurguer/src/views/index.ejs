@@ -1,100 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullBurguer</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="link rel=preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/8d886df13f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../public/css/styles.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lekton:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!--HEADER-->
-    <header>
-        <!--LOGO CON INDEX-->
-        <a href="index">
-            <img src="/images/Logo.jpeg" alt="Logo de la empresa">
-        </a>
-        <!--MENU,LINKS-->
-        <nav>
-            <ul>
-                <li><a href="/login" > LogIn </a> </li>
-                <li><a href="/productDetail" > Productos </a> </li> 
-                <li><a href="/productCart" > Carrito de Compras </a> </li>
-                <li><a href="/register" > Registrarse </a> </li>             
-            </ul>
-        </nav>
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-    </header>
-    <main>
-        <!--INTRODUCCION-->
-        <section class="Presentacion">
-            <div class="wrap">
-                <div class="wrap-texto">
-                    <h1>¿Queres recorrer el mundo?</h1>
-                    <p>Ven y come nuestras burgers</p>
-                    <p>encontraras la mexicana, americana y más</p>
-                    <p>sabores mundiales.</p>     
-                    <p>Más de mil sabores bajo una FULL BURGUER</p>
-                    <a href="/productCart"><h4>Ver Mas</h4></a>
-                </div>
-                
-            </div>
-        
-        </section>
-        <!--SEGUNDA PARTE-->
-        <section class="segundaPresentacion">
-            <div class="wrap2">
-                <div class="wrap-texto2">
-                    <h2>Cocinamos con el corazon</h2>
-                    <p>Descubre cuanto sabor</p>
-                    <p>puede contener una FULL BURGUER</p>
-                    <a href="/productCart"><h4>Ver Mas</h4></a>
-                </div>
-                
-            </div>
-            
-        </section>
-        
-        <!--FOOTER (PIE DE PAGINA)-->
-        <footer class="pie">
-            <div class="pieParrafo">
-            <p>Nuestra misión es servir comida de calidad 
-            generando momentos deliciosos y accesibles para todos.
-            FULL BURGUER nace del corazón de todos los argentinos,
-            es la pasión perfecta para cualquier apetito</p>
-            </div>
-            
-            <div class="redes">
-                <p>Nuestras redes</p>
-                <a href="https://www.facebook.com">
-                <img src="/images/facebook.png" alt="Logo facebook">
-                </a>        
-                <a href="https://www.youtube.com">
-                <img src="/images/youtube.png" alt="logo youtube">
-                </a>
-                <a href="https://www.instagram.com">
-                <img src="/images/instagram.png" alt="logo instagram">
-                </a>
-            </div>
-            
-            <div class="direccion">
-                    <p>Av. Pte. J. D. Perón 1330, 
-                        San Miguel</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.3705607796824!2d-58.71357947587967!3d-34.544171936908754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0c29a0824d%3A0x5b10d0b228e14866!2sBurger%20King!5e0!3m2!1ses!2sar!4v1690593254135!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-            </div>
-        </footer>
-    </main>
-</body>
+<%- include('./partials/head.ejs')%>
+
+    <body>
+        <%- include('./partials/header.ejs')%>
+            <main>
+                <!--INTRODUCCION-->
+                <section class="Presentacion">
+                    <div class="wrap">
+                        <div class="wrap-texto">
+                            <h1>¿Queres recorrer el mundo?</h1>
+                            <p>Ven y come nuestras burgers</p>
+                            <p>encontraras la mexicana, americana y más</p>
+                            <p>sabores mundiales.</p>
+                            <p>Más de mil sabores bajo una FULL BURGUER</p>
+                            <a href="/productCart">
+                                <h4>Ver Mas</h4>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!--SEGUNDA PARTE-->
+                <section class="segundaPresentacion">
+                    <div class="wrap2">
+                        <div class="wrap-texto2">
+                            <h2>Cocinamos con el corazon</h2>
+                            <p>Descubre cuanto sabor</p>
+                            <p>puede contener una FULL BURGUER</p>
+                            <a href="/productCart">
+                                <h4>Ver Mas</h4>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <%- include('./partials/footer.ejs')%>
+            </main>
+    </body>
+
 </html>
