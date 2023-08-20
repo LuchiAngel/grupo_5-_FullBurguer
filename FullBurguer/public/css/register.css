@@ -71,7 +71,7 @@ header ul a:hover {
 
 .burger-menu i {
     background-color: yellowgreen;
-    color: white;
+    color: black;
     font-size: 20px;
     border-radius: 5px;
     padding: 10px;
@@ -189,7 +189,7 @@ button[type="submit"]:hover {
 
 }
 
-.pieReg {
+.pie{
     display: flex;
     flex-direction: column;
     background-color: yellowgreen;
@@ -244,7 +244,7 @@ button[type="submit"]:hover {
 
     }
 
-    .pieReg {
+    .pie{
         background-color: yellowgreen;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

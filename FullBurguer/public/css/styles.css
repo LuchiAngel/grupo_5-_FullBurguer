@@ -55,8 +55,7 @@ main{
 .wrap{
     width: 100vw;
     height: 40vw;
-    display: flex;
-    
+    display: flex;    
     background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGER1.jpg);
     background-size: cover;
     background-position: center;
@@ -227,14 +226,15 @@ main{
 /**/          
 
 /*PIE FOOTER*/
-
 .pie{
+    display: flex;
+    flex-direction: column;
     background-color: yellowgreen;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    
+    justify-content: center;
 }
+
 .pieParrafo p{
     color: yellowgreen;
     text-align: center;
@@ -317,6 +317,11 @@ main{
     .burger-menu i {
         display: none;
     }
-
+    .pie {
+        background-color: yellowgreen;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
 
