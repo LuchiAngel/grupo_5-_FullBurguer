@@ -16,6 +16,12 @@ const controller = {
     },
     login: (req,res) =>{
         res.render('login')
+    },
+    productCreate: (req,res) =>{
+        res.render('productCreate')
+    },
+    productEdit: (req,res) =>{
+        res.render('productEdit')
     }
 }
 

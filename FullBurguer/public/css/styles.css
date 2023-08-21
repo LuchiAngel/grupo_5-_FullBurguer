@@ -224,7 +224,85 @@ main{
     background: linear-gradient(yellowgreen);
 }
 /**/          
+/*CREACION PRODUCTO*/
+.crearproducto{
+    color:yellowgreen;
+    text-align: center;
+}
+.form-create{ 
+    min-width: 300px;
+    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 10px;
+    border: 3px solid yellowgreen;
+    
+}
+.crearproductoD{
+    width: 50%;
+}
 
+.form-create button:hover{
+    color:yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
+}
+.form-create button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: yellowgreen;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5s ease;
+    border: 1px solid yellowgreen;
+}
+.form-create input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    font-size: 1rem;
+    outline: none;
+}
+.form-create input:hover{
+    transition: .5s;
+    border:5px solid yellowgreen;
+    color: yellowgreen;
+
+}
+.form-create input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+/**/ 
 /*PIE FOOTER*/
 .pie{
     display: flex;
