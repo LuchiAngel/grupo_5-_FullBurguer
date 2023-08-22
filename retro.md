@@ -2,3 +2,5 @@ Siguiendo la metodología de la dinámica de la estrella de mar, como grupo, pod
 Algo que hicimos mal fue no comunicarnos con mayor frecuencia y no realizarr una reunión de equipo al finalizar el spring. 
 Lo que consideramos que debemos comenzar a hacer es cumplir con los horarios y días de reuniones grupales como también consultar más sobre dudas que puedan surgirnos al ir desarrollando el trabajo. 
 Lo que deberíamos dejar de hacer, es esperar unos días antes de la entrega para volver a poner en común lo realizado. 
+
+De acuerdo a este último Sprint, podemos acotar que a diferencia del anterior, no dividimos los puntos a realizar, como así tampoco hemos logrado reunirnos para organizar las tareas. El medio de comunicación utilizado fue WhatsApp para dar novedades o hacer consultas. Para el próximo Sprint debemos continuar, como en la entrega del segundo Sprint, reuniéndonos para hacer la divsión de tareas, poner puntos en común, etc. Debemos mejorar la comunicación intra-equipo para que todos los integrantes trabajemos equitativamente.
