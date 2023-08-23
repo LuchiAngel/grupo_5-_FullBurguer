@@ -10,7 +10,7 @@ app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/use
 app.set('view engine', 'ejs');
 
 app.listen(3000, () => {
-    console.log("servidor corriendo en puerto:http://localhost:3000/index");
+    console.log("servidor corriendo en puerto:http://localhost:3000");
 })
 
 app.use("/", mainRouter)
