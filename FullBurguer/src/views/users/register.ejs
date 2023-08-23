@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs')%>
-    <link rel="stylesheet" href="/css/register.css">
+<link rel="stylesheet" href="/css/register.css">
     </head>
 
     <body>
         <%- include('../partials/header.ejs')%>
             <main>
                 <section class="registro">
-                    <div class="combo"><img src="/images/combo.jpg" alt="combo" height="50%" width="100%" /></div>
-                    </div>
-                    <form action="/" method="get">
+                    <form class="form-login" action="/" method="get">
                         <h3 class="cuenta">Creá tu cuenta</h3>
                         <div><label for="Nombre y apellido"></label>
                             <input type="text" name="Nombre y apellido" id="Nombre y apellido"
@@ -21,15 +19,15 @@
                         <div><label for="fecha"></label>
                             <input type="date" name="fecha" id="fecha">
                             <span class="feedback"></span>
-                        </div>
+                        </div><br>
                         <div><label for="Domicilio"></label>
                             <input type="text" name="Domicilio" id="Domicilio" placeholder="Domicilio">
                             <span class="feedback"></span>
-                        </div>
+                        </div><br>
                         <div> <label for="Usuario"></label>
                             <input type="text" name="Usuario" id="Usuario" placeholder="Nombre de usuario">
                             <span class="feedback"></span>
-                        </div>
+                        </div><br>
                         <div><label for="Contrasenia"></label>
                             <input type="password" name="Contrasenia" id="Contrasenia"
                                 placeholder="Creá una contraseña">

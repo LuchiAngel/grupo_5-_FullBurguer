@@ -9,93 +9,21 @@ body {
 }
 
 
-.logo {
-    width: 25%;
-
-}
-
-.formasdepago {
-    padding: 15px;
-    color: #E7C934;
-}
-
-header {
-    background-color: #000;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid yellowgreen;
-    align-items: center;
-}
-
-header img {
-    width: 150px;
-
-}
-
-header img:hover {
-    transform: scale(1.05);
-}
-
-nav {
-    width: 85%;
-    display: none;
-}
-
-header ul {
-    list-style: none;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-
-}
-
-header ul a {
-    color: yellowgreen;
-    font-size: 1.8rem;
-    display: flex;
-    text-decoration: none;
-}
-
-header ul a:hover {
-    color: greenyellow;
-    transform: scale(1.25);
-}
-
-.burger-menu {
-    text-align: right;
-    padding-right: 5%;
-
-}
-
-.burger-menu i {
-    background-color: yellowgreen;
-    color: black;
-    font-size: 20px;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0 20px 0;
-}
-
 .compras {
     display: flex;
 }
 
-.cuenta {
-    display: flex;
-}
 
 a {
     text-decoration: none;
-    color: wheat;
+    color: yellowgreen;
 }
 
 h3.cuenta {
     text-align: center;
     font-size: 24px;
     width: 100%;
-    color: wheat;
+    color: yellowgreen;
 }
 
 .registro {
@@ -103,91 +31,98 @@ h3.cuenta {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+  
 
 
 }
 
-.combo {
-    width: 100%;
-    padding: 5%;
-   
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    border: solid 1 px yellowgreen;
-    width: 100%;
-    padding: 10%;
-    color: wheat;
-}
-
-
-input[type="text"],
-input[type="password"],
-input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin: 15px;
-    border-radius: 5px;
-    transition: all 0.5s;
-    border: solid 3px yellowgreen;
-    ;
-}
-
-input[type="text"]:focus {
-    border: 5px groove yellowgreen;
-}
-
-input[type="password"]:focus {
-    border: 5px groove yellowgreen;
-
-}
-
-input[type="date"]:focus {
-    border: 5px groove yellowgreen;
-}
-
-input {
-
-    padding: 10px;
-}
 
 h4.form {
     margin: 15px;
     font-weight: bold;
     font-size: 15px;
+    text-align: center;
 }
 
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #DFDEDE;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin: 15px;
-    transition: all 0.3s;
+.registro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vw;
+    font-family:'Lekton', sans-serif;
+    background: linear-gradient(to left , rgb(0 0 0/ 1), rgb(0 0 0/ .5)), url(../images/combo.jpg);
+    border: 3px solid yellowgreen;
+}
+.form-login{ 
+    min-width: 300px;
+    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 10px;
+    border: 3px solid yellowgreen;
+    }
+
+.text {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: yellowgreen;
+    margin-bottom: 25px;
+}
+.form-login input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    font-size: 1rem;
+    outline: none;
+}
+.form-login input[type="password"]{
+    margin-top: 20px;
 }
 
-button[type="reset"] {
-    padding: 10px;
-    background-color: #DFDEDE;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin: 15px;
-    width: 100%;
-}
-
-button[type="submit"]:hover {
-
-    background-color: greenyellow;
-    border: 2px inset;
-    color: black;
+::placeholder{
+    font-size: 0.9rem;
+    color: rgba(yellowgreen, 0, 0, .5);
 
 }
+.form-login input:hover{
+    transition: .5s;
+    border:5px solid yellowgreen;
+    color: yellowgreen;
+
+}
+.form-login button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: yellowgreen;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5s ease;
+    border: 1px solid yellowgreen;
+}
+
+.form-login button:hover{
+    color:yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
+}
+/*/nuevo formato*/
 
 .pie{
     display: flex;
@@ -240,7 +175,8 @@ button[type="submit"]:hover {
     }
 
     form {
-        width: 45%;
+        width: 70%;
+        align-items: center;
 
     }
 
@@ -250,4 +186,15 @@ button[type="submit"]:hover {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
+    .registro {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 60vw;
+    
+    
+    }
+    
 }
