@@ -1,155 +1,155 @@
 [
-    {
-        "id": 11,
-        "name": "Pollo Bacon",
-        "price": 2.200,
-        "discount": 5,
-        "category": "visited",
-        "description": "Medallón de pollo crispy con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares.",
-        "image": "PolloBacon.jpg"
-    },
-    {
-        "id": 12,
-        "name": "Mega Pampeano",
-        "price": 1900,
-        "discount": 3,
-        "category": "in-sale",
-        "description": "Medallón de 150 gr de pura carne, con queso cheddar, lomo en fetas y nuestra salsa epecial, papas regulares",
-        "image": "MegaPampeano.jpg"
-    },
-    {
-        "id": 13,
-        "name": "Mega Doble Angus",
-        "price": 2200,
-        "discount": 25,
-        "category": "in-sale",
-        "description": "Doble medallón de 200 gr de pura carne angus premium, con doble queso cheddar, lechuga, cebolla y tomate más nuestra súper salsa tártara, papas regulares",
-        "image": "DobleAngus.jpg"
-    },
-    {
-        "id": 14,
-        "name": "Pollo Deluxe",
-        "description": "Medallón de pollo crispy, con queso doble cheddar, cebolla, lechuga, tomate, nuestra salsa picante con pepinillos, papas regulares",
-        "price": 2400,
-        "discount": 10,
-        "image": "PolloDeluxe.jpg",
-        "category": "in-sale"
-    },
-    {
-        "id": 15,
-        "name": "Nuggets x10",
-        "description": "10 bocaditos del más delicioso pollo crispy, acompañado con la salsa que más te guste: cheddar, aioli, mostaza dulce, y papas regulares",
-        "price": 2500,
-        "discount": 20,
-        "image": "Nuggets.jpg",
-        "category": "in-sale"
-    },
-    {
-        "id": 16,
-        "name": "Cajita Feliz",
-        "description": "Hamburguesa de carne junior con queso cheddar, acompañada de papas fritas, gaseosa a elección y juguete de la última colección",
-        "price": 2200,
-        "discount": 25,
-        "image": "Cajita.jpg",
-        "category": "in-sale"
-    },
-    {
-        "id": 17,
-        "name": "Mega Cheddar Deluxe",
-        "description": "Para los amantes del cheddar: Doble medallón de 200 gr de pura carne, con delicioso baño de queso cheddar y lluvia de bacon, con más cheddar por dentro, papas regulares",
-        "price": 2700,
-        "discount": 5,
-        "image": "MegaCheddar.jpg",
-        "category": "in-sale"
-    },
-    {
-        "id": 1,
-        "name": "donec semper sapien",
-        "description": "vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum",
-        "price": 2028,
-        "discount": 27,
-        "image": "prenda6.png",
-        "category": ""
-    },
-    {
-        "id": 2,
-        "name": "interdum",
-        "description": "libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed",
-        "price": 3163,
-        "discount": 28,
-        "image": "prenda3.png",
-        "category": "consectetuer adipiscing elit proin interdum mauris non"
-    },
-    {
-        "id": 3,
-        "name": "quisque id",
-        "description": "felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed",
-        "price": 2654,
-        "discount": 35,
-        "image": "prenda1.png",
-        "category": ""
-    },
-    {
-        "id": 4,
-        "name": "tortor id nulla",
-        "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis",
-        "price": 2496,
-        "discount": 61,
-        "image": "prenda2.png",
-        "category": "varius"
-    },
-    {
-        "id": 5,
-        "name": "scelerisque mauris sit amet eros suspendisse accumsan tortor",
-        "description": "libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
-        "price": 4280,
-        "discount": 73,
-        "image": "prenda3.png",
-        "category": "scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula"
-    },
-    {
-        "id": 6,
-        "name": "pede malesuada in imperdiet et commodo",
-        "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae",
-        "price": 4694,
-        "discount": 4,
-        "image": "prenda6.png",
-        "category": "vehicula consequat morbi"
-    },
-    {
-        "id": 7,
-        "name": "volutpat erat quisque erat eros viverra",
-        "description": "in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum",
-        "price": 2520,
-        "discount": 71,
-        "image": "prenda6.png",
-        "category": "sit"
-    },
-    {
-        "id": 8,
-        "name": "vulputate vitae nisl aenean lectus pellentesque",
-        "description": "convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit",
-        "price": 4626,
-        "discount": 8,
-        "image": "prenda1.png",
-        "category": "proin"
-    },
-    {
-        "id": 9,
-        "name": "morbi quis tortor id nulla ultrices aliquet maecenas leo odio",
-        "description": "consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
-        "price": 2028,
-        "discount": 43,
-        "image": "prenda2.png",
-        "category": "faucibus orci luctus et"
-    },
-    {
-        "id": 10,
-        "name": "in hac habitasse platea",
-        "description": "luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
-        "price": 3993,
-        "discount": 43,
-        "image": "prenda3.png",
-        "category": "viverra dapibus nulla suscipit ligula in lacus curabitur at"
-    }
+  {
+    "id": 11,
+    "name": "Pollo Bacon",
+    "price": 2.2,
+    "discount": 5,
+    "category": "visited",
+    "description": "Medallón de pollo crispy con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares.",
+    "image": "PolloBacon.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Mega Pampeano",
+    "price": 1900,
+    "discount": 3,
+    "category": "in-sale",
+    "description": "Medallón de 150 gr de pura carne, con queso cheddar, lomo en fetas y nuestra salsa epecial, papas regulares",
+    "image": "MegaPampeano.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Mega Doble Angus",
+    "price": 2200,
+    "discount": 25,
+    "category": "in-sale",
+    "description": "Doble medallón de 200 gr de pura carne angus premium, con doble queso cheddar, lechuga, cebolla y tomate más nuestra súper salsa tártara, papas regulares",
+    "image": "DobleAngus.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Pollo Deluxe",
+    "description": "Medallón de pollo crispy, con queso doble cheddar, cebolla, lechuga, tomate, nuestra salsa picante con pepinillos, papas regulares",
+    "price": 2400,
+    "discount": 10,
+    "image": "PolloDeluxe.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 15,
+    "name": "Nuggets x10",
+    "description": "10 bocaditos del más delicioso pollo crispy, acompañado con la salsa que más te guste: cheddar, aioli, mostaza dulce, y papas regulares",
+    "price": 2500,
+    "discount": 20,
+    "image": "Nuggets.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 16,
+    "name": "Cajita Feliz",
+    "description": "Hamburguesa de carne junior con queso cheddar, acompañada de papas fritas, gaseosa a elección y juguete de la última colección",
+    "price": 2200,
+    "discount": 25,
+    "image": "Cajita.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 17,
+    "name": "Mega Cheddar Deluxe",
+    "description": "Para los amantes del cheddar: Doble medallón de 200 gr de pura carne, con delicioso baño de queso cheddar y lluvia de bacon, con más cheddar por dentro, papas regulares",
+    "price": 2700,
+    "discount": 5,
+    "image": "MegaCheddar.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 1,
+    "name": "donec semper sapien",
+    "description": "vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum",
+    "price": 2028,
+    "discount": 27,
+    "image": "prenda6.png",
+    "category": ""
+  },
+  {
+    "id": 2,
+    "name": "interdum",
+    "description": "libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed",
+    "price": 3163,
+    "discount": 28,
+    "image": "prenda3.png",
+    "category": "consectetuer adipiscing elit proin interdum mauris non"
+  },
+  {
+    "id": 3,
+    "name": "quisque id",
+    "description": "felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed",
+    "price": 2654,
+    "discount": 35,
+    "image": "prenda1.png",
+    "category": ""
+  },
+  {
+    "id": 4,
+    "name": "tortor id nulla",
+    "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis",
+    "price": 2496,
+    "discount": 61,
+    "image": "prenda2.png",
+    "category": "varius"
+  },
+  {
+    "id": 5,
+    "name": "scelerisque mauris sit amet eros suspendisse accumsan tortor",
+    "description": "libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
+    "price": 4280,
+    "discount": 73,
+    "image": "prenda3.png",
+    "category": "scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula"
+  },
+  {
+    "id": 6,
+    "name": "pede malesuada in imperdiet et commodo",
+    "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae",
+    "price": 4694,
+    "discount": 4,
+    "image": "prenda6.png",
+    "category": "vehicula consequat morbi"
+  },
+  {
+    "id": 7,
+    "name": "volutpat erat quisque erat eros viverra",
+    "description": "in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum",
+    "price": 2520,
+    "discount": 71,
+    "image": "prenda6.png",
+    "category": "sit"
+  },
+  {
+    "id": 8,
+    "name": "vulputate vitae nisl aenean lectus pellentesque",
+    "description": "convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit",
+    "price": 4626,
+    "discount": 8,
+    "image": "prenda1.png",
+    "category": "proin"
+  },
+  {
+    "id": 9,
+    "name": "morbi quis tortor id nulla ultrices aliquet maecenas leo odio",
+    "description": "consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
+    "price": 2028,
+    "discount": 43,
+    "image": "prenda2.png",
+    "category": "faucibus orci luctus et"
+  },
+  {
+    "id": 10,
+    "name": "in hac habitasse platea",
+    "description": "luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+    "price": 3993,
+    "discount": 43,
+    "image": "prenda3.png",
+    "category": "viverra dapibus nulla suscipit ligula in lacus curabitur at"
+  }
 ]

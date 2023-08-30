@@ -4,7 +4,8 @@ const mainRouter = require("./routes/mainRouter")
 const path = require('path')
 
 app.use(express.static('public'))
-
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/users'), path.join(__dirname, 'views/products')]);
 app.set('view engine', 'ejs');
