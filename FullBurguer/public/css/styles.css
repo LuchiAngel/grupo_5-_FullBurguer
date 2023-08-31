@@ -16,13 +16,14 @@ header {
     position:sticky;
     top: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border: 2px solid yellowgreen;
     align-items: center;
   }
 header img{
-    width: 150px;
-    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px;   
 }
 header img:hover{
     transform: scale(1.05);
