@@ -14,7 +14,7 @@ header {
     align-items: center;
   }
 header img{
-    width: 150px;
+    width: 140px;
     
 }
 header img:hover{
@@ -68,6 +68,8 @@ article ul {
     margin-left: 3vw;
     margin-top: 3vw;
     margin-right: 4vw;
+    border: solid 3px yellowgreen;
+    
 }
 
 .nombreHamburguesa{
@@ -87,21 +89,27 @@ article ul {
 .cantidad{
     font-size: 20px;
     text-align: center;
-    display: flex;
+    color: #000;
     margin-left: 2vw;
     margin-right: 2vw;
+    background-color: #fff;
+    width: 3vw;
+    
 }
 
 .mas{
     margin-left: 4vw;
+    
 }
 
 .mas i{
-    font-size: 12px;
+    font-size: 15px;
+  
 }
 
 .menos i{
-    font-size: 12px;
+    font-size: 15px;
+    
 }
 
 .precioTotal{
@@ -121,7 +129,7 @@ input[type="text"]{
     padding: 10px;
     margin: 15px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 12px;
     transition: all 0.5s;
     border: solid 3px yellowgreen;
 }
@@ -153,3 +161,75 @@ button[type="submit"]:hover {
     border: 2px inset;
     color: black;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .descripcionHamburguesa{
+        display: none;
+    }
+
+    .fotoProducto { 
+        width: 15vw;
+        
+        
+    }
+    .nombreHamburguesa{
+        width: 25vw;
+        font-size: 13px;
+    }
+
+    .cantidad{
+        font-size: 10px;
+    }
+
+    .mas i{
+    font-size: 8px;
+  
+    }
+
+    .menos i{
+    font-size: 8px;
+    
+    }
+    .precioTotal{
+        font-size: 12px;
+        margin-left: 90%;
+    }
+
+    .descuentoYPrecioFinal{
+        margin-left: 20%;
+    }
+
+    .input{
+        font-size: 8px;
+    }
+
+    input[type="text"]{
+        font-size: 8px;
+    }
+
+    button[type="submit"]{
+        font-size: 8px;
+    }
+
+    main{
+        height: fit-content;
+    }
+
+    .pie{
+        font-size: 12px;
+        text-align: center;
+        
+
+    }
+  
+    
+}
+
+
+@media (min-width: 769px) {}
+
