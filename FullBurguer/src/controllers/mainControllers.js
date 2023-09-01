@@ -40,6 +40,9 @@ const controller = {
     },
     productEdit: (req, res) => {
         res.render('productEdit')
+    },
+    oneProduct: (req, res) => {
+        res.render('oneProduct')
     }
 }
 

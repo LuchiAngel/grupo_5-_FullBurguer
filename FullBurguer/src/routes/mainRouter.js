@@ -13,6 +13,7 @@ router.get("/login", mainControllers.login);
 router.get("/productCreate", mainControllers.productCreate);
 router.post("/productCreate", mainControllers.productCreateProcess);
 router.get("/productEdit", mainControllers.productEdit)
+router.get("/oneProduct", mainControllers.oneProduct);
 
 module.exports = router;
 

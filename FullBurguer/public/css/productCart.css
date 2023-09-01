@@ -9,13 +9,14 @@ header {
     position:sticky;
     top: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border: 2px solid yellowgreen;
     align-items: center;
   }
 header img{
-    width: 140px;
-    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px;   
 }
 header img:hover{
     transform: scale(1.05);
@@ -44,9 +45,9 @@ header ul {
 main {
     width: 100vw;
     height: 90vw;    
-        background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGER3.jpg);
-        background-size: cover;
-        background-position: center;
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGER3.jpg);
+    background-size: cover;
+    background-position: center;
     }
 
 h3.titular{
