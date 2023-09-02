@@ -51,7 +51,7 @@ h4.form {
     justify-content: center;
     height: 100vw;
     font-family:'Lekton', sans-serif;
-    background: linear-gradient(to left , rgb(0 0 0/ 1), rgb(0 0 0/ .5)), url(../images/combo.jpg);
+    background: linear-gradient(to left , rgb(0 0 0/ 4), rgb(0 0 0/ .8)), url(../images/combo.jpg);
     border: 3px solid yellowgreen;
 }
 .form-login{ 

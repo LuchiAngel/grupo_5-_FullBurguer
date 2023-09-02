@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%><link rel="stylesheet" href="/css/productList.css">
+<body>
+    <%- include('../partials/header.ejs')%>
+ <main>
+    <section>
+        <h3 class="titular-detail">Hamburguesas 100% hechas con carne de verdad</h3>
+        <article>
+            <% listaProductos.forEach((combo)=>{%>
+                <h4 class="detail"><%= combo.name %></h4>
+                <p class="descripcion">
+                <%= combo.description %></p>
+                <br>
+                <a href="/oneProduct/"><img class="fotos" src=<%= combo.image %> /></a>
+              <br>                
+              <%})%></article>
+              <br>
+    </section>
+
+ </main>
+  
+</body>
+  <%- include('../partials/footer.ejs')%>
+</html>

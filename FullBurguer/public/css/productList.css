@@ -8,6 +8,7 @@ html{
     font-family: 'Lekton', sans-serif;
     background-color: #000;
     color: yellowgreen;
+    
 }
 
                 /*HEADER*/
@@ -16,11 +17,13 @@ header {
     position:sticky;
     top: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border: 2px solid yellowgreen;
     align-items: center;
   }
 header img{
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 150px;
     
 }
@@ -48,7 +51,14 @@ header ul {
     transform: scale(1.25);
   }
 
-
+section{
+    width: 90%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
@@ -56,6 +66,7 @@ h3.titular-detail{
     font-size: 35px;
     padding: 10px;
     font-weight: 500;
+    text-align: center;
 }
 
 h4.detail{
@@ -64,13 +75,15 @@ h4.detail{
     padding: 10px;
     margin: 10px;
     line-height: 10px;
+    text-align: center;
 }
 
 .descripcion{
     font-size: 18px;
     font-style: normal;
-    padding: 2px;
+    padding: 5px;
     margin: 2px;
+    text-align: center;
 
 }
 
@@ -80,61 +93,13 @@ h4.detail{
     padding: 2px;
     margin: 2px;
     font-weight: bold;
+    text-align: center;
 }
 
 .fotos{
     border: solid 3px rgb(6, 223, 6);
     margin: 15px;
-}
-
-.pie{
-    background-color: yellowgreen;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    
     
 }
-.pieParrafo p{
-    color: yellowgreen;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: black;
-}
 
-.redes {
-    color:black;
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.redes p{
-    text-align: center;
-    color: yellowgreen;
-    background-color: black;
-    width: 30%;
-    margin-left: 150px;
-}
-.redes img {
-    width: 70px;
-    transition: 0.4s;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-.redes img:hover {
-    scale: 1.15;
-}
-
-.direccion iframe {
-    width: 250px;
-    height: 150px;
-    margin-top: 10px;
-    margin-left: 50px;
-
-}
-.direccion p{
-    text-align: center;
-    color: yellowgreen;
-    background-color: black;
-    width: 80%;
-    margin-top: 20px;
-}

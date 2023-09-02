@@ -12,9 +12,15 @@ const controller = {
     productCart: (req, res) => {
         res.render('productCart')
     },
-    productDetail: (req, res) => {
-        res.render('productDetail')
+    productList: (req, res) => {
+        res.render('productList', {listaProductos: listaProductos})
     },
+    /*/Prueba*detalle:(req, res)=>{
+        let comboEncontrado = listaProductos.find((combo)=> combo.id == req.params.id)
+        res.render('oneProduct', {combo: comboEncontrado})
+    }, /*/
+
+
     register: (req, res) => {
         res.render('register')
     },
@@ -42,8 +48,9 @@ const controller = {
         res.render('productEdit')
     },
     oneProduct: (req, res) => {
-        res.render('oneProduct')
-    }
+           res.render('oneProduct')
+    },
+ 
 }
 
 module.exports = controller
