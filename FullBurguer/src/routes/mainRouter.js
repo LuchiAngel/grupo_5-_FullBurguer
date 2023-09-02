@@ -4,7 +4,7 @@ const mainControllers = require("../controllers/mainControllers");
 const multer = require("multer");
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        let folder = path.join(__dirname, '../../public/images')
+        let folder = path.join(__dirname, '../public/images')
         cb(null, folder);
     },
     filename: function (req, file, cb) {
@@ -20,6 +20,8 @@ router.get("/", mainControllers.index);
 router.get("/register", mainControllers.register);
 router.get("/login", mainControllers.login);
 router.get("/productList", mainControllers.productList);
+
+
 router.get("/productCart", mainControllers.productCart);
 router.get("/productCreate",  mainControllers.productCreate);
 router.post("/productCreate",uploadFile.single('images'), mainControllers.productCreateProcess);

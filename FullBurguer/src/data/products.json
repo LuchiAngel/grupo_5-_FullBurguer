@@ -6,7 +6,7 @@
     "discount": 5,
     "category": "visited",
     "description": "Medallón de pollo crispy con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares.",
-    "images": "../images/PolloBacon.jpg"
+    "images": "PolloBacon.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "discount": 3,
     "category": "in-sale",
     "description": "Medallón de 150 gr de pura carne, con queso cheddar, lomo en fetas y nuestra salsa epecial, papas regulares",
-    "images": "../images/MegaPampeano.jpg"
+    "images": "MegaPampeano.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "discount": 25,
     "category": "in-sale",
     "description": "Doble medallón de 200 gr de pura carne angus premium, con doble queso cheddar, lechuga, cebolla y tomate más nuestra súper salsa tártara, papas regulares",
-    "images": "../images/DobleAngus.jpg"
+    "images": "DobleAngus.jpg"
   },
   {
     "id": 4,
@@ -32,7 +32,7 @@
     "description": "Medallón de pollo crispy, con queso doble cheddar, cebolla, lechuga, tomate, nuestra salsa picante con pepinillos, papas regulares",
     "price": 2400,
     "discount": 10,
-    "images": "../images/PolloDeluxe.jpg",
+    "images": "PolloDeluxe.jpg",
     "category": "in-sale"
   },
   {
@@ -41,7 +41,7 @@
     "description": "10 bocaditos del más delicioso pollo crispy, acompañado con la salsa que más te guste: cheddar, aioli, mostaza dulce, y papas regulares",
     "price": 2500,
     "discount": 20,
-    "images": "../images/Nuggets.jpg",
+    "images": "Nuggets.jpg",
     "category": "in-sale"
   },
   {
@@ -50,7 +50,7 @@
     "description": "Hamburguesa de carne junior con queso cheddar, acompañada de papas fritas, gaseosa a elección y juguete de la última colección",
     "price": 2200,
     "discount": 25,
-    "images": "../images/Cajita.jpg",
+    "images": "Cajita.jpg",
     "category": "in-sale"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Para los amantes del cheddar: Doble medallón de 200 gr de pura carne, con delicioso baño de queso cheddar y lluvia de bacon, con más cheddar por dentro, papas regulares",
     "price": 2700,
     "discount": 5,
-    "images": "../images/MegaCheddar.jpg",
+    "images": "MegaCheddar.jpg",
     "category": "in-sale"
   }
 ]
