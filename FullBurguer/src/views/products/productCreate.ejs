@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs')%>
-<body>
-    <%- include('../partials/header.ejs')%>
-    <main>
-        <section >
-                     
-            <form class="form-create" action="/productCreate" method="post" >
-               <br> <h2 class="crearproducto">Nuevo producto</h2><br>
-                <div><label for="Nombre del producto"></label>
-                    <input type="text" name="nombreProducto" id="NombreProducto"
-                        placeholder="Nombre del producto">
-                    </div><br>
-                        <div class="crearproducto"><label  for="Descripcion">Descripción del producto:</label><br>
-                    <textarea class="crearproductoD"id="descripcion" name="descripcion" rows="4" cols="50vw" ></textarea>
-                </div>
-                <div class="crearproducto"><label for="imagen">Imagen</label>
-                    <input type="file" name="imagen" id="imagen" accept=".jpg, .png">
-                </div>
-                <div class="crearproducto">
-                    <h2 class="form">Categoría</h2>
-                    <label for="vegetariano">Vegetariano</label>
-                    <input type="radio" name="categoria" id="vegetariano" value="vegetariano">
-                    <label for="carne">Carne</label>
-                    <input type="radio" name="categoria" id="carne" value="carne">
-                    <label for="pollo">Pollo</label>
-                    <input type="radio" name="categoria" id="pollo" value="pollo">
-                    <label for="acompaniamiento">Acompañamiento</label>
-                    <input type="radio" name="categoria" id="acompaniamiento" value="acompaniamiento">
-                    <br>
-                    <label for="precio">Precio del producto:</label>
-                </div>
- 
-   
+<%- include('../partials/head.ejs')%>
+
+    <body>
+        <%- include('../partials/header.ejs')%>
+            <main>
+                <section>
+
+                    <form class="form-create" action="/productCreate" method="post">
+                        <br>
+                        <h2 class="crearproducto">Nuevo producto</h2><br>
+                        <div><label for="Nombre del producto"></label>
+                            <input type="text" name="nombreProducto" id="NombreProducto"
+                                placeholder="Nombre del producto">
+                        </div><br>
+                        <div class="crearproducto"><label for="Descripcion">Descripción del producto:</label><br>
+                            <textarea class="crearproductoD" id="descripcion" name="descripcion" rows="4"
+                                cols="50vw"></textarea>
+                        </div>
+
+                        <div class="crearproducto">
+                            <h2 class="form">Categoría</h2>
+                            <label for="vegetariano">Vegetariano</label>
+                            <input type="radio" name="categoria" id="vegetariano" value="vegetariano">
+                            <label for="carne">Carne</label>
+                            <input type="radio" name="categoria" id="carne" value="carne">
+                            <label for="pollo">Pollo</label>
+                            <input type="radio" name="categoria" id="pollo" value="pollo">
+                            <label for="acompaniamiento">Acompañamiento</label>
+                            <input type="radio" name="categoria" id="acompaniamiento" value="acompaniamiento">
+                            <br>
+                            <label for="precio">Precio del producto:</label>
+                        
                         <input type="number" id="precio" name="precio" step="0.01" required><br>
-                        
-                            
-                        
-                           
-                        
-                        
-                        <button type="submit">Crear Producto</button>
-                </form>
+                        <form class="form-create" action="/productCreate" method="post" enctype="multipart/form-data">
+                            <div class="crearproducto"><label for="imagen">Imagen</label>
+                                <input type="file" name="images" >
+                            </div>
+                        </form>
 
-        </section>
+                        <button type="submit">Crear Producto</button></div>
+                    </form>
 
-       
-</main>
+                </section>
 
-</body>
- <%- include('../partials/footer.ejs')%>
+
+            </main>
+
+    </body>
+    <%- include('../partials/footer.ejs')%>
 
 </html>

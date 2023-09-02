@@ -37,7 +37,7 @@ const controller = {
             "description": req.body.descripcion,
             "price": req.body.precio,
             "discount": 27,
-            "image": req.body.imagen,
+            "images": req.file ? req.file.images : 'logo.png',
             "category": req.body.categoria
         }
         listaProductos.push(comboNuevo)
