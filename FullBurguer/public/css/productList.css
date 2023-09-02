@@ -103,3 +103,54 @@ h4.detail{
     
 }
 
+
+@media (max-width: 768px) {
+
+    h3.titular-detail{
+        padding: 20;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .descripcion{
+      
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .fotos { 
+        width: 40vw;
+
+        
+        
+    }
+    h4.detail{
+        font-size: 25px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .precio{
+        font-size: 18px;
+    }
+
+   
+    main{
+        height: fit-content;
+    }
+
+    .pie{
+        font-size: 12px;
+        text-align: center;
+               
+
+    }
+  
+    
+}
+
+
+@media (min-width: 460px) {}
+
+
