@@ -7,7 +7,7 @@
             <main>
                 <section>
 
-                    <form class="form-create" action="/productCreate" method="post">
+                    <form class="form-create" action="/productCreate" method="post" enctype="multipart/form-data">
                         <br>
                         <h2 class="crearproducto">Nuevo producto</h2><br>
                         <div><label for="Nombre del producto"></label>
@@ -31,15 +31,16 @@
                             <input type="radio" name="categoria" id="acompaniamiento" value="acompaniamiento">
                             <br>
                             <label for="precio">Precio del producto:</label>
-                        
-                        <input type="number" id="precio" name="precio" step="0.01" required><br>
-                        <form class="form-create" action="/productCreate" method="post" enctype="multipart/form-data">
-                            <div class="crearproducto"><label for="imagen">Imagen</label>
-                                <input type="file" name="images" >
-                            </div>
-                        </form>
 
-                        <button type="submit">Crear Producto</button></div>
+                            <input type="number" id="precio" name="precio" step="0.01" required><br>
+
+                            <div class="crearproducto"><label for="file">Imagen</label>
+                                <input type="file" name="images" id="imagen" accept=".jpg, .png">
+                            </div>
+
+
+                            <button type="submit">Crear Producto</button>
+                        </div>
                     </form>
 
                 </section>

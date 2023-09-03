@@ -37,12 +37,12 @@ const controller = {
             "description": req.body.descripcion,
             "price": req.body.precio,
             "discount": 27,
-            "images": req.file ? req.file.images : 'logo.png',
+            "images": req.file ? req.file.filename : 'DobleAngus.JPG',
             "category": req.body.categoria
         }
         listaProductos.push(comboNuevo)
         fs.writeFileSync(path.join(__dirname, '../data/products.json'),JSON.stringify(listaProductos, null, 2), 'utf-8');
-        res.redirect('/')
+        res.redirect('productList')
     },
     productEdit: (req, res) => {
         res.render('productEdit')
