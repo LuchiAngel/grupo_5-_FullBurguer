@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%><link rel="stylesheet" href="/css/productDetail.css">
+<body>
+    <%- include('../partials/header.ejs')%>
+ <main>
+    <section>
+        <article>
+            <% if (combo) { %>
+          <h3 class="titular-detail"><%= combo.name %></h3>
+          <img class="fotos" src="/images/<%= combo.images %>" alt='<%= combo.name %>'>
+          <p class="descripcion"><%= combo.description %></p>
+          <p class="precio"><%= combo.price %></p>
+      </article>
+      </section>
+      <% } else { %>
+        <p>Producto no encontrado.</p>
+    <% } %>
+    </main>
+  
+</body>
+  <%- include('../partials/footer.ejs')%>
+</html>
