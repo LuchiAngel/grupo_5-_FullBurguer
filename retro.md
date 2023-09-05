@@ -4,3 +4,6 @@ Lo que consideramos que debemos comenzar a hacer es cumplir con los horarios y d
 Lo que deberíamos dejar de hacer, es esperar unos días antes de la entrega para volver a poner en común lo realizado. 
 
 De acuerdo a este último Sprint, podemos acotar que a diferencia del anterior, no dividimos los puntos a realizar, como así tampoco hemos logrado reunirnos para organizar las tareas. El medio de comunicación utilizado fue WhatsApp para dar novedades o hacer consultas. Para el próximo Sprint debemos continuar, como en la entrega del segundo Sprint, reuniéndonos para hacer la divsión de tareas, poner puntos en común, etc. Debemos mejorar la comunicación intra-equipo para que todos los integrantes trabajemos equitativamente.
+
+En este cuarto Sprint, logramos como equipo reunirnos los días pactados, comunicarnos más fluidamente sobre los que fuimos logrando y lo que quedaba pendiente. Se dividieron las tareas, logramos trabajar sobre los puntos pendientes marcados en los Sprints anteriores. Hemos mejorado en la comunicación y seguiremos trabajando en ello. Nos fue útil comunicarnos por WhatsApp para ir informando los problemas con los que nos fuimos encontrando, como así también con lo que se fue logrando.  
+
