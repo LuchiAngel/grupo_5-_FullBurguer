@@ -6,14 +6,14 @@
     <main>
         <section >
                      
-            <form class="form-create" action="/product/:id/editar?_method=PUT" method="post" >
+            <form class="form-create" action="/edit/<%=combo.id%>?_method=put" method="post" >
                <br> <h2 class="crearproducto">Editar Producto</h2><br>
                 <div><label for="Nombre del producto"></label>
-                    <input type="text" name="Nombre del producto" id="Nombre del producto"
+                    <input value="<%=combo.name%>"type="text" name="Nombre del producto" id="Nombre del producto"
                         placeholder="Nombre del producto">
                     </div><br>
                         <div class="crearproducto"><label  for="Descripcion">Descripción del producto:</label><br>
-                    <textarea class="crearproductoD"id="descripcion" name="descripcion" rows="4" cols="50vw" ></textarea>
+                    <textarea class="crearproductoD"id="descripcion" name="descripcion" rows="4" cols="50vw" ><%=combo.description%></textarea>
                 </div>
                 <div class="crearproducto"><label for="imagen">Imagen</label>
                     <input type="file" name="imagen" id="imagen" accept=".jpg, .png">
@@ -21,7 +21,7 @@
                         <label for="precio">Precio del producto:</label>
  
    
-                        <input type="number" id="precio" name="precio" step="0.01" required><br>
+                        <input value="<%=combo.price%>"type="number" id="precio" name="precio" step="0.01" required><br>
                         
                         
                         <button type="submit">Guardar Cambios</button>
