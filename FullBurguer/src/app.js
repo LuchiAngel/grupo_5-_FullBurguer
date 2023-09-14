@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
-const mainRouter = require("./routes/mainRouter")
+const mainRouter = require("./routes/mainRouter");
+const productsRouter = require ("./routes/productRouter");
 const path = require('path')
+const methodOverride = require('method-override');
 
+app.use(methodOverride('_method'));
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -14,4 +17,5 @@ app.listen(3000, () => {
     console.log("servidor corriendo en puerto:http://localhost:3000");
 })
 
-app.use("/", mainRouter)
+app.use("/", mainRouter);
+app.use("/product", productsRouter)
