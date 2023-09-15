@@ -37,9 +37,19 @@ const productsControllers ={
         let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
         res.render('productEdit', { combo: comboEncontrado })
     }, 
-   
-}
+    /*editProcess: (req, res) => {
+        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
 
+comboEncontrado.name = req.body.nombreProducto
+comboEncontrado.description = req.body.descripcion
+comboEncontrado.price =req.body.precio
+
+fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
+res.redirect('list')
+
+    }*/
+    
+}
 
 
 module.exports = productsControllers
