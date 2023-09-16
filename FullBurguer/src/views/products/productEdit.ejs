@@ -7,7 +7,7 @@
             <main>
                 <section>
 
-                    <form class="form-create" action="/edit/<%=combo.id%>?_method=put" method="post">
+                    <form class="form-create" action="/edit/<%= combo.id %>?_method=put" method="post">
                         <br>
                         <h2 class="crearproducto">Editar Producto</h2><br>
                         <div><label for="Nombre del producto"></label>
@@ -30,8 +30,8 @@
 
                             <button type="submit">Guardar Cambios</button>
                     </form>
-                    <form action="/eliminarCombo/<%=combo.id%>?_method=delete" method=" post">
-                        <button  class="form-create"  type="submit">Eliminar Combo</button>
+                    <form action="/edit/<%=combo.id%>?_method=delete" method=" post">
+                        <button  class="form-create"  type="submit"onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar Combo</button>
 
                     </form>
 
