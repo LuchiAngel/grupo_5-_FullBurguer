@@ -4,11 +4,14 @@ const mainRouter = require("./routes/mainRouter");
 const productsRouter = require ("./routes/productRouter");
 const usersRouter = require ("./routes/usersRouter");
 const path = require('path');
-//const bcrypt= require('bcrypt');
+const session = require('express-session');
+const cookieParser = require("cookie-parser");
 const methodOverride = require('method-override');
 
+app.use(session({secret:'Las mejores hamburguesas'}));
+app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
