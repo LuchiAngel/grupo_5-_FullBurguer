@@ -18,8 +18,8 @@ const uploadFile = multer({storage});
 
 
 router.get("/", mainControllers.index);
-router.get("/register", mainControllers.register);
-router.get("/login", mainControllers.login);
+//router.get("/register", mainControllers.register);
+//router.get("/login", mainControllers.login);
 
 module.exports = router;
 

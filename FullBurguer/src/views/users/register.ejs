@@ -8,10 +8,10 @@
         <%- include('../partials/header.ejs')%>
             <main>
                 <section class="registro">
-                    <form class="form-login" action="/" method="get">
+                    <form class="form-login" action="register" method="post" enctype="multipart/form-data">
                         <h3 class="cuenta">Creá tu cuenta</h3>
                         <div><label for="Nombre y apellido"></label>
-                            <input type="text" name="Nombre y apellido" id="Nombre y apellido"
+                            <input type="text" name="nombre" id="Nombre y apellido"
                                 placeholder="Nombre y Apellido">
                             <span class="feedback"></span>
                         </div>
@@ -19,16 +19,19 @@
                         <div><label for="fecha"></label>
                             <input type="date" name="fecha" id="fecha">
                             <span class="feedback"></span>
-                        </div><br>
+                        </div>
                         <div><label for="Domicilio"></label>
-                            <input type="text" name="Domicilio" id="Domicilio" placeholder="Domicilio">
+                            <input type="text" name="address" id="address" placeholder="Domicilio">
                             <span class="feedback"></span>
                         </div><br><label for="Email"></label>
                             <input type="email" name="email" id="email" placeholder="Email">
                             <span class="feedback"></span>
-                        </div><br>
+                        </div>
+                        <div class="crearproducto"><label for="file">Foto de perfil</label>
+                            <input type="file" name="avatar" id="imagen" accept=".jpg, .png">
+                        </div>
                         <div><label for="Contrasenia"></label>
-                            <input type="password" name="Contrasenia" id="Contrasenia"
+                            <input type="password" name="password" id="Contrasenia"
                                 placeholder="Creá una contraseña">
                             <span class="feedback"></span>
                         </div>

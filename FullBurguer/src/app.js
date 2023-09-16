@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const mainRouter = require("./routes/mainRouter");
 const productsRouter = require ("./routes/productRouter");
-const path = require('path')
+const usersRouter = require ("./routes/usersRouter");
+const path = require('path');
+//const bcrypt= require('bcrypt');
 const methodOverride = require('method-override');
 
 app.use(methodOverride('_method'));
@@ -15,7 +17,8 @@ app.set('view engine', 'ejs');
 
 app.listen(3000, () => {
     console.log("servidor corriendo en puerto:http://localhost:3000");
-})
+});
 
 app.use("/", mainRouter);
-app.use("/product", productsRouter)
+app.use("/product", productsRouter);
+app.use("/users", usersRouter);
