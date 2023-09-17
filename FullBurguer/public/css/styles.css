@@ -93,6 +93,10 @@ main{
     transform: scale(2.5);
 
 }
+.text-danger{
+    color: red;
+    text-align: center;
+}
 /*SEGUNDA PARTE*/
 .wrap2{
     width: 100vw;
