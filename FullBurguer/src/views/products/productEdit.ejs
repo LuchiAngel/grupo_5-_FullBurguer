@@ -6,7 +6,7 @@
         <%- include('../partials/header.ejs')%>
             <main>
                 <section>
-
+                    /*EDITAR PRODUCTO A CORREGIR ERROR EN COMBO ID*/
                     <form class="form-create" action="/edit/<%= combo.id %>?_method=put" method="post">
                         <br>
                         <h2 class="crearproducto">Editar Producto</h2><br>
@@ -30,10 +30,20 @@
 
                             <button type="submit">Guardar Cambios</button>
                     </form>
-                    <form action="/edit/<%=combo.id%>?_method=delete" method=" post">
-                        <button  class="form-create"  type="submit"onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar Combo</button>
-
-                    </form>
+                    /*DELETE A CORREGIR*/
+                    <% if (combo.borrado==false) { %>
+                        <form action="/edit/<%=combo.id%>?_method=delete" method=" post">
+                            <button  class="form-create"  type="submit">Eliminar Combo</button>
+                        </form>
+                        <%} else {%> 
+                            <form action="/edit/<%=combo.id%>?_method=put" method=" post">
+                                <button  class="form-create"  type="submit">Recuperar Combo</button>
+                            </form>
+                        <%} %> 
+    
+    
+                        }
+    
 
                 </section>
 

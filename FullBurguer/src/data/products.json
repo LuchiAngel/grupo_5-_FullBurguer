@@ -6,7 +6,8 @@
     "discount": 5,
     "category": "visited",
     "description": "Medallón de pollo crispy con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares.",
-    "images": "PolloBacon.jpg"
+    "images": "PolloBacon.jpg",
+    "borrado": false
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "discount": 3,
     "category": "in-sale",
     "description": "Medallón de 150 gr de pura carne, con queso cheddar, lomo en fetas y nuestra salsa epecial, papas regulares",
-    "images": "MegaPampeano.jpg"
+    "images": "MegaPampeano.jpg",
+    "borrado": false
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "discount": 25,
     "category": "in-sale",
     "description": "Doble medallón de 200 gr de pura carne angus premium, con doble queso cheddar, lechuga, cebolla y tomate más nuestra súper salsa tártara, papas regulares",
-    "images": "DobleAngus.jpg"
+    "images": "DobleAngus.jpg",
+    "borrado": false
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": "2400",
     "discount": 10,
     "images": "PolloDeluxe.jpg",
-    "category": "in-sale"
+    "category": "in-sale",
+    "borrado": false
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "price": "2500",
     "discount": 20,
     "images": "Nuggets.jpg",
-    "category": "in-sale"
+    "category": "in-sale",
+    "borrado": false
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "price": "2200",
     "discount": 25,
     "images": "Cajita.jpg",
-    "category": "in-sale"
+    "category": "in-sale",
+    "borrado": false
   },
   {
     "id": 7,
@@ -60,7 +66,7 @@
     "price": "2700",
     "discount": 5,
     "images": "MegaCheddar.jpg",
-    "category": "in-sale"
+    "category": "in-sale",
+    "borrado": false
   }
-
 ]

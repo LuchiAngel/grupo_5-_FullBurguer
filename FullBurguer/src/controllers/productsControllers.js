@@ -36,26 +36,37 @@ const productsControllers = {
     edit: (req, res) => {
         let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
         res.render('productEdit', { combo: comboEncontrado })
+    }, /*A REVISAR*/
+    /*editProcess: (req, res) => {
+        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
+        
+        
+        comboEncontrado.name = req.body.nombreProducto
+        comboEncontrado.description = req.body.descripcion
+        comboEncontrado.price = req.body.precio
+        comboEncontrado.discount = 27
+        comboEncontrado.images = req.file ? req.file.filename : 'DobleAngus.JPG'
+        comboEncontrado.category = req.body.categoria
+
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
+    res.redirect('/')
     },
-    /* delete: (req,res) =>{
-       const comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
-       const combosActualizados = listaProductos.filter((comboEncontrado) => comboEncontrado.id !== id);
-       fs.writeFileSync('products.json', JSON.stringify(combosActualizados, null, 2));
-       res.redirect('list',{ combo: comboEncontrado })
-   },
-    editProcess: (req, res) => {
-        let comboNuevo = {
-            "id": listaProductos.length + 1,
-            "name": req.body.nombreProducto,
-            "description": req.body.descripcion,
-            "price": req.body.precio,
-            "discount": 27,
-            "images": req.file ? req.file.filename : 'DobleAngus.JPG',
-            "category": req.body.categoria
-        }
-        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
-            res.redirect('list')
-    },*/
+    deleteProcess: (req, res) => {
+        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
+
+        comboEncontrado.borrado = true
+
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
+    res.redirect('list')
+    },
+    recuperarProcess: (req, res) => {
+        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
+
+        comboEncontrado.borrado = false
+
+    fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
+    res.redirect('list')
+    }*/
 
 }
 
