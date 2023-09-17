@@ -1,7 +1,7 @@
 const path = require('path');
 let fs = require('fs');
 const bcrypt = require('bcrypt');
-
+//const { validationResult } = require('express-validator');
 let listaUsuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
 
 
@@ -15,7 +15,19 @@ const usersController = {
 
     login: (req, res) => {
         res.render('login')
-    },
+    },/*
+    loginProcess:(req,res) =>{
+         const userEncontrado = listaUsuarios.find((user) => user.id== req.params.id)
+       let usuarioLogin = userEncontrado('email, req.body.email');
+    if(usuarioLogin){
+    let okPassword= bcrypt.compareSync(req.body.password, usuarioLogin.password)
+    if(okPassword){
+        res.redirect('index')
+    }
+    
+    
+    }return res.render('login', {errors:{email:{msg: 'No se encuentra éste email entre nuestros usuarios'}}})
+    },*/
 
 
     registerProcess: (req, res) => {

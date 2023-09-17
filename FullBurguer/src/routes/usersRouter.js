@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require("../controllers/usersControllers");
 const multer = require("multer");
 const path = require ("path");
-
+//const loginValidations = require("../../validations/loginValidator");
 const userStorage = multer.diskStorage({
     destination: function (req, file, cb) {
         let folder = path.join(__dirname, '../../public/images/users')
@@ -19,5 +19,5 @@ const usersUpload = multer({storage: userStorage});
 router.get("/register", usersController.register);       
 router.get("/login", usersController.login);     
 router.post("/register",usersUpload.single('avatar'), usersController.registerProcess);    
-
+//router.post("login",loginValidations,usersController.loginProcess);
 module.exports = router;

@@ -58,5 +58,15 @@
     "password": "alejandromaldonado",
     "category": "user",
     "avatar": "avatar-4.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tomas Maldonado",
+    "birthdate": "2012-10-28",
+    "address": "De la Plaza 266",
+    "email": "tomas.maldonado@gmail.com",
+    "password": "$2b$10$6U/3Ztwbg0jGW2v61UNEaOYafFGRtmXDCm5CIpdryrXbddV..6r2m",
+    "category": "admin",
+    "avatar": "1695703920612.jpg"
   }
 ]
