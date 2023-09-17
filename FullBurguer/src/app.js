@@ -8,7 +8,12 @@ const session = require('express-session');
 const cookieParser = require("cookie-parser");
 const methodOverride = require('method-override');
 
-app.use(session({secret:'Las mejores hamburguesas'}));
+app.use(session({
+    secret:'Las mejores hamburguesas',
+ resave:false,
+ saveUninitialized:true,
+}));
+
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
