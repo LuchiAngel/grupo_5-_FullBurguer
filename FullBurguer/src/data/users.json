@@ -1,182 +1,72 @@
 [
-    {
-        "id": 15,
-        "firstName": "Luis Angel",
-        "lastName": "Alcarraz",
-        "email": "luchinico2010@gmail.com",
-        "password": "luchinico2010",
-        "category": "admin",
-        "avatar": "PolloBacon.jpg"
-    },
-    {
-        "id": 16,
-        "firstName": "Victoria",
-        "lastName": "Mulhall",
-        "email": "vickymulhall@gmail.com",
-        "password": "vickymulhall",
-        "category": "admin",
-        "avatar": "PolloBacon.jpg"
-    },
-    {
-        "id": 17,
-        "firstName": "Andrea",
-        "lastName": "Restivo",
-        "email": "andreRestivo2@gmail.com",
-        "password": "andrerestivo2",
-        "category": "admin",
-        "avatar": "PolloBacon.jpg"
-    },
-    {
-        "id": 18,
-        "firstName": "Guadalupe",
-        "lastName": "Nieva",
-        "email": "guadanieva@gmail.com",
-        "password": "guadanieva",
-        "category": "admin",
-        "avatar": "PolloBacon.jpg"
-    },
-    {
-        "id": 19,
-        "firstName": "Fernando",
-        "lastName": "Juarez",
-        "email": "fernandojuarez13@gmail.com",
-        "password": "fernandojuarez13",
-        "category": "admin",
-        "avatar": "PolloBacon.jpg"
-    },
-    {
-        "id": 20,
-        "firstName": "Alejandro",
-        "lastName": "Maldonado",
-        "email": "maldonado.alejandro1991@gmail.com",
-        "password": "alejandromaldonado",
-        "category": "user",
-        "avatar": "PolloBacon.jpg"
-    },
-    {
-        "id": 1,
-        "firstName": "lacinia erat",
-        "lastName": "metus",
-        "email": "afaircliffe0@xing.com",
-        "password": "uJ4,l'E?",
-        "category": "Admin",
-        "avatar": "/images/avatars/tostada.jpg"
-    },
-    {
-        "id": 2,
-        "firstName": "id massa",
-        "lastName": "amet erat",
-        "email": "llamkin1@studiopress.com",
-        "password": "iV2}va7c5RS5&*",
-        "category": "Admin",
-        "avatar": "/images/avatars/pretzel.jpg"
-    },
-    {
-        "id": 3,
-        "firstName": "dapibus",
-        "lastName": "vulputate",
-        "email": "mcleaves2@zdnet.com",
-        "password": "hR8/A/BxShBWw",
-        "category": "Admin",
-        "avatar": ""
-    },
-    {
-        "id": 4,
-        "firstName": "potenti nullam",
-        "lastName": "habitasse",
-        "email": "wcalvard3@is.gd",
-        "password": "sU4$)fGLM}SuBN)",
-        "category": "Admin",
-        "avatar": "/images/avatars/pletzale.jpg"
-    },
-    {
-        "id": 5,
-        "firstName": "nullam",
-        "lastName": "venenatis non",
-        "email": "kdielhenn4@ebay.com",
-        "password": "yQ8@Ao'p0Zc",
-        "category": "Admin",
-        "avatar": "/images/avatars/pretzel.jpg"
-    },
-    {
-        "id": 6,
-        "firstName": "purus",
-        "lastName": "augue vel",
-        "email": "cbeane5@umn.edu",
-        "password": "fH7?~35GB7H\\",
-        "category": "Admin",
-        "avatar": "/images/avatars/kipa.jpg"
-    },
-    {
-        "id": 7,
-        "firstName": "ac nibh",
-        "lastName": "morbi",
-        "email": "epowley6@goo.gl",
-        "password": "dO7\"y,rgj03",
-        "category": "Admin",
-        "avatar": "/images/avatars/tostada.jpg"
-    },
-    {
-        "id": 8,
-        "firstName": "lorem ipsum",
-        "lastName": "maecenas",
-        "email": "biacavone7@samsung.com",
-        "password": "oE6't}P*Y+55",
-        "category": "Admin",
-        "avatar": ""
-    },
-    {
-        "id": 9,
-        "firstName": "scelerisque mauris",
-        "lastName": "eleifend luctus",
-        "email": "wcomport8@51.la",
-        "password": "sY4#@O<GTa",
-        "category": "Admin",
-        "avatar": ""
-    },
-    {
-        "id": 10,
-        "firstName": "quam a",
-        "lastName": "amet",
-        "email": "adrewett9@odnoklassniki.ru",
-        "password": "xM3>j,R1Hi,!H",
-        "category": "Admin",
-        "avatar": "/images/avatars/pletzale.jpg"
-    },
-    {
-        "id": 11,
-        "firstName": "massa donec",
-        "lastName": "hac",
-        "email": "gnelseya@google.de",
-        "password": "xX6)L6op",
-        "category": "Customer",
-        "avatar": "/images/avatars/kipa.jpg"
-    },
-    {
-        "id": 12,
-        "firstName": "potenti nullam",
-        "lastName": "habitasse platea",
-        "email": "bsarverb@slideshare.net",
-        "password": "wR4&B!nh3(I",
-        "category": "Customer",
-        "avatar": "/images/avatars/polloCorazon.jpg"
-    },
-    {
-        "id": 13,
-        "firstName": "augue luctus",
-        "lastName": "sed",
-        "email": "mcoec@oracle.com",
-        "password": "vF7.+yzKB&)UXf",
-        "category": "Admin",
-        "avatar": ""
-    },
-    {
-        "id": 14,
-        "firstName": "nibh",
-        "lastName": "ipsum primis",
-        "email": "mlethieulierd@europa.eu",
-        "password": "tF0=M?EHfr9>>T",
-        "category": "Admin",
-        "avatar": "/images/avatars/jala.jpg"
-    }
+  {
+    "id": 1,
+    "name": "Luis Angel Alcarraz",
+    "birthday": "1991-05-15",
+    "address": "Victorino de la plaza 268",
+    "email": "luchinico2010@gmail.com",
+    "password": "luchinico2010",
+    "category": "admin",
+    "avatar": "avatar-2.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Victoria Mulhall",
+    "birthday": "1984-01-17",
+    "address": "Gelly y Obes 564",
+    "email": "vickymulhall@gmail.com",
+    "password": "vickymulhall",
+    "category": "admin",
+    "avatar": "avatar-6.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Andrea Restivo",
+    "birthday": "1989-05-12",
+    "address": "Sourdeaux 555",
+    "email": "andreRestivo2@gmail.com",
+    "password": "andrerestivo2",
+    "category": "admin",
+    "avatar": "avatar-1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Guadalupe Nieva",
+    "birthday": "1995-09-05",
+    "address": "Las Heras 950",
+    "email": "guadanieva@gmail.com",
+    "password": "guadanieva",
+    "category": "admin",
+    "avatar": "avatar-5.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Fernando Juarez",
+    "birthday": "1999-10-19",
+    "address": "Sarmiento 1234",
+    "email": "fernandojuarez13@gmail.com",
+    "password": "fernandojuarez13",
+    "category": "admin",
+    "avatar": "avatar-3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Alejandro Maldonado",
+    "birthday": "1991-02-16",
+    "address": "Sargento Cabral 4567",
+    "email": "maldonado.alejandro1991@gmail.com",
+    "password": "alejandromaldonado",
+    "category": "user",
+    "avatar": "avatar-4.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tomas Maldonado",
+    "birthdate": "2012-10-28",
+    "address": "De la Plaza 266",
+    "email": "tomas.maldonado@gmail.com",
+    "password": "$2b$10$6U/3Ztwbg0jGW2v61UNEaOYafFGRtmXDCm5CIpdryrXbddV..6r2m",
+    "category": "admin",
+    "avatar": "1695703920612.jpg"
+  }
 ]
