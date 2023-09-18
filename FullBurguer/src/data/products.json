@@ -13,10 +13,9 @@
     "id": 2,
     "name": "Mega Pampeano",
     "price": "1900",
-    "discount": 3,
-    "category": "in-sale",
+    "discount": 27,
     "description": "Medallón de 150 gr de pura carne, con queso cheddar, lomo en fetas y nuestra salsa epecial, papas regulares",
-    "images": "MegaPampeano.jpg",
+    "images": "DobleAngus.JPG",
     "borrado": false
   },
   {

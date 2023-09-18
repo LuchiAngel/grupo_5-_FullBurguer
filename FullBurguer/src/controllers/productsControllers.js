@@ -37,7 +37,7 @@ const productsControllers = {
         let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
         res.render('productEdit', { combo: comboEncontrado })
     }, /*A REVISAR*/
-    /*editProcess: (req, res) => {
+    editProcess: (req, res) => {
         let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
         
         
@@ -66,7 +66,7 @@ const productsControllers = {
 
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
     res.redirect('list')
-    }*/
+    }
 
 }
 
