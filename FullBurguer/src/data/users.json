@@ -63,10 +63,11 @@
     "id": 7,
     "name": "Tomas Maldonado",
     "birthdate": "2012-10-28",
-    "address": "De la Plaza 266",
+    "address": "Victorino 456",
     "email": "tomas.maldonado@gmail.com",
-    "password": "$2b$10$6U/3Ztwbg0jGW2v61UNEaOYafFGRtmXDCm5CIpdryrXbddV..6r2m",
+    "password": "$2a$10$tohcEfcGbNGR0BpFfPDYgurU/DLsBx.7kTc8Ec0ojofoFJ6VtmK/2",
     "category": "admin",
+<<<<<<< HEAD
     "avatar": "1695703920612.jpg"
   },
   {
@@ -88,5 +89,8 @@
     "password": "$2b$10$jpeTr/UjTwjxsC9RCB1SF.nug7gqDDqhEjJ0Zlb8Cmp4pRMyfWsFm",
     "category": "admin",
     "avatar": "Logo.png"
+=======
+    "avatar": "1695547496762.jpg"
+>>>>>>> c4b96f6cd7e57a6b3fde3aaac9f358eba7190019
   }
 ]

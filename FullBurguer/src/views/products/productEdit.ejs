@@ -6,13 +6,13 @@
         <%- include('../partials/header.ejs')%>
             <main>
                 <section>
-
-                    <form class="form-create" action="/edit/<%= combo.id %>?_method=put" method="post">
+                    <!-- EDITAR PRODUCTO A CORREGIR ERROR EN COMBO ID -->
+                    <form class="form-create" action="/product/edit/<%= combo.id %>?_method=put" method="post">
                         <br>
                         <h2 class="crearproducto">Editar Producto</h2><br>
                         <div><label for="Nombre del producto"></label>
-                            <input value="<%=combo.name%>" type="text" name="Nombre del producto"
-                                id="Nombre del producto" placeholder="Nombre del producto">
+                            <input value="<%=combo.name%>" type="text" name="nombreProducto"
+                                id="nombreProducto" placeholder="Nombre del producto">
                         </div><br>
                         <div class="crearproducto"><label for="Descripcion">Descripción del producto:</label><br>
                             <textarea class="crearproductoD" id="descripcion" name="descripcion" rows="4"
@@ -30,10 +30,16 @@
 
                             <button type="submit">Guardar Cambios</button>
                     </form>
-                    <form action="/edit/<%=combo.id%>?_method=delete" method=" post">
-                        <button  class="form-create"  type="submit"onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar Combo</button>
-
+                    
+                    
+                    <form action="/product/edit/<%=combo.id%>?_method=delete" method="post" >
+                          <button type="submit"> Eliminar Combo</button>
                     </form>
+                    
+                    
+    
+    
+                        
 
                 </section>
 

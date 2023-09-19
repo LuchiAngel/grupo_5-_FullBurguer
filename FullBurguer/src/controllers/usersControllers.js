@@ -1,10 +1,16 @@
 const path = require('path');
 let fs = require('fs');
+<<<<<<< HEAD
 const bcrypt = require('bcrypt');
 //const { validationResult } = require('express-validator');
 
 
 
+=======
+const bcrypt = require('bcryptjs');
+const User = require ('../models/User')
+const { validationResult } = require('express-validator');
+>>>>>>> c4b96f6cd7e57a6b3fde3aaac9f358eba7190019
 let listaUsuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
 
 
@@ -35,7 +41,17 @@ const usersController = {
 
 
     registerProcess: (req, res) => {
-        let usuarioNuevo = {
+        const errors = validationResult(req);
+      let userInDB = User.findByField('email', req.body.email);
+      
+    if (userInDB){
+    return res.render('register', {
+        errors:{
+            email:{
+                msg: 'Este email ya está registrado'
+    }
+}, oldData: req.body});
+}          let usuarioNuevo = {
             "id": listaUsuarios.length + 1,
             "name": req.body.nombre,
             "birthdate": req.body.fecha,
