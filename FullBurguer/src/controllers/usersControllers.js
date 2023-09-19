@@ -1,16 +1,8 @@
 const path = require('path');
 let fs = require('fs');
-<<<<<<< HEAD
-const bcrypt = require('bcrypt');
-//const { validationResult } = require('express-validator');
-
-
-
-=======
 const bcrypt = require('bcryptjs');
 const User = require ('../models/User')
-const { validationResult } = require('express-validator');
->>>>>>> c4b96f6cd7e57a6b3fde3aaac9f358eba7190019
+/*const { validationResult } = require('express-validator'); Andrea*/
 let listaUsuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
 
 
@@ -25,7 +17,7 @@ const usersController = {
 
     /*login: (req, res) => {
         res.render('login')
-    },/*
+    },
     loginProcess:(req,res) =>{
          const userEncontrado = listaUsuarios.find((user) => user.id== req.params.id)
        let usuarioLogin = userEncontrado('email, req.body.email');
