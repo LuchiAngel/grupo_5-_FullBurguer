@@ -68,5 +68,25 @@
     "password": "$2b$10$6U/3Ztwbg0jGW2v61UNEaOYafFGRtmXDCm5CIpdryrXbddV..6r2m",
     "category": "admin",
     "avatar": "1695703920612.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Martina Muñoz",
+    "birthdate": "2005-12-21",
+    "address": "Avellaneda 191",
+    "email": "andre2588.ar@gmail.com",
+    "password": "$2b$10$XxgHj7UyZWq1JrlM0/uT/.RURpBmiCimUkInXcNSOsCZwlSHhXM1C",
+    "category": "admin",
+    "avatar": "Logo.png"
+  },
+  {
+    "id": 9,
+    "name": "Andrea",
+    "birthdate": "1988-01-25",
+    "address": "Avellaneda 191",
+    "email": "andre@gmail.com",
+    "password": "$2b$10$jpeTr/UjTwjxsC9RCB1SF.nug7gqDDqhEjJ0Zlb8Cmp4pRMyfWsFm",
+    "category": "admin",
+    "avatar": "Logo.png"
   }
 ]

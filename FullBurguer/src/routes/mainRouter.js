@@ -3,6 +3,11 @@ const router = express.Router();
 const mainControllers = require("../controllers/mainControllers");
 const multer = require("multer");
 const path = require ("path");
+
+const usersController = require("../controllers/usersControllers");
+
+
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         let folder = path.join(__dirname, '../../public/images')
@@ -20,6 +25,8 @@ const uploadFile = multer({storage});
 router.get("/", mainControllers.index);
 //router.get("/register", mainControllers.register);
 //router.get("/login", mainControllers.login);
+
+
 
 module.exports = router;
 
