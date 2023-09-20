@@ -31,12 +31,15 @@
                             <button type="submit">Guardar Cambios</button>
                     </form>
                     
-                    
-                    <form action="/product/edit/<%=combo.id%>?_method=delete" method="post" >
-                          <button type="submit"> Eliminar Combo</button>
-                    </form>
-                    
-                    
+                    <% if (combo.borrado==false) { %>
+                        <form action="/product/edit/<%=combo.id%>?_method=delete" method=" post">
+                            <button  class="form-create"  type="submit">Eliminar Combo</button>
+                        </form>
+                        <%} else {%> 
+                            <form action="/product/edit/<%=combo.id%>?_method=put" method=" post">
+                                <button  class="form-create"  type="submit">Recuperar Combo</button>
+                            </form>
+                        <%} %> 
     
     
                         

@@ -26,6 +26,8 @@ router.get("/productDetail/:id", productsControllers.detalle);
 //PUT Y DELETE
 router.put("/edit/:id", productsControllers.editProcess);
 router.delete("/edit/:id", productsControllers.deleteProcess);
+//router.put("/edit/:id", productsControllers.editProcess);
+//router.put("/edit/:id", productsControllers.recuperarProcess);
 
 
 module.exports = router;
