@@ -8,8 +8,6 @@ const session = require('express-session');
 const cookieParser = require("cookie-parser");
 const methodOverride = require('method-override');
 
-
-
 app.use(session({
     secret: 'Las mejores ha0mburguesas',
     resave: false,
