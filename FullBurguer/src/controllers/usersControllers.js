@@ -69,6 +69,16 @@ const usersController = {
         res.render('index');
 
     },
+    profile:(req, res)=>{
+        return res.render('profile',{
+            user: req.session.userLogged
+        })
+    },
+    logout:(req, res)=>{
+    req.session.destroy();
+    return res.redirect ('/');
+    }
 }
+    
 
 module.exports = usersController
