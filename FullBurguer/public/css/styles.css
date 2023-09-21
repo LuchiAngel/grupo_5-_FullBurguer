@@ -305,7 +305,18 @@ main{
     font-size: 1rem;
     outline: none;
 }
-
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin:  5px;
+    padding: 5px;
+}
+.remember {
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+  }
 
 /**/ 
 /*PIE FOOTER*/
