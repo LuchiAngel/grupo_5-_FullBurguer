@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 app.use(session({
     secret: 'Las mejores ha0mburguesas',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
 }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));

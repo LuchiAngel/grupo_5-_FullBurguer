@@ -5,17 +5,22 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <div class="usuarios">
-        
-        <form class="form-login">
+        <section>
+        <form class="form-login" action="login" method="post">
             <img src= "/images/icono burger.jpg" alt="icono de login hamburguesa">
-            <input type="email" name= "email" placeholder="Email o nombre de usuario">
-            
+            <label for="email"></label>
+            <input type="email" name= "email" placeholder="Email ">
+            <% if (locals.errors && errors.email) { %>
+                <div class = "text-danger">
+                   <%= errors.email.msg %>
+                </div>
+               <% } %>
             <input type="password" name="password" placeholder="Ingrese su contraseña">
             
             <button type="submit">Iniciar Sesion</button>
         </form>
         
-        
+        </section>
     </div>
     
 </main>
