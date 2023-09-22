@@ -3,6 +3,8 @@ const router = express.Router();
 const productsControllers = require("../controllers/productsControllers");
 const multer = require("multer");
 const path = require ("path");
+const authMiddleware = require ('../middleware/authMiddleware');
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         let folder = path.join(__dirname, '../../public/images')
@@ -17,7 +19,7 @@ const uploadFile = multer({storage});
 
 
 router.get("/list", productsControllers.productList);
-router.get("/productCart", productsControllers.productCart);
+router.get("/productCart",authMiddleware, productsControllers.productCart);
 router.get("/create",  productsControllers.productCreate);
 router.post("/create", uploadFile.single('images'), productsControllers.productCreateProcess);
 router.get("/edit/:id", productsControllers.edit);
