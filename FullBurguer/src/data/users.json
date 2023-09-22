@@ -68,5 +68,25 @@
     "password": "$2a$10$tohcEfcGbNGR0BpFfPDYgurU/DLsBx.7kTc8Ec0ojofoFJ6VtmK/2",
     "category": "admin",
     "avatar": "1695547496762.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Andrea",
+    "birthdate": "1988-01-25",
+    "address": "Avellaneda 191",
+    "email": "andre@gmail.com",
+    "password": "$2a$10$BThDcESrcbp.D34WiquavuEE00nD/1bUiSqBTZmzlHq.cAA.U3fH2",
+    "category": "admin",
+    "avatar": "1696224982223.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Andrea",
+    "birthdate": "1988-01-25",
+    "address": "Avellaneda 191",
+    "email": "andrea@gmail.com",
+    "password": "$2a$10$d4zOj0MBGe04ZCxrUkwjWOzZojRKne1DzW1l8wilWPrg5ID9dbeOG",
+    "category": "admin",
+    "avatar": "1696074579332.jpg"
   }
 ]
