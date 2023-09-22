@@ -1,53 +1,3 @@
-@charset "UTF-8";
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-html{
-    font-family: 'Lekton', sans-serif;
-    background-color: #000;
-    color: yellowgreen;
-}
-
-                /*HEADER*/
-header {
-    background-color: #000;
-    position:sticky;
-    top: 0px;
-    display: flex;
-    justify-content: space-around;
-    border: 2px solid yellowgreen;
-    align-items: center;
-  }
-header img{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 150px;   
-}
-header img:hover{
-    transform: scale(1.05);
-}
-nav{
-    width: 85%;
-}
-header ul {
-    list-style: none;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    
-  }
-  header ul a {
-    color: yellowgreen;
-    font-size: 1.8rem;
-    display: flex;
-    text-decoration: none;
-  }
-  header ul a:hover {
-    color:greenyellow;
-    transform: scale(1.25);
-  }
 
   h3.saludo{
     font-size: 45px;
@@ -59,7 +9,7 @@ header ul {
   .fotos{
 
     border: solid 3px rgb(6, 223, 6);
-    position: relative;
+  width: 40%;
     left: 555px;
     top:5px;
     bottom: 40px;
@@ -68,7 +18,7 @@ header ul {
 
   }
 
-  .adress{
+  .address{
     font-size: 18px;
     font-style: normal;
     padding: 5px;
@@ -87,3 +37,11 @@ header ul {
     font-weight: bold;
     text-align: center;
   }
+  section{
+    width: 90%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
