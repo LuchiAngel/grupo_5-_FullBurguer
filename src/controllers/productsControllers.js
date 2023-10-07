@@ -1,6 +1,6 @@
 const path = require('path')
-let fs = require('fs');
-
+const fs = require('fs');
+/*const db = */
 
 let listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
 
