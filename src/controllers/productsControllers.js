@@ -1,28 +1,36 @@
 const path = require('path')
 const fs = require('fs');
-/*const db = */
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const Producto = db.Producto;
 
-let listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+
 
 const productsControllers = {
     productCart: (req, res) => {
         res.render('productCart')
     },
-    productList: (req, res) => {
-        let listaFiltrada = listaProductos.filter((combo)=> combo.borrado == false )
-        res.render('productList', { listaProductos: listaFiltrada })
+    productList: async (req, res) => {
+        let producto = await db.Producto.findAll()
+        res.render ('productList', {combo:producto})
+
+
     },
-    detalle: (req, res) => {
-        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
-        res.render('productDetail', { combo: comboEncontrado });
+    detalle: async(req, res) => {
+        let producto = await db.Producto.findByPk(req.params.id)
+        res. render('productDetail',{combo:producto})
+
+
+      
 
     },
     productCreate: (req, res) => {
         res.render('productCreate')
     },
-    productCreateProcess: (req, res) => {
-        let comboNuevo = {
-            "id": listaProductos.length + 1,
+    productCreateProcess:async (req, res) => {
+    
+        const comboNuevo = await db.Producto.create({
+           
             "name": req.body.nombreProducto,
             "description": req.body.descripcion,
             "price": req.body.precio,
@@ -30,14 +38,15 @@ const productsControllers = {
             "images": req.file ? req.file.filename : 'DobleAngus.JPG',
             "category": req.body.categoria,
             "borrado":false
-        }
-        listaProductos.push(comboNuevo)
-        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
+        })
         res.redirect('list')
+        
     },
-    edit: (req, res) => {
-        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
-        res.render('productEdit', { combo: comboEncontrado })
+    edit: async (req, res) => {
+      let producto =  await db.Producto.findByPk(req.params.id)
+      res.render('productEdit',{combo:producto})
+      
+    
     }, 
     editProcess: (req, res) => {
         let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
