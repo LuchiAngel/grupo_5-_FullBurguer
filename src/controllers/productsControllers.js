@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs');
 const db = require('../database/models');
+const { log } = require('console');
 const sequelize = db.sequelize;
 const Producto = db.Producto;
 
@@ -19,9 +20,7 @@ const productsControllers = {
     detalle: async(req, res) => {
         let producto = await db.Producto.findByPk(req.params.id)
         res. render('productDetail',{combo:producto})
-
-
-      
+    
 
     },
     productCreate: (req, res) => {
@@ -48,8 +47,21 @@ const productsControllers = {
       
     
     }, 
-    editProcess: (req, res) => {
-        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
+    editProcess: async (req, res) => {
+        const combo = await db.Producto.create({
+           
+            "name": req.body.nombreProducto,
+            "description": req.body.descripcion,
+            "price": req.body.precio,
+            "discount": 27,
+            "images": req.file ? req.file.filename : 'DobleAngus.JPG',
+            "category": req.body.categoria,
+            "borrado":false
+        },{where:{
+            id:req.params.id}});
+      console.log(combo)
+            res.redirect('list')
+       /* let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
         
         
         comboEncontrado.name = req.body.nombreProducto
@@ -61,8 +73,8 @@ const productsControllers = {
         
 
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
-    res.redirect('/')
-    },
+    res.redirect('/')*/
+        },
     deleteProcess: (req, res) => {
         let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
 
