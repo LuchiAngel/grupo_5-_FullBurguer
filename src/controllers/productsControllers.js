@@ -48,7 +48,8 @@ const productsControllers = {
     
     }, 
     editProcess: async (req, res) => {
-        const combo = await db.Producto.create({
+        const combo = await db.Producto.findByPk(req.params.id)
+        const comboEditado = await db.Producto.update({
            
             "name": req.body.nombreProducto,
             "description": req.body.descripcion,
@@ -58,9 +59,12 @@ const productsControllers = {
             "category": req.body.categoria,
             "borrado":false
         },{where:{
-            id:req.params.id}});
-      console.log(combo)
+            id:combo}});
+      console.log(comboEditado)
             res.redirect('list')
+
+
+            
        /* let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
         
         
@@ -75,14 +79,25 @@ const productsControllers = {
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
     res.redirect('/')*/
         },
-    deleteProcess: (req, res) => {
-        let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
+        delete: async function (req, res){
+            const combo = await db.Producto.findByPk(req.params.id)
+            res.render("delete",{combo:combo})
+
+
+        },
+    deleteProcess: async (req, res) => {
+        const combo = await db.Producto.findByPk(req.params.id)
+        const comboEliminado = await db.Producto.destroy({where:{id: req.params.id}})
+       console.log(comboEliminado);
+       res.redirect("list")
+       
+        /*let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
 
         comboEncontrado.borrado = true
 
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
-    res.redirect('/')
-    }
+    res.redirect('/')*/
+   }
 }
 
 

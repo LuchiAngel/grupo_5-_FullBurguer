@@ -222,6 +222,26 @@ main{
     transition: all .5s ease;
     border: 1px solid yellowgreen;
 }
+.eliminar button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 45%;
+    background: yellowgreen;
+    color: black;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5s ease;
+    border: 1px solid yellowgreen;
+}
+.eliminar1{
+    text-align: center;
+
+
+}
 
 .form-login button:hover{
     color:yellowgreen;
