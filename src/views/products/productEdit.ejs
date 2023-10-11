@@ -33,8 +33,9 @@
                     
                     
                     
-                        <a href="delete/<%= combo.id %>"><button type="submit"> Eliminar Combo</button>
-                    </form>
+                    <form class="eliminar"action="/product/delete/<%=combo.id%>?_method=delete" method="post" >
+                        <button type="submit"> Eliminar</button>
+                  </form>
                     
                     
     

@@ -59,9 +59,9 @@ const productsControllers = {
             "category": req.body.categoria,
             "borrado":false
         },{where:{
-            id:combo}});
+            id:req.params.id}});
       console.log(comboEditado)
-            res.redirect('list')
+            res.redirect('/product/list')
 
 
             
@@ -81,7 +81,7 @@ const productsControllers = {
         },
         delete: async function (req, res){
             const combo = await db.Producto.findByPk(req.params.id)
-            res.render("delete",{combo:combo})
+            res.render('productEdit',{combo:combo})
 
 
         },
@@ -89,7 +89,7 @@ const productsControllers = {
         const combo = await db.Producto.findByPk(req.params.id)
         const comboEliminado = await db.Producto.destroy({where:{id: req.params.id}})
        console.log(comboEliminado);
-       res.redirect("list")
+       res.redirect("/product/list")
        
         /*let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
 
