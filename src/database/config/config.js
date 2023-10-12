@@ -1,9 +1,9 @@
 module.exports ={ 
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "330672",
+    "password": "fullburguerprueba",
     "database": "fullburguer_db",
-    "host": "127.0.0.1",
+    "host": "mysql-fullburguer.alwaysdata.net",
     "dialect": "mysql"
   },
   "test": {
