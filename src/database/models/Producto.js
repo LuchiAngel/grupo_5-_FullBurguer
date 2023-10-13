@@ -26,12 +26,31 @@ module.exports = (sequelize, dataTypes) => {
         },   
         id_categoria: {
             type: dataTypes.INTEGER
-        }
+        },
+        created_at: {
+            type: dataTypes.DATE,
+            defaultValue: dataTypes.NOW,
+            allowNull: false,
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+            defaultValue: dataTypes.NOW,
+            allowNull: false,
+        },
+        deleted_at: {
+            type: dataTypes.DATE,
+            allowNull: true,
+        },
+        
     };
 
     let config = {
         tableName: "Productos",
-        timestamps: false
+        timestamps: true,
+        paranoid: true,
+        deletedAt: 'deleted_at',
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
     };
 
     const Producto = sequelize.define(alias, cols, config);

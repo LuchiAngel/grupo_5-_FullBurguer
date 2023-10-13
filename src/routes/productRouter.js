@@ -24,7 +24,7 @@ router.get("/create",  productsControllers.productCreate);
 router.post("/create", uploadFile.single('images'), productsControllers.productCreateProcess);
 router.get("/edit/:id", productsControllers.edit);
 router.get("/productDetail/:id", productsControllers.detalle);
-/*router.get("/delete/:id", productsControllers.delete)*/
+router.get("/restore/:id", productsControllers.restore);
 
 //PUT Y DELETE
 router.put("/edit/:id", productsControllers.editProcess);

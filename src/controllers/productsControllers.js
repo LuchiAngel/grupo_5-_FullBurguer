@@ -62,22 +62,8 @@ const productsControllers = {
             id:req.params.id}});
       console.log(comboEditado)
             res.redirect('/product/list')
-
-
             
-       /* let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
-        
-        
-        comboEncontrado.name = req.body.nombreProducto
-        comboEncontrado.description = req.body.descripcion
-        comboEncontrado.price = req.body.precio
-        comboEncontrado.discount = 27
-        comboEncontrado.images = req.file ? req.file.filename : 'DobleAngus.JPG'
-        comboEncontrado.category = req.body.categoria
-        
-
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
-    res.redirect('/')*/
+      
         },
         delete: async function (req, res){
             const combo = await db.Producto.findByPk(req.params.id)
@@ -86,19 +72,19 @@ const productsControllers = {
 
         },
     deleteProcess: async (req, res) => {
-        const combo = await db.Producto.findByPk(req.params.id)
+       // const combo = await db.Producto.findByPk(req.params.id)
         const comboEliminado = await db.Producto.destroy({where:{id: req.params.id}})
        console.log(comboEliminado);
        res.redirect("/product/list")
        
-        /*let comboEncontrado = listaProductos.find((combo) => combo.id == req.params.id)
-
-        comboEncontrado.borrado = true
-
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(listaProductos, null, 2), 'utf-8');
-    res.redirect('/')*/
-   }
+    
+   },
+   restore: async (req, res) => {
+    //const combo = await db.Producto.findByPk(req.params.id)
+    const comboRestaurada = await db.Producto.restore({where:{id: req.params.id}})
+   console.log(comboRestaurada);
+   res.redirect("/product/list")
+},
 }
-
 
 module.exports = productsControllers
