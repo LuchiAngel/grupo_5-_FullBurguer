@@ -25,4 +25,9 @@ router.get("/profile", authMiddleware, usersController.profile);
 router.get("/logout",  usersController.logout);
 router.post("/register", registerValidations, usersUpload.single('avatar'), usersController.registerProcess);    
 router.post("/login", usersController.loginProcess);
+
+
+router.get("/create", usersController.userCreate);
+router.post("/createProcess", usersController.userCreateProcess);
+
 module.exports = router;
