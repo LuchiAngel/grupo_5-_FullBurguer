@@ -82,7 +82,25 @@ const usersController = {
         res.clearCookie('userEmail');
         req.session.destroy();
     return res.redirect ('/');
-    }
+    },
+
+    userCreate:(req, res)=>{
+        res.render('userCreate')
+    },
+    userCreateProcess:async (req, res) => {
+    
+        const usuarioNuevo = await db.User.create({
+           
+            "name": req.body.nombreUsuario,
+            "birthday": req.body.fechaNacimiento,
+            "adress": req.body.domicilio,
+            "images": req.file ? req.file.filename : 'predeterminada.jpg',
+            "email": req.body.email,
+            "category": req.body.categorias,
+            "borrado":false
+        })
+        res.redirect('list')
+    },
 }
     
 
