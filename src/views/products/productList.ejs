@@ -6,16 +6,18 @@
  <main>
     <section>
         <h3 class="titular-detail">Hamburguesas 100% hechas con carne de verdad</h3>
-        <article>
+        <div class="combo-container">
             <% combo.forEach((combo)=>{%>
+              <article class="combo">
                 <h4 class="detail"><%= combo.name %></h4>
                 <p class="descripcion">
                 <%= combo.description %></p>
-                <br>
+                
                 <a href="productDetail/<%= combo.id %>"><img class="fotos" src=../images/<%= combo.images %> /></a>
-              <br>                
-              <%})%></article>
-              <br>
+                            
+            </article>  <%})%>
+          </div>
+              
     </section>
 
  </main>

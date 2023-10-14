@@ -4,7 +4,7 @@ const db = require('../database/models');
 const { log } = require('console');
 const sequelize = db.sequelize;
 const Producto = db.Producto;
-
+const Tipo = db.Tipo;
 
 
 const productsControllers = {
@@ -12,8 +12,12 @@ const productsControllers = {
         res.render('productCart')
     },
     productList: async (req, res) => {
-        let producto = await db.Producto.findAll()
-        res.render ('productList', {combo:producto})
+        let producto = await db.Producto.findAll(/*{
+            include: [{
+                association: 'categoria'
+            }]
+        }*/)
+    res.render ('productList', {combo:producto})
 
 
     },
