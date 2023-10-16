@@ -18,11 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Tipo = sequelize.define(alias, cols, config);
-    /*Tipo.associate=function(models){
+    
+    Tipo.associate = function(models) {
         Tipo.hasMany(models.Producto,{
-            foreignKey: 'id_categoria',
-            as: 'productos'
+            foreignKey:'id_categoria',
+            as:'productos'
         })
-    }*/
+    }
     return Tipo;
 }
