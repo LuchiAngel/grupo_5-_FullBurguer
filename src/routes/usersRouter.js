@@ -23,11 +23,22 @@ router.get("/register", guestMiddleware, usersController.register);
 router.get("/login", guestMiddleware, usersController.login); 
 router.get("/profile", authMiddleware, usersController.profile);
 router.get("/logout",  usersController.logout);
+
 router.post("/register", registerValidations, usersUpload.single('avatar'), usersController.registerProcess);    
 router.post("/login", usersController.loginProcess);
 
 
+
+//Create, Edit y Delete.
+
 router.get("/create", usersController.userCreate);
-router.post("/createProcess", usersController.userCreateProcess);
+router.post("/create", usersController.userCreateProcess);
+
+/*router.get("/edit/:id", usersController.editUsers);
+router.put("/edit/:id", usersController.editProcess);*/
+
+/*router.delete("/delete/:id", usersController.deleteProcess);*/
+
+
 
 module.exports = router;
