@@ -31,11 +31,8 @@ router.post("/login", usersController.loginProcess);
 
 //Create, Edit y Delete.
 
-router.get("/create", usersController.userCreate);
-router.post("/create", usersController.userCreateProcess);
-
-/*router.get("/edit/:id", usersController.editUsers);
-router.put("/edit/:id", usersController.editProcess);*/
+router.get("/edit/:id", usersController.editUsers);
+router.put("/edit/:id", usersController.editProcess);
 
 /*router.delete("/delete/:id", usersController.deleteProcess);*/
 

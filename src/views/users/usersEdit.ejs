@@ -9,22 +9,22 @@
                         <br>
                         <h2 class="crearproducto">Editar Usuario</h2>
                         <br>
-                        <form action="/users/edit/<%= Usuario.id %>"method="post"> 
+                        <form action="/users/edit/<%- Usuario.id %>?_method=put" method="post"> 
                             <label for="name"> Nombre del usuario</label>
-                            <p><input type="text" name="name" id="name" value="<%= Usuario.name %>" required></p>
+                            <p><input type="text" name="name" id="name" value="<%= Usuario.name %>" ></p>
                             <label for="birthday"> Fecha de nacimiento</label>
-                            <p><input type="date" name="birthday" id="birthday" value="<%= Usuario.birthday %>" required></p>
+                            <p><input type="date" name="birthday" id="birthday" value="<%= Usuario.birthday %>" ></p>
                             <label for="adress"> Domicilio</label>
-                            <p><input type="text" name="adress" id="adress" value="<%= Usuario.adress %>" required></p>
+                            <p><input type="text" name="adress" id="adress" value="<%= Usuario.address %>" ></p>
                             <label for="avatar"> Imagen</label>
-                            <p><input type="image" name="avatar" id="avatar" value="<%= Usuario.avatar %>" required></p>    
+                            <p><input type="file" name="avatar" id="avatar" value="<%= Usuario.avatar %>" ></p>    
                             <br>
-                            <p><button type="submit">Guardar Cambios</button></p>
+                            <button type="submit">Guardar Cambios</button>
                         </form>
                     
-                    <form class="eliminar"action="/product/delete/<%=combo.id%>?_method=delete" method="post" >
+                     <form class="eliminar"action="/users/delete/<%= Usuario.id%>?_method=delete" method="post" >
                         <button type="submit"> Eliminar</button>
-                  </form>
+                  </form> 
             
                 </section>
 

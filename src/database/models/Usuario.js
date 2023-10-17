@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
         },   
         id_roles: {
             type: dataTypes.INTEGER
-        }
+        },
     };
 
     let config = {

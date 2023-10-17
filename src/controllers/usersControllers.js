@@ -1,13 +1,15 @@
 const path = require('path');
 let fs = require('fs');
-const bcrypt = require('bcryptjs');
-const User = require('../models/User')
-const { validationResult } = require('express-validator');
+const db = require('../database/models');
 const { profile } = require('console');
-let listaUsuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
+const sequelize = db.sequelize;
+const Usuario = db.Usuario;
+const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
+
+
 
 const usersController = {
-
     register: (req, res) => {
         res.render('register')
     },
@@ -84,41 +86,26 @@ const usersController = {
         req.session.destroy();
     return res.redirect ('/');
     },
-    
-    userCreate:(req, res)=>{
-        res.render('register')
-    },
-    
-
-    userCreateProcess:async (req, res) => {
-
-        const usuarioNuevo = await db.User.create({
-
-            "name": req.body.nombre,
-            "birthdate": req.body.fecha,
-            "address": req.body.address,
-            "email": req.body.email,
-            "password": bcrypt.hashSync(req.body.password, 10),
-            "category": "admin",
-            "avatar": req.file ? req.file.filename : 'predeterminada.jpg',
-        })
         
-    },
-        
-    /*editUsers: async (req, res) => {
+    editUsers: async (req, res) => {
         let usuario = await db.Usuario.findByPk(req.params.id)
-        res.render("usersEdit" , {usuario})
+        res.render('usersEdit' , {Usuario:usuario})
     },
 
-    editProcess:  async function (req, res) {
+    editProcess:  async (req, res) => {
         const usuarioEditado = await db.Usuario.update({
-            ...req.body
+            "name": req.body.nombreUsuario,
+            "birthday": req.body.fechaNacimiento,
+            "address": req.body.domicilio,
+            "avatar": req.file ? req.file.filename : "predeterminada.jpg",
+            "borrado": false,
         }, {where:{
             id: req.params.id} })
 
             console.log(usuarioEditado)
-                res.redirect("/users/profile")
-    },*/
+                res.redirect('/users/profile')
+    },
+
 }
 
         
