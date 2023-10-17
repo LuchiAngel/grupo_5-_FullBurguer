@@ -54,11 +54,21 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Producto = sequelize.define(alias, cols, config);
- /* Producto.associate=function(models){
+    
+    Producto.associate=function(models){
+       
         Producto.belongsTo(models.Tipo,{
-            foreignKey: 'id_categoria',
-            as: 'categoria'
+            foreignKey:"id_categoria",
+            as:"tipos"
         })
-}*/
+
+        //Relacion Producto Factura
+        Producto.belongsToMany(models.Factura,{            
+            as:"facturas",
+            through: "productos_factura",
+            foreignKey:"id_productos",
+            otherKey:"id_facturas"
+        })
+}
     return Producto;
 }

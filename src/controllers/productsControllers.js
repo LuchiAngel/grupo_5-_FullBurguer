@@ -12,12 +12,15 @@ const productsControllers = {
         res.render('productCart')
     },
     productList: async (req, res) => {
-        let producto = await db.Producto.findAll(/*{
+        let producto = await db.Producto.findAll({
             include: [{
                 association: 'categoria'
             }]
-        }*/)
-    res.render ('productList', {combo:producto})
+        })
+        .then(productos =>{
+            res.send(productos)
+        })
+    //res.render ('productList', {combo:producto})
 
 
     },

@@ -38,6 +38,16 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Usuario = sequelize.define(alias, cols, config);
+    Usuario.associate = function(models) {
+        Usuario.hasMany(models.Factura,{
+            foreignKey:"id",
+            as:"facturas"
+        })
+        Usuario.belongsTo(models.Roles,{
+            foreignKey:"id",
+            as:"roles"
+        })
+    }
 
     return Usuario;
 }

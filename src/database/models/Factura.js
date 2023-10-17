@@ -30,5 +30,13 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Factura = sequelize.define(alias, cols, config);
+    Factura.associate = function(models) {        
+        Factura.belongsToMany(models.Producto,{            
+            as:"productos",
+            through: "producto_factura",
+            foreignKey:"id_facturas",
+            otherKey:"id_productos"
+        })
+    }
     return Factura;
 }
