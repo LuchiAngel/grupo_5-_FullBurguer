@@ -10,15 +10,17 @@ const { validationResult } = require('express-validator');
 
 
 const usersController = {
-    register: (req, res) => {
-        res.render('register')
-    },
+   
 
     login: (req, res) => {
         res.render('login')
     },
-    loginProcess: (req, res) => {
-        const userToLogin = User.findByField('email', req.body.email);
+    loginProcess: async (req, res) => {
+        const userToLogin = await db.Usuario.findOne({
+            where:{
+                email: req.body.email
+            }
+        });
         if (userToLogin) {
             let itsOkThePasword = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (itsOkThePasword) {
@@ -45,11 +47,18 @@ const usersController = {
                 }
             }
         })
+    }, register: async(req, res) => {
+        const roles= await db.Roles.findAll();
+        res.render('register', {roles})
     },
 
-    registerProcess: (req, res) => {
+    registerProcess: async(req, res) => {
         const errors = validationResult(req);
-        let userInDB = User.findByField('email', req.body.email);
+        
+        let userInDB = await db.Usuario.findOne({
+            where:{
+                email: req.body.email
+            }});
 
         if (userInDB) {
             return res.render('register', {
@@ -59,19 +68,17 @@ const usersController = {
                     }
                 }, oldData: req.body
             });
-        } let usuarioNuevo = {
-            "id": listaUsuarios.length + 1,
+        } let usuarioNuevo = await db.Usuario.create ({
             "name": req.body.nombre,
             "birthdate": req.body.fecha,
             "address": req.body.address,
             "email": req.body.email,
             "password": bcrypt.hashSync(req.body.password, 10),
-            "category": "admin",
+            "id_roles": "admin",
             "avatar": req.file ? req.file.filename : 'Logo.png',
-        }
+        })
 
-        listaUsuarios.push(usuarioNuevo)
-        fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(listaUsuarios, null, 2), 'utf-8');
+       
 
         res.render('index');
 

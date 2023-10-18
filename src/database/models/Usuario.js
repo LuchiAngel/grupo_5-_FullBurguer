@@ -1,5 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Usuario';
+    const Roles= require ('./Roles');
     let cols = {
         id: {
             autoIncrement: true,
@@ -28,13 +29,36 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },   
         id_roles: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull:false,
+            references:{
+                model: Roles,
+                key:'id'
+            }
+        },
+        created_at: {
+            type: dataTypes.DATE,
+            defaultValue: dataTypes.NOW,
+            allowNull: false,
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+            defaultValue: dataTypes.NOW,
+            allowNull: true,
+        },
+        deleted_at: {
+            type: dataTypes.DATE,
+            allowNull: true,
         },
     };
 
     let config = {
         tableName: "Usuarios",
-        timestamps: false
+        timestamps: true,
+        paranoid: true,
+        deletedAt: 'deleted_at',
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
     };
 
     const Usuario = sequelize.define(alias, cols, config);
@@ -44,7 +68,7 @@ module.exports = (sequelize, dataTypes) => {
             as:"facturas"
         })
         Usuario.belongsTo(models.Roles,{
-            foreignKey:"id",
+            foreignKey:"id_roles",
             as:"roles"
         })
     }

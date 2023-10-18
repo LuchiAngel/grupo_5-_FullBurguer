@@ -40,6 +40,13 @@
                         <div class="crearproducto"><label for="file">Foto de perfil</label>
                             <input type="file" name="avatar" id="imagen" accept=".jpg, .png">
                         </div>
+                        <div class="rol"><h2 class="form">Tipo</h2><br>
+                            <label for="id_categoria"></label>
+                            <select class= 'categoria' id="id_roles" name="id_roles" required>
+                                <% roles.forEach(roles => { %>
+                                  <option value="<%= roles.id %>"><%= roles.nombre %></option>
+                                <% }); %>
+                              </select></div>
                         <div><label for="Contrasenia"></label>
                             <input type="password" name="password" id="Contrasenia"
                                 placeholder="Creá una contraseña">
