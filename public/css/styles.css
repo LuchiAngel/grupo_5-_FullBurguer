@@ -396,7 +396,19 @@ input[type="checkbox"]{
 /**/
 
 /*DISEÑO PARA CELULAR/TABLET*/
+.categoria{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    border: 1px solid yellowgreen;
+    padding: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
 
+}
+.precio{
+    margin: 2px;
+}
 
 @media (max-width:768px){
     nav{

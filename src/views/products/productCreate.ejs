@@ -21,14 +21,13 @@
 
                         <div class="crearproducto">
                             <h2 class="form">Categoría</h2>
-                            <label for="vegetariano">Vegetariano</label>
-                            <input type="radio" name="categoria" id="vegetariano" value="vegetariano">
-                            <label for="carne">Carne</label>
-                            <input type="radio" name="categoria" id="carne" value="carne">
-                            <label for="pollo">Pollo</label>
-                            <input type="radio" name="categoria" id="pollo" value="pollo">
-                            <label for="acompaniamiento">Acompañamiento</label>
-                            <input type="radio" name="categoria" id="acompaniamiento" value="acompaniamiento">
+                            <label for="id_categoria"></label>
+                            <select class= 'categoria' id="id_categoria" name="id_categoria" required>
+                                <% tipos.forEach(tipo => { %>
+                                  <option value="<%= tipo.id %>"><%= tipo.nombre %></option>
+                                <% }); %>
+                              </select>
+                          
                             <br>
                             <label for="precio">Precio del producto:</label>
 
@@ -36,7 +35,7 @@
 
                             <div class="crearproducto"><label for="file">Imagen</label>
                                 <input type="file" name="images" id="imagen" accept=".jpg, .png">
-                            </div>
+                             </div>
 
 
                             <button type="submit">Crear Producto</button>

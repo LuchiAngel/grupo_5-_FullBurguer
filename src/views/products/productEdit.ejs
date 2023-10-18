@@ -21,9 +21,16 @@
                             <input type="file" name="imagen" id="imagen" accept=".jpg, .png">
 
                             <label for="precio">Precio del producto:</label>
-
-
-                            <input value="<%=combo.price%>" type="number" id="precio" name="precio" step="0.01"
+                            <h2 class="form">Categoría</h2>
+                            <label for="id_categoria"></label>
+                            <select class= 'categoria' id="id_categoria" name="id_categoria" required>
+                                <% tipos.forEach(tipo => { %>
+                                  <option value="<%= tipo.id %>"><%= tipo.nombre %></option>
+                                <% }); %>
+                              </select>
+                              <br>
+<br>
+                            <input class='form' value="<%=combo.price%>" type="number" id="precio" name="precio" step="0.01"
                                 required><br>
 
 

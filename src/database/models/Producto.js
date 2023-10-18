@@ -1,5 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Producto';
+    let alias = 'Producto';  
+    const Tipo= require ('./Tipo');
     let cols = {
         id: {
             autoIncrement: true,
@@ -25,7 +26,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },   
         id_categoria: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull:false,
+            references:{
+                model: Tipo,
+                key:'id'
+            }
         },
         created_at: {
             type: dataTypes.DATE,
@@ -35,7 +41,7 @@ module.exports = (sequelize, dataTypes) => {
         updated_at: {
             type: dataTypes.DATE,
             defaultValue: dataTypes.NOW,
-            allowNull: false,
+            allowNull: true,
         },
         deleted_at: {
             type: dataTypes.DATE,
@@ -54,7 +60,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Producto = sequelize.define(alias, cols, config);
-    
+  
     Producto.associate=function(models){
        
         Producto.belongsTo(models.Tipo,{
@@ -70,5 +76,6 @@ module.exports = (sequelize, dataTypes) => {
             otherKey:"id_facturas"
         })
 }
+
     return Producto;
 }

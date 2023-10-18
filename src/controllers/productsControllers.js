@@ -7,20 +7,19 @@ const Producto = db.Producto;
 const Tipo = db.Tipo;
 
 
+
 const productsControllers = {
-    productCart: (req, res) => {
+    productCart: async (req, res) => {
+       
         res.render('productCart')
     },
     productList: async (req, res) => {
         let producto = await db.Producto.findAll({
             include: [{
-                association: 'categoria'
+                association: 'tipos'
             }]
         })
-        .then(productos =>{
-            res.send(productos)
-        })
-    //res.render ('productList', {combo:producto})
+       res.render ('productList', {combo:producto})
 
 
     },
@@ -30,8 +29,9 @@ const productsControllers = {
     
 
     },
-    productCreate: (req, res) => {
-        res.render('productCreate')
+    productCreate:async (req, res) => {
+       const tipos= await db.Tipo.findAll();
+        res.render('productCreate', {tipos});
     },
     productCreateProcess:async (req, res) => {
     
@@ -42,7 +42,7 @@ const productsControllers = {
             "price": req.body.precio,
             "discount": 27,
             "images": req.file ? req.file.filename : 'DobleAngus.JPG',
-            "category": req.body.categoria,
+            "id_categoria": req.body.tipo,
             "borrado":false
         })
         res.redirect('list')
@@ -50,7 +50,8 @@ const productsControllers = {
     },
     edit: async (req, res) => {
       let producto =  await db.Producto.findByPk(req.params.id)
-      res.render('productEdit',{combo:producto})
+      const tipos= await db.Tipo.findAll();
+      res.render('productEdit',{combo:producto, tipos})
       
     
     }, 
@@ -63,7 +64,7 @@ const productsControllers = {
             "price": req.body.precio,
             "discount": 27,
             "images": req.file ? req.file.filename : 'DobleAngus.JPG',
-            "category": req.body.categoria,
+            "id_categoria": req.body.id_categoria,
             "borrado":false
         },{where:{
             id:req.params.id}});
@@ -79,16 +80,14 @@ const productsControllers = {
 
         },
     deleteProcess: async (req, res) => {
-       // const combo = await db.Producto.findByPk(req.params.id)
-        const comboEliminado = await db.Producto.destroy({where:{id: req.params.id}})
+       const comboEliminado = await db.Producto.destroy({where:{id: req.params.id}})
        console.log(comboEliminado);
        res.redirect("/product/list")
        
     
    },
    restore: async (req, res) => {
-    //const combo = await db.Producto.findByPk(req.params.id)
-    const comboRestaurada = await db.Producto.restore({where:{id: req.params.id}})
+        const comboRestaurada = await db.Producto.restore({where:{id: req.params.id}})
    console.log(comboRestaurada);
    res.redirect("/product/list")
 },
