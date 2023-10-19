@@ -5,7 +5,7 @@ const multer = require("multer");
 const path = require ("path");
 const guestMiddleware = require ('../middleware/guestMiddleware');
 const authMiddleware = require ('../middleware/authMiddleware');
-//const loginValidations = require("../../validations/loginValidator");
+
 const registerValidations = require("../../validations/registerValidator");
 const userStorage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -26,7 +26,7 @@ router.get("/logout",  usersController.logout);
 
 router.post("/register", registerValidations, usersUpload.single('avatar'), usersController.registerProcess);    
 router.post("/login", usersController.loginProcess);
-//router.get("/restore/:id", usersController.restore);
+router.get("/restore/:id", usersController.restore);
 
 
 //Create, Edit y Delete.
