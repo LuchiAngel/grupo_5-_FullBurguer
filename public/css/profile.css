@@ -37,6 +37,17 @@
     font-weight: bold;
     text-align: center;
   }
+
+  .botonEditar{
+    font-size: 18px; 
+    font-style: normal;
+    padding: 2px;
+    margin: 2px;
+    font-weight: bold;
+    text-align: center;
+    color: yellowgreen;
+  }
+
   section{
     width: 90%;
     display: flex;

@@ -71,8 +71,8 @@ const usersController = {
             });
         } const usuarioNuevo = await db.Usuario.create ({
             
-            "name": req.body.nombre,
-            "birthday": req.body.fecha,
+            "name": req.body.name,
+            "birthday": req.body.birthday,
             "address": req.body.address,
             "email": req.body.email,
             "password": bcrypt.hashSync(req.body.password, 10),
@@ -95,24 +95,27 @@ const usersController = {
     return res.redirect ('/');
     },
         
-    editUsers: async (req, res) => {
-        let usuario = await db.Usuario.findByPk(req.params.id)
-        const roles =  await db.Roles.findAll();
+    
+    editUsers: async function (req, res) {
+        const usuario = await db.Usuario.findByPk(req.params.id)
         res.render('usersEdit' , {Usuario:usuario})
     },
 
-    editProcess:  async (req, res) => {
+    
+    editProcess: async function (req, res)  {
+        const usuario = await db.Usuario.findByPk(req.params.id)
         const usuarioEditado = await db.Usuario.update({
+
             "name": req.body.nombre,
             "birthday": req.body.fecha,
             "address": req.body.domicilio,
             "avatar": req.file ? req.file.filename : "predeterminada.jpg",
             "borrado": false,
-        }, {where:{
-            id: req.params.id} })
+        }, {where:{id: req.params.id}} )
 
-            console.log(usuarioEditado)
-                res.redirect('/users/profile')
+            console.log(usuarioEditado);
+
+                res.redirect('/product/list');
     },
 
 }
