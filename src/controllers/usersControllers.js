@@ -83,11 +83,11 @@ const usersController = {
         res.render('index');
 
     },
-    profile:(req, res)=>{
-        return res.render('profile',{
-            user: req.session.userLogged
-        })
+    profile: async (req, res)=>{
+        let usuario = await db.Usuario.findByPk(req.params.id)
+        res.render('profile',{Usuario:usuario})
     },
+    
     logout:(req, res)=>{
         res.clearCookie('userEmail');
         req.session.destroy();
