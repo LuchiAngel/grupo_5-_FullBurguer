@@ -73,7 +73,7 @@ const usersController = {
         } const usuarioNuevo = await db.Usuario.create({
 
             "name": req.body.nombre,
-            "birthday": req.body.birthday,
+            "birthday": req.body.fecha,
             "address": req.body.address,
             "email": req.body.email,
             "password": bcrypt.hashSync(req.body.password, 10),
