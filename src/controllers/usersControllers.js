@@ -27,7 +27,7 @@ const usersController = {
             if (itsOkThePasword) {
                 req.session.userLogged = userToLogin;
               if(req.body.rememberUser){
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 90)*2})
               }
 
 
@@ -71,7 +71,7 @@ const usersController = {
             });
         } const usuarioNuevo = await db.Usuario.create ({
             
-            "name": req.body.name,
+            "name": req.body.nombre,
             "birthday": req.body.birthday,
             "address": req.body.address,
             "email": req.body.email,
@@ -98,17 +98,18 @@ const usersController = {
     
     editUsers: async function (req, res) {
         const usuario = await db.Usuario.findByPk(req.params.id)
-        res.render('usersEdit' , {Usuario:usuario})
+        const roles= await db.Roles.findAll();
+        res.render('usersEdit' , {Usuario:usuario, roles})
     },
 
     
     editProcess: async function (req, res)  {
-        const usuario = await db.Usuario.findByPk(req.params.id)
+               const usuario = await db.Usuario.findByPk(req.params.id)
         const usuarioEditado = await db.Usuario.update({
 
-            "name": req.body.nombre,
-            "birthday": req.body.fecha,
-            "address": req.body.domicilio,
+            "name": req.body.name,
+            "birthday": req.body.birthday,
+            "address": req.body.address,
             "avatar": req.file ? req.file.filename : "predeterminada.jpg",
             "borrado": false,
         }, {where:{id: req.params.id}} )
@@ -117,9 +118,22 @@ const usersController = {
 
                 res.redirect('/product/list');
     },
+    delete: async function (req, res){
+        const usuario = await db.Usuario.findByPk(req.params.id)
+        const roles= await db.Roles.findAll();
+        res.render('usersEdit',{Usuario:usuario, roles})
+    },
+    deleteProcess: async (req, res) => {
+        const usuarioEliminado = await db.Usuario.destroy({where:{id: req.params.id}})
+        console.log(usuarioEliminado);
+        res.redirect("/")
+},
+/*restore: async (req, res) => {
+    const usuarioRestaurado = await db.Usuario.restore({where:{id: req.params.id}})
+console.log(usuarioRestaurado);
+res.redirect("/")
+},*/
 
-}
-
-        
+}     
 
 module.exports = usersController

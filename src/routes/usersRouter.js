@@ -26,7 +26,7 @@ router.get("/logout",  usersController.logout);
 
 router.post("/register", registerValidations, usersUpload.single('avatar'), usersController.registerProcess);    
 router.post("/login", usersController.loginProcess);
-
+//router.get("/restore/:id", usersController.restore);
 
 
 //Create, Edit y Delete.
@@ -34,7 +34,7 @@ router.post("/login", usersController.loginProcess);
 router.get("/edit/:id", usersController.editUsers);
 router.put("/edit/:id", usersController.editProcess);
 
-/*router.delete("/delete/:id", usersController.deleteProcess);*/
+router.delete("/delete/:id", usersController.deleteProcess);
 
 
 
