@@ -6,7 +6,7 @@
     <!--MENU,LINKS-->
     <nav>
         <ul><% if(locals.isLogged){%>
-             <li><a href="/users/profile" > <%=locals.userLogged.name%> </a> </li>
+             <li><a href="/users/profile/<%=locals.userLogged.id%>" > <%=locals.userLogged.name%> </a> </li>
                 <li><a href="/users/logout" > Cerrar Sesión </a> </li>
                  
             

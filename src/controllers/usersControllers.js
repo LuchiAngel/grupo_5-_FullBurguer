@@ -70,6 +70,7 @@ const usersController = {
                 }, oldData: req.body
             });
         } const usuarioNuevo = await db.Usuario.create ({
+            
             "name": req.body.nombre,
             "birthday": req.body.fecha,
             "address": req.body.address,
@@ -87,7 +88,7 @@ const usersController = {
         let usuario = await db.Usuario.findByPk(req.params.id)
         res.render('profile',{Usuario:usuario})
     },
-    
+
     logout:(req, res)=>{
         res.clearCookie('userEmail');
         req.session.destroy();
