@@ -4,6 +4,7 @@ const db = require('../database/models');
 const { profile } = require('console');
 const sequelize = db.sequelize;
 const Usuario = db.Usuario;
+const roles = db.Roles;
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
@@ -95,6 +96,7 @@ const usersController = {
         
     editUsers: async (req, res) => {
         let usuario = await db.Usuario.findByPk(req.params.id)
+        const roles =  await db.Roles.findAll();
         res.render('usersEdit' , {Usuario:usuario})
     },
 
