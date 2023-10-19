@@ -68,17 +68,16 @@ const usersController = {
                     }
                 }, oldData: req.body
             });
-        } let usuarioNuevo = await db.Usuario.create ({
+        } const usuarioNuevo = await db.Usuario.create ({
             "name": req.body.nombre,
-            "birthdate": req.body.fecha,
+            "birthday": req.body.fecha,
             "address": req.body.address,
             "email": req.body.email,
             "password": bcrypt.hashSync(req.body.password, 10),
             "id_roles": "admin",
-            "avatar": req.file ? req.file.filename : 'Logo.png',
+            "avatar": req.file ? req.file.filename : "predeterminada.jpg",
         })
 
-       
 
         res.render('index');
 
@@ -101,8 +100,8 @@ const usersController = {
 
     editProcess:  async (req, res) => {
         const usuarioEditado = await db.Usuario.update({
-            "name": req.body.nombreUsuario,
-            "birthday": req.body.fechaNacimiento,
+            "name": req.body.nombre,
+            "birthday": req.body.fecha,
             "address": req.body.domicilio,
             "avatar": req.file ? req.file.filename : "predeterminada.jpg",
             "borrado": false,
