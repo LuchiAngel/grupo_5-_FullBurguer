@@ -11,14 +11,14 @@ const { validationResult } = require('express-validator');
 
 
 const usersController = {
-   
+
 
     login: (req, res) => {
         res.render('login')
     },
     loginProcess: async (req, res) => {
         const userToLogin = await db.Usuario.findOne({
-            where:{
+            where: {
                 email: req.body.email
             }
         });
@@ -26,9 +26,9 @@ const usersController = {
             let itsOkThePasword = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (itsOkThePasword) {
                 req.session.userLogged = userToLogin;
-              if(req.body.rememberUser){
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 90)*2})
-              }
+                if (req.body.rememberUser) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 90) * 2 })
+                }
 
 
                 return res.redirect('/')
@@ -48,18 +48,19 @@ const usersController = {
                 }
             }
         })
-    }, register: async(req, res) => {
-        const roles= await db.Roles.findAll();
-        res.render('register', {roles})
+    }, register: async (req, res) => {
+        const roles = await db.Roles.findAll();
+        res.render('register', { roles })
     },
 
-    registerProcess: async(req, res) => {
+    registerProcess: async (req, res) => {
         const errors = validationResult(req);
-        
+
         let userInDB = await db.Usuario.findOne({
-            where:{
+            where: {
                 email: req.body.email
-            }});
+            }
+        });
 
         if (userInDB) {
             return res.render('register', {
@@ -69,8 +70,8 @@ const usersController = {
                     }
                 }, oldData: req.body
             });
-        } const usuarioNuevo = await db.Usuario.create ({
-            
+        } const usuarioNuevo = await db.Usuario.create({
+
             "name": req.body.nombre,
             "birthday": req.body.birthday,
             "address": req.body.address,
@@ -84,27 +85,27 @@ const usersController = {
         res.render('index');
 
     },
-    profile: async (req, res)=>{
+    profile: async (req, res) => {
         let usuario = await db.Usuario.findByPk(req.params.id)
-        res.render('profile',{Usuario:usuario})
+        res.render('profile', { Usuario: usuario })
     },
 
-    logout:(req, res)=>{
+    logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
-    return res.redirect ('/');
-    },
-        
-    
-    editUsers: async function (req, res) {
-        const usuario = await db.Usuario.findByPk(req.params.id)
-        const roles= await db.Roles.findAll();
-        res.render('usersEdit' , {Usuario:usuario, roles})
+        return res.redirect('/');
     },
 
-    
-    editProcess: async function (req, res)  {
-               const usuario = await db.Usuario.findByPk(req.params.id)
+
+    editUsers: async function (req, res) {
+        const usuario = await db.Usuario.findByPk(req.params.id)
+        const roles = await db.Roles.findAll();
+        res.render('usersEdit', { Usuario: usuario, roles })
+    },
+
+
+    editProcess: async function (req, res) {
+        const usuario = await db.Usuario.findByPk(req.params.id)
         const usuarioEditado = await db.Usuario.update({
 
             "name": req.body.name,
@@ -112,28 +113,29 @@ const usersController = {
             "address": req.body.address,
             "avatar": req.file ? req.file.filename : "predeterminada.jpg",
             "borrado": false,
-        }, {where:{id: req.params.id}} )
+        }, { where: { id: req.params.id } })
 
-            console.log(usuarioEditado);
+        console.log(usuarioEditado);
 
-                res.redirect('/product/list');
+        res.redirect('/product/list');
     },
-    delete: async function (req, res){
+    delete: async function (req, res) {
         const usuario = await db.Usuario.findByPk(req.params.id)
-        const roles= await db.Roles.findAll();
-        res.render('usersEdit',{Usuario:usuario, roles})
+        const roles = await db.Roles.findAll();
+        res.render('usersEdit', { Usuario: usuario, roles })
     },
     deleteProcess: async (req, res) => {
-        const usuarioEliminado = await db.Usuario.destroy({where:{id: req.params.id}})
+        const usuarioEliminado = await db.Usuario.destroy({ where: { id: req.params.id } })
+        req.session.destroy();
         console.log(usuarioEliminado);
         res.redirect("/")
-},
-/*restore: async (req, res) => {
-    const usuarioRestaurado = await db.Usuario.restore({where:{id: req.params.id}})
-console.log(usuarioRestaurado);
-res.redirect("/")
-},*/
+    },
+    restore: async (req, res) => {
+        const usuarioRestaurado = await db.Usuario.restore({ where: { id: req.params.id } })
+        console.log(usuarioRestaurado);
+        res.redirect("/login")
+    },
 
-}     
+}
 
 module.exports = usersController
