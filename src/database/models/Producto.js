@@ -8,7 +8,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         name: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            validate: {
+                len: [5, 255] // debera tener al menos 5 caracteres
+            }
         },
         price: {
             type: dataTypes.DECIMAL(10,2)
@@ -17,13 +20,19 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         description: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            validate: {
+                len: [20, 255] // debera tener al menos 20 caracteres
+            }
         },
         borrado: {
             type: dataTypes.BOOLEAN
         },
         images: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            validate: {
+                is: /\.(jpg|jpeg|png|gif)$/i // debera ser un archivo válido JPG,JPEG,PNG,GIF
+            }
         },   
         id_categoria: {
             type: dataTypes.INTEGER,
