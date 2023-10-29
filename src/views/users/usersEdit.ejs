@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
-<%- include('../partials/head.ejs')%>
+    <%- include('../partials/head.ejs')%><link rel="stylesheet" href="/css/usersEdit.css">
+
 
     <body>
         <%- include('../partials/header.ejs')%>
@@ -8,30 +11,32 @@
                 <section>
                         <br>
                         <h2 class="editarUsuario">Editar Usuario</h2>
-                        <br>
-                        <form action="/users/edit/<%- Usuario.id %>?_method=put" method="post"> 
-                            <label for="name"> Nombre del usuario</label>
+                       
+                        <form action="/users/edit/<%- Usuario.id %>?_method=put" method="post">
+                            <br>
+                            <label class="subtitulosEdit" for="name"> Nombre del usuario</label>
                             <p><input type="text" name="name" id="name" value="<%= Usuario.name %>" ></p>
-                            <label for="birthday"> Fecha de nacimiento</label>
+                            <label class="subtitulosEdit" for="birthday"> Fecha de nacimiento</label>
                             <p><input type="date" name="birthday" id="birthday" value="<%= Usuario.birthday %>" ></p>
-                            <label for="address"> Domicilio</label>
+                            <label class="subtitulosEdit" for="address"> Domicilio</label>
                             <p><input type="text" name="address" id="address" value="<%= Usuario.address %>" ></p>
-                            <label for="avatar"> Imagen</label>
+                            <label class="subtitulosEdit" for="avatar"> Imagen</label>
                             <p><input type="file" name="avatar" id="avatar" value="<%= Usuario.avatar %>" ></p>    
                             <br>
-                            <button type="submit">Guardar Cambios</button>
-                        </form>
-                    
-                     <form class="eliminar"action="/users/delete/<%= Usuario.id%>?_method=delete" method="post" >
-                        <button type="submit"> Eliminar</button>
-                  </form> 
-            
+                            <button class="guardarEditUser" type="submit">Guardar Cambios</button>
+                            <button class="eliminarUser"action="/users/delete/<%= Usuario.id%>?_method=delete" method="post" type="submit"> Eliminar</button>
+                  </form>
+           
                 </section>
+
+
 
 
             </main>
 
+
     </body>
     <%- include('../partials/footer.ejs')%>
+
 
 </html>
