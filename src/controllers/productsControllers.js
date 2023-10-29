@@ -42,7 +42,7 @@ const productsControllers = {
             "price": req.body.precio,
             "discount": 27,
             "images": req.file ? req.file.filename : 'DobleAngus.JPG',
-            "id_categoria": req.body.tipo,
+            "id_categoria": req.body.id_categoria,
             "borrado":false
         })
         res.redirect('list')
