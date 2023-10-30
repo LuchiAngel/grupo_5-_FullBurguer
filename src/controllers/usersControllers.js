@@ -70,20 +70,22 @@ const usersController = {
                     }
                 }, oldData: req.body
             });
-        } const usuarioNuevo = await db.Usuario.create({
+        } 
+      
+        const usuarioNuevo = await db.Usuario.create({
 
             "name": req.body.nombre,
             "birthday": req.body.fecha,
             "address": req.body.address,
             "email": req.body.email,
             "password": bcrypt.hashSync(req.body.password, 10),
-            "id_roles": "admin",
+            "id_roles": req.body.id_roles,
             "avatar": req.file ? req.file.filename : "predeterminada.jpg",
         })
 
 
         res.render('index');
-
+        
     },
     profile: async (req, res) => {
         let usuario = await db.Usuario.findByPk(req.params.id)
