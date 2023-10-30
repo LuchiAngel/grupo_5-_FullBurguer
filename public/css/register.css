@@ -6,7 +6,9 @@ html {
 
 body {
     font-family: 'Lekton', sans-serif;
-}
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .6)), url(../images/BURGER5.jpg);
+    background-size:cover;
+    }
 
 
 .compras {
@@ -51,7 +53,6 @@ h4.form {
     justify-content: center;
     height: 100vw;
     font-family:'Lekton', sans-serif;
-    background: linear-gradient(to left , rgb(0 0 0/ 4), rgb(0 0 0/ .8)), url(../images/combo.jpg);
     border: 3px solid yellowgreen;
 }
 .form-login{ 
@@ -122,6 +123,23 @@ h4.form {
     border: 3px solid yellowgreen;
     background: linear-gradient(yellowgreen);
 }
+
+.alert-warning{
+    color: red;
+    font-size: 18px;
+    background-color: transparent;
+    text-align: left;
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 60%;
+    margin-top: 2px;
+
+    
+    
+}
+
+
 /*/nuevo formato*/
 
 .pie{

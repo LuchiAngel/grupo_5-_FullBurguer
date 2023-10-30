@@ -21,7 +21,7 @@
                             <label class="subtitulosEdit" for="address"> Domicilio</label>
                             <p><input type="text" name="address" id="address" value="<%= Usuario.address %>" ></p>
                             <label class="subtitulosEdit" for="avatar"> Imagen</label>
-                            <p><input type="file" name="avatar" id="avatar" value="<%= Usuario.avatar %>" ></p>    
+                            <p><input type="file" name="avatar" id="avatar" accept=".jpg, .png" value="<%= Usuario.avatar %>" ></p>    
                             <br>
                             <button class="guardarEditUser" type="submit">Guardar Cambios</button>
                             <button class="eliminarUser"action="/users/delete/<%= Usuario.id%>?_method=delete" method="post" type="submit"> Eliminar</button>

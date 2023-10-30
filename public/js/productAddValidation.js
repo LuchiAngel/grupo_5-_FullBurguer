@@ -1,5 +1,5 @@
 window.onload = function () {
-    const captName = document.querySelector("#nombreProducto");
+    const captName = document.querySelector("#NombreProducto");
     captName.focus();
     const form = document.querySelector("form");
     form.addEventListener("submit", (e) => {

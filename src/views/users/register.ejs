@@ -7,23 +7,21 @@
     <body>
         <%- include('../partials/header.ejs')%>
             <main>
-                <section class="registro">
+                <section class="registro" id="registro">
+                    <ul class="errores"></ul>
+                    <br>
                     <form class="form-login" action="register" method="post" enctype="multipart/form-data">
+                       <br>
                         <h3 class="cuenta">Creá tu cuenta</h3>
+                        <br>
                         <div><label for="Nombre y apellido"></label>
-                            <input type="text" name="nombre" id="Nombre y apellido"
-                                placeholder="Nombre y Apellido">
-                                <% if (locals.errors && errors.nombre) { %>
-                                    <div class = "text-danger">
-                                       <%= errors.nombre.msg %>
-                                    </div>
-                                   <% } %>   
-                            <span class="feedback"></span>
+                        <input type="text" name="nombre" id="NombreApellido" placeholder="Nombre y Apellido">
                         </div>
                         <h4 class="form">Fecha de nacimiento</h4>
                         <div><label for="fecha"></label>
                             <input type="date" name="fecha" id="fecha">
                             <span class="feedback"></span>
+                        <br>
                         </div>
                         <div><label for="Domicilio"></label>
                             <input type="text" name="address" id="address" placeholder="Domicilio">
@@ -70,11 +68,14 @@
                             <button type="reset">Cancelar</button>
                         </div>
                     </form>
-
+                    <br>            
                 </section>
 
             </main>
-            
-    </body>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="/js/usersRegisterValidation.js"></script>
+    
+        </body>
+    
 <%- include('../partials/footer.ejs')%>
 </html>
