@@ -7,7 +7,7 @@ const Usuario = db.Usuario;
 const roles = db.Roles;
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
-
+const{validate}=require("../middleware/registerMiddleware");
 
 
 const usersController = {
@@ -55,6 +55,13 @@ const usersController = {
 
     registerProcess: async (req, res) => {
         const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+           
+            return res.render('register', {
+              errors: errors.array(),
+              oldData: req.body,
+            });
+          }
 
         let userInDB = await db.Usuario.findOne({
             where: {
