@@ -8,11 +8,12 @@
     <body>
         <%- include('../partials/header.ejs')%>
             <main>
-                <section>
+                <section id="editarUsuario">
                         <br>
                         <h2 class="editarUsuario">Editar Usuario</h2>
-                       
-                        <form action="/users/edit/<%- Usuario.id %>?_method=put" method="post">
+                        <ul class="errores"></ul>
+                        <br>
+                        <form class="form-edit-users" action="/users/edit/<%- Usuario.id %>?_method=put" method="post">
                             <br>
                             <label class="subtitulosEdit" for="name"> Nombre del usuario</label>
                             <p><input type="text" name="name" id="name" value="<%= Usuario.name %>" ></p>
@@ -22,6 +23,11 @@
                             <p><input type="text" name="address" id="address" value="<%= Usuario.address %>" ></p>
                             <label class="subtitulosEdit" for="avatar"> Imagen</label>
                             <p><input type="file" name="avatar" id="avatar" accept=".jpg, .png" value="<%= Usuario.avatar %>" ></p>    
+                            <label class="subtitulosEdit" for="password">Modificar contraseña</label>
+                            <p><input type="password" name="password" id="Contrasenia"  value="<%= Usuario.password %>"  ></p>
+                            <label class="subtitulosEdit" for="confirmPassword">Confrimar contraseña</label>
+                            <p><input type="password" name="confirmPassword" id="confirmarContrasenia" value="<%= Usuario.password %>"  ></p>
+                    
                             <br>
                             <button class="guardarEditUser" type="submit">Guardar Cambios</button>
                             <button class="eliminarUser"action="/users/delete/<%= Usuario.id%>?_method=delete" method="post" type="submit"> Eliminar</button>
@@ -29,13 +35,13 @@
            
                 </section>
 
-
-
-
             </main>
 
-
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="/js/usersEditValidation.js"></script>
+            
     </body>
+
     <%- include('../partials/footer.ejs')%>
 
 
