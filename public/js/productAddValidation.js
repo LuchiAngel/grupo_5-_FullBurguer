@@ -89,6 +89,6 @@ window.onload = function () {
           'success full'
         ).then(()=> {form.submit();})
       }
-    });
+    })
     
-  };
+  }
