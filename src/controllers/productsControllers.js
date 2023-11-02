@@ -5,7 +5,8 @@ const { log } = require('console');
 const sequelize = db.sequelize;
 const Producto = db.Producto;
 const Tipo = db.Tipo;
-
+const { validationResult } = require('express-validator');
+const{validate}=require("../middleware/registerMiddleware");
 
 
 const productsControllers = {

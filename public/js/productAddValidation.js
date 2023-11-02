@@ -1,7 +1,10 @@
 window.onload = function () {
-    const captName = document.querySelector("#NombreProducto");
-    captName.focus();
-    const form = document.querySelector("form");
+    
+  
+    
+    const inputNombre = document.querySelector("#NombreProducto");
+    inputNombre.focus();
+    const form = document.querySelector("form-create");
     form.addEventListener("submit", (e) => {
       let errores = [];
   
