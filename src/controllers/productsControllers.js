@@ -35,6 +35,8 @@ const productsControllers = {
         res.render('productCreate', {tipos});
     },
     productCreateProcess:async (req, res) => {
+        let errors = validationResult(req);
+        res.send(errors)
     
         const comboNuevo = await db.Producto.create({
            
