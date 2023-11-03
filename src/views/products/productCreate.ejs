@@ -5,8 +5,9 @@
     <body>
         <%- include('../partials/header.ejs')%>
             <main>
-                <section>
-
+                <section id="createProduct">
+                    <ul class="erroresProduct"></ul>
+                    <br>
                     <form class="form-create" action="create" method="post" enctype="multipart/form-data">
                         <br>
                         <h2 class="crearproducto">Nuevo producto</h2><br>
@@ -22,17 +23,16 @@
                         <div class="crearproducto">
                             <h2 class="form">Categoría</h2>
                             <label for="id_categoria"></label>
-                            <select class= 'categoria' id="id_categoria" name="id_categoria" required>
+                            <select class= 'categoria' id="id_categoria" name="id_categoria">
                                 <% tipos.forEach(tipo => { %>
                                   <option value="<%= tipo.id %>"><%= tipo.nombre %></option>
                                 <% }); %>
                               </select></div>
                           
                             <br>
-                            <label for="precio">Precio del producto:</label>
-
-                            <input type="number" id="precio" name="precio" step="0.01" required><br>
-
+                            <label class="labelPrecio" for="precio">Precio del producto:</label>
+                            <input class='form' type="number" id="precio" name="precio" step="0.01"
+                                ><br>
                             <div class="crearproducto"><label for="file">Imagen</label>
                                 <input type="file" name="images" id="images" accept=".jpg, .png">
                              </div>
@@ -47,8 +47,10 @@
 
             </main>
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script src="/js/productAddValidation.js"></script>
-    </body>
+            <script src="/js/productCreateValidation.js"></script>
+            
+        </body>
+
     <%- include('../partials/footer.ejs')%>
 
 </html>

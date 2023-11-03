@@ -5,7 +5,10 @@
     <body>
         <%- include('../partials/header.ejs')%>
             <main>
-                <section>
+                <section id="editProduct">
+                    <br>
+                    <ul class="erroresProduct"></ul>
+                    <br>
                     <form class="form-create" action="/product/edit/<%= combo.id %>?_method=put" method="post">
                         <br>
                         <h2 class="crearproducto">Editar Producto</h2><br>
@@ -19,19 +22,18 @@
                         </div>
                         <div class="crearproducto"><label for="images">Imagen</label>
                             <input type="file" name="images" id="images" accept=".jpg, .png">
-
-                            <label for="precio">Precio del producto:</label>
+                            
                             <h2 class="form">Categoría</h2>
                             <label for="id_categoria"></label>
-                            <select class= 'categoria' id="id_categoria" name="id_categoria" required>
+                            <select class= 'categoria' id="id_categoria" name="id_categoria" >
                                 <% tipos.forEach(tipo => { %>
                                   <option value="<%= tipo.id %>"><%= tipo.nombre %></option>
                                 <% }); %>
                               </select>
-                              <br>
-<br>
+                              <br>  
+                            <label for="precio">Precio del producto:</label>
                             <input class='form' value="<%=combo.price%>" type="number" id="precio" name="precio" step="0.01"
-                                required><br>
+                                ><br>
 
 
                             <button type="submit">Guardar Cambios</button>
@@ -52,6 +54,9 @@
 
 
             </main>
+
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="/js/productEditValidation.js"></script>
 
     </body>
     <%- include('../partials/footer.ejs')%>
