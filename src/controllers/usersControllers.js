@@ -54,14 +54,15 @@ const usersController = {
     },
 
     registerProcess: async (req, res) => {
+        const roles = await db.Roles.findAll();
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-           
+            const errorMessages = errors.array().map((error) => error.msg);
             return res.render('register', {
-              errors: errors.array(),
+              errors:errorMessages, roles,
               oldData: req.body,
             });
-          }
+          }else{
 
         let userInDB = await db.Usuario.findOne({
             where: {
@@ -92,7 +93,7 @@ const usersController = {
 
 
         res.render('index');
-        
+      }  
     },
     profile: async (req, res) => {
         let usuario = await db.Usuario.findByPk(req.params.id)
