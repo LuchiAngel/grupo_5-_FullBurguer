@@ -37,12 +37,12 @@ router.get("/list", productsControllers.productList);
 router.get("/productCart",authMiddleware, productsControllers.productCart);
 router.get("/create", isAdmin,  productsControllers.productCreate);
 router.post("/create", isAdmin, validateCreateProductForm, uploadFile.single('images'), productsControllers.productCreateProcess);
-router.get("/edit/:id", isAdmin, productsControllers.edit);
+router.get("/edit/:id", isAdmin,  productsControllers.edit);
 router.get("/productDetail/:id", productsControllers.detalle);
 router.get("/restore/:id", isAdmin, productsControllers.restore);
 
 //PUT Y DELETE
-router.put("/edit/:id", isAdmin, uploadFile.single('images'), productsControllers.editProcess);
+router.put("/edit/:id", isAdmin, validateCreateProductForm, uploadFile.single('images'), productsControllers.editProcess);
 router.delete("/delete/:id", isAdmin, productsControllers.deleteProcess);
 
 

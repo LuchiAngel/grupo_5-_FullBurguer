@@ -64,6 +64,16 @@ const productsControllers = {
     }, 
     editProcess: async (req, res) => {
         const combo = await db.Producto.findByPk(req.params.id)
+        const tipos= await db.Tipo.findAll();
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            const errorMessages = errors.array().map((error) => error.msg);
+            res.render('productCreate',{errors:errorMessages, tipos});
+           console.log(errors);
+          }else{
+
+
+
         const comboEditado = await db.Producto.update({
            
             "name": req.body.nombreProducto,
@@ -77,7 +87,7 @@ const productsControllers = {
             id:req.params.id}});
       console.log(comboEditado)
             res.redirect('/product/list')
-            
+        }  
       
         },
         delete: async function (req, res){
