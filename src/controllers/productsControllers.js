@@ -35,12 +35,13 @@ const productsControllers = {
         res.render('productCreate', {tipos});
     },
     productCreateProcess:async (req, res) => {
-        /*const tipos= await db.Tipo.findAll();
+       const tipos= await db.Tipo.findAll();
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            res.render('productCreate',{errors:errors.array()});
+            const errorMessages = errors.array().map((error) => error.msg);
+            res.render('productCreate',{errors:errorMessages, tipos});
            console.log(errors);
-          }else{*/
+          }else{
         const comboNuevo = await db.Producto.create({
            
             "name": req.body.nombreProducto,
@@ -52,7 +53,7 @@ const productsControllers = {
             "borrado":false
         })
         res.redirect('list')
-      /*  }*/ 
+        }
     },
     edit: async (req, res) => {
       let producto =  await db.Producto.findByPk(req.params.id)

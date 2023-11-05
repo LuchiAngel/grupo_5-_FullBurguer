@@ -7,13 +7,22 @@
             <main>
                 <section id="createProduct">
                     <ul class="erroresProduct"></ul>
-                    <br>
+                    <br> <% if (locals.errors && locals.errors.length > 0) { %>
+                        <div class="text-dangerMsg">
+                          <ul>
+                            <% locals.errors.forEach((error) => { %>
+                              <li><%= error %></li>
+                            <% }); %>
+                          </ul>
+                        </div>
+                      <% } %>
                     <form class="form-create" action="create" method="post" enctype="multipart/form-data">
                         <br>
                         <h2 class="crearproducto">Nuevo producto</h2><br>
                         <div><label for="Nombre del producto"></label>
                             <input type="text" name="nombreProducto" id="NombreProducto"
                                 placeholder="Nombre del producto">
+                                
                         </div><br>
                         <div class="crearproducto"><label for="Descripcion">Descripción del producto:</label><br>
                             <textarea class="crearproductoD" id="descripcion" name="descripcion" rows="4"

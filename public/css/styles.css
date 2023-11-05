@@ -97,6 +97,11 @@ main{
     color: red;
     text-align: center;
 }
+.text-dangerMsg{
+    color: red;
+    text-align: left;
+    margin-left: 20%;
+}
 /*SEGUNDA PARTE*/
 .wrap2{
     width: 100vw;
