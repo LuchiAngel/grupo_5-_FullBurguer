@@ -10,7 +10,9 @@ html{
     color: yellowgreen;
     
 }
-
+.id{
+    display: none;
+}
 section{
     width: 90%;
     display: flex;

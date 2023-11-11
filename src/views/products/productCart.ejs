@@ -4,20 +4,10 @@
 <body>
     <%- include('../partials/header.ejs')%>
     <main>
-     <section>
+     <section class="selected">
            <h3 class="titular">Mis Compras</h3>
 
-       <article>
-                <ul> 
-                    <li><img class= "fotoProducto" src="/images/PolloBacon.jpg" alt=''></li>
-                    <li><h4 class="nombreHamburguesa">Pollo Bacon</h4></li>    
-                    <li><p class="descripcionHamburguesa">Medallón de pollo crispy con queso cheddar, cebolla, lechuga, tomate, nuestra salsa epecial, y por supuesto bien recargada del más rico bacon, papas regulares.</p></li>
-                    <li class="mas"><button type="button"><i class="fa-solid fa-plus"></i></button></li>
-                    <li><p class="cantidad">1</p></li>
-                    <li class="menos"><button type="button"><i class="fa-solid fa-minus"></i></button></li>
-                    <li><p class="precioTotal">$2.200</p></li>
-                </ul>
-        </article>
+      
         <article>
             <ul>
                 <li><img class= "fotoProducto" src="/images/Nuggets.jpg" alt=''></li>
@@ -45,15 +35,8 @@
 
       <section class="descuentoYPrecioFinal">
     <form action="/" method="get">
-        <div class="codigoDescuento"><label for="codigoDescuento"></label>
-            <input type="text" name="Código de descuento" id="Código de descuento" placeholder="Código de descuento">
-            <button type="submit">Aplicar descuento</button>
-        </div>
-
-         <div class="subtotal"><div class="input">Subtotal</div></div>
-         <div class="descuento"><div class="input">Descuento</div></div>
-         <div class="total"><div class="input">Total</div></div>
-
+         
+         <div class="total"><div class="input" id="total">Total</div></div>
 
         <div>
             <button type="submit">Finalizar Compra</button>
@@ -63,7 +46,7 @@
     
     
     </main>
-    
+    <script src='/js/cart.js'></script>
     </body>
 <%- include('../partials/footer.ejs')%>
     </html>    
