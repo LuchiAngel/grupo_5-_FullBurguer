@@ -10,6 +10,8 @@ const cookieParser = require("cookie-parser");
 const methodOverride = require('method-override');
 const userLoggedMiddleware = require ('./middleware/userLoggedMiddleware');
 
+const apiUser = require('./routes/apis/userRouteApi');
+const apiProduct = require('./routes/apis/productRouteApi');
 
 app.use(session({
     secret: 'Las mejores ha0mburguesas',
@@ -34,3 +36,6 @@ app.listen(3000, () => {
 app.use("/", mainRouter);
 app.use("/product", productsRouter);
 app.use("/users", usersRouter);
+
+app.use("/api/user",apiUser);
+app.use("/api/product",apiProduct);

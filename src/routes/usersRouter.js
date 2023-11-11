@@ -49,7 +49,7 @@ router.post("/register", usersUpload.single('avatar'), validateRegistroForm, use
 router.post("/login", usersController.loginProcess);
 router.get("/restore/:id", usersController.restore);
 
-
+router.get("/list", usersController.list)
 //Create, Edit y Delete.
 
 router.get("/edit/:id", usersController.editUsers);

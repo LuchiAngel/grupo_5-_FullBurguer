@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%><link rel="stylesheet" href="/css/productList.css">
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        <section>
+            <h3 class="titular-detail">Lista de usuarios burguers:</h3>
+            <div class="combo-container">
+                <% user.forEach(i => { %>
+                    <article class="combo">                    
+                        <h4 class="detail"><%= i.name %></h4>
+                        
+                    </article>
+            
+            <% }); %>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer.ejs')%>
+</body>
+</html>

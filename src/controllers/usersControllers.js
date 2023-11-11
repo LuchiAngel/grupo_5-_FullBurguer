@@ -95,6 +95,10 @@ const usersController = {
         res.render('index');
       }  
     },
+    list: async (req, res) => {
+        let usersLista = await db.Usuario.findAll()
+        res.render("usersList", { user: usersLista })
+    },
     profile: async (req, res) => {
         let usuario = await db.Usuario.findByPk(req.params.id)
         res.render('profile', { Usuario: usuario })
@@ -144,7 +148,7 @@ const usersController = {
         const usuarioRestaurado = await db.Usuario.restore({ where: { id: req.params.id } })
         console.log(usuarioRestaurado);
         res.redirect("/login")
-    },
+    }
 
 }
 
