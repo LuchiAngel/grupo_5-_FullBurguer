@@ -503,6 +503,43 @@ input[type="checkbox"]{
     font-size: 15px;
 }
 
+
+.wrap, .wrap2 {
+    height: auto;
+    flex-direction: column;
+}
+
+
+.wrap-texto h1, .wrap-texto p, .wrap-texto a,
+.wrap-texto2 h2, .wrap-texto2 p, .wrap-texto2 a {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    }
+    .wrap-texto h1, .wrap-texto2 h2{
+        font-size: 2rem;
+    }
+
+
+
+
+.wrap-texto p, .wrap-texto2 p {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1rem;
+}
+
+
+.wrap-texto a, .wrap-texto2 a {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 2rem;/* Ajustar según sea necesario */
+}
+   
+   
+
+
+
     
     
 
@@ -533,4 +570,27 @@ input[type="checkbox"]{
     
     }
 }
+@media(max-width:1279px){
+    
+
+   
+    .labelPrecio{
+        margin-left: 45%;
+   
+    }
+    .wrap-texto p,.wrap-texto2 p{
+        font-size: 1.2rem;
+    }
+    .wrap-texto h1,.wrap-texto2 h2{
+        font-size: 3rem;
+    }
+    .wrap-texto a,.wrap-texto2 a{
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
 
