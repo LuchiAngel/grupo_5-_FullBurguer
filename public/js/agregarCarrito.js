@@ -36,6 +36,7 @@ window.onload = function(){
         }
         localStorage.setItem('carrito', JSON.stringify(carrito));
         console.log(producto);
+        window.location.href='/product/list';
     })
 
 

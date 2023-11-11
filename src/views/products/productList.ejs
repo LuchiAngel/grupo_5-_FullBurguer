@@ -9,10 +9,7 @@
         <div class="combo-container">
             <% combo.forEach((combo)=>{%>
               <article class="combo">
-                <h4 class="detail"><%= combo.name %></h4>
-                <p class="descripcion">
-                <%= combo.description %></p>
-                
+                <h4 class="detail"><%= combo.name %></h4>                          
                 <a href="productDetail/<%= combo.id %>"><img class="fotos" src=../images/<%= combo.images %> /></a>
                             
             </article>  <%})%>

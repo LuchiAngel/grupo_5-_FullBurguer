@@ -1,28 +1,40 @@
 window.onload = function () {
-    let displayCarrito = function () {
-        let carrito = JSON.parse(localStorage.getItem('carrito'));
-        let carritoConteiner = document.querySelector('.selected');
-        carritoConteiner.innerHTML = ' '
-        carrito.forEach(element => {
-            carritoConteiner.innerHTML += `
-            <article>
-            <ul> 
-                <li><img class= "fotoProducto" src="/images/${element.img}" alt=''></li>
-                <li><h4 class="nombreHamburguesa">${element.nombre}</h4></li>    
-                <li><p class="descripcionHamburguesa">${element.descr}</p></li>
-                <li class="mas"><button type="button"><i onClick='sumar(${element.id})' class="fa-solid fa-plus"></i></button></li>
-                <li><p class="cantidad">${element.quantity}</p></li>
-                <li class="menos"><button type="button"><i onClick='restar(${element.id})' class="fa-solid fa-minus"></i></button></li>
-                <li><p class="precioTotal">$${element.price * element.quantity}</p></li>
-            </ul>
-    </article>
-            `
-        });
-    }
+   
    
     displayCarrito()
     actualizarCarrito()
 
+}
+let displayCarrito = function () {
+    let carrito = JSON.parse(localStorage.getItem('carrito'));
+    let carritoConteiner = document.querySelector('.selected');
+    carritoConteiner.innerHTML = ' '
+    if (carrito &&carrito.length>0){
+    carrito.forEach(element => {
+        carritoConteiner.innerHTML += `
+        <article>
+        <ul> 
+            <li><img class= "fotoProducto" src="/images/${element.img}" alt=''></li>
+            <li><h4 class="nombreHamburguesa">${element.nombre}</h4></li>    
+            <li><p class="descripcionHamburguesa">${element.descr}</p></li>
+            <li class="mas"><button type="button"><i onClick='sumar(${element.id})' class="fa-solid fa-plus"></i></button></li>
+            <li><p class="cantidad">${element.quantity}</p></li>
+            <li class="menos"><button type="button"><i onClick='restar(${element.id})' class="fa-solid fa-minus"></i></button></li>
+            <li><p class="precioTotal">$${element.price * element.quantity}</p></li>
+        </ul>
+</article>
+        `;
+    });
+}else{
+    carritoConteiner.innerHTML = '<button class= "mensajeCarritoVacio" id="emptyCartMessage"> ¡Eligí tu combo y disfrutá!</button>'
+    let emptyCartMessage = document.getElementById('emptyCartMessage');
+    emptyCartMessage.addEventListener('click', redirectToProductList);
+    function redirectToProductList() {
+        window.location.href ='/product/list';
+        
+    }
+
+}
 }
 let actualizarCarrito = function () {
     let productos = JSON.parse(localStorage.getItem('carrito'));

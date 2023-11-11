@@ -257,17 +257,21 @@ main{
 /*CREACION PRODUCTO*/
 main{
     width: 100vw;
-    height: 70vw;    
-    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGERR2.jpg);
+    height: auto;    
+    background: black;
     background-size: cover;
     background-position: center;
   }
+.crearproductoD{
+    width: 50%;
+}
 
 
 
 .crearproducto{
     color:yellowgreen;
-    text-align: center;
+    text-align: center; 
+    width: auto;
 }
 .form-create{ 
     min-width: 300px;
@@ -275,17 +279,17 @@ main{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     margin: 80px;
-    height: 50vw;
     border: 3px solid yellowgreen;
+    height: auto;
+   
     
-}
-.crearproductoD{
-    width: 50%;
+
 }
 
 .labelPrecio{
-    margin-left: 45%;
+    margin-left: 25%;
     font-size: 20px;
+    text-align: center;
 }
 
 .form-create button:hover{
@@ -394,40 +398,51 @@ input[type="checkbox"]{
     grid-template-rows: auto;
     justify-content: center;
 }
-
+.pieParrafo{
+    margin: 25px;
+}
 .pieParrafo p{
     color: yellowgreen;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 15px;
+    margin-left: 5px;
     background-color: black;
+    font-size: 10px;
 }
-
-.redes {
+.redes{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.redes i{
     color:black;
     margin-top: 20px;
     margin-left: 10px;
+    font-size: 25px;
+    
+}
+.logosRedes{
+    display: flex;
+    flex-direction: row;
 }
 .redes p{
     text-align: center;
     color: yellowgreen;
     background-color: black;
     width: 30%;
-    margin-left: 150px;
+    
+    font-size: 15px;
 }
-.redes img {
-    width: 70px;
-    transition: 0.4s;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-.redes img:hover {
+
+.redes i:hover {
     scale: 1.15;
 }
 
 .direccion iframe {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     margin-top: 10px;
     margin-left: 50px;
 
@@ -437,7 +452,8 @@ input[type="checkbox"]{
     color: yellowgreen;
     background-color: black;
     width: 80%;
-    margin-top: 20px;
+    margin-top: 25px;
+    font-size: 15px;
 }
 /**/
 
@@ -455,6 +471,7 @@ input[type="checkbox"]{
 .precio{
     margin: 2px;
 }
+
 
 @media (max-width:768px){
     nav{
@@ -477,6 +494,14 @@ input[type="checkbox"]{
     .logo {
     width: 25%;
 }
+.pieParrafo p{
+    color: yellowgreen;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: black;
+    font-size: 15px;
+}
 
     
     
@@ -494,6 +519,18 @@ input[type="checkbox"]{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
+    }
+    .pieParrafo p{
+        color: yellowgreen;
+        text-align: center;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-color: black;
+        font-size: 20px;
+    }
+    .labelPrecio{
+        margin-left: 45%;
+    
     }
 }
 
