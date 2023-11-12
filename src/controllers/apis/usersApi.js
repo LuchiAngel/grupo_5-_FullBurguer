@@ -23,7 +23,7 @@ const controller = {
         let user = await db.Usuario.findByPk(req.params.id,{atributtes:{exclude:['id_roles','password']}})
         let respuesta = {
             ...user,
-            url_imagen:'/img/users/'+user.avatar,
+            url_imagen:'/images/users/'+user.avatar,
         }
         res.json(respuesta)
 

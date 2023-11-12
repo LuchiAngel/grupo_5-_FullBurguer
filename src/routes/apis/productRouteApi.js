@@ -7,7 +7,7 @@ const controller = require("../../controllers/apis/productsApi");
 
 
 
-router.get("/list", controller.list);
+router.get("/", controller.list);
 router.get("/productDetail/:id", controller.detalle);
 
 
