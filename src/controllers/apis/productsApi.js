@@ -23,7 +23,7 @@ const controller = {
                 name:row.name,
                 description:row.description,
                 tipo:row.Tipo,
-                detalle: 'api/product/detalle/'+row.id
+                detail: '/api/product/detalle/'+row.id
             }
         })
 
