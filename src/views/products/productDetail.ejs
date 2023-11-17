@@ -9,7 +9,7 @@
             <% if (combo) { %>
           <h3 class="titular-detail"id='name'><%= combo.name %></h3>
           <p class="id"id='idProduct'><%= combo.id %></p>
-          <img class="fotos" id='img'src="/images/<%= combo.images %>" alt='<%= combo.images %>'>
+          <img class="fotos" id='img'src="/images/products/<%= combo.images %>" alt='<%= combo.images %>'width=300>
           <p class="descripcion"id='descr'><%= combo.description %></p>
           <p class="precio">$ <span id='price'><%= combo.price %></p></span> 
       </article>

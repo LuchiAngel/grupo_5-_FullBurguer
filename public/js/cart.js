@@ -14,7 +14,7 @@ let displayCarrito = function () {
         carritoConteiner.innerHTML += `
         <article>
         <ul> 
-            <li><img class= "fotoProducto" src="/images/${element.img}" alt=''></li>
+            <li><img class= "fotoProducto" src="/images/products/${element.img}" alt=''></li>
             <li><h4 class="nombreHamburguesa">${element.nombre}</h4></li>    
             <li><p class="descripcionHamburguesa">${element.descr}</p></li>
             <li class="mas"><button type="button"><i onClick='sumar(${element.id})' class="fa-solid fa-plus"></i></button></li>
