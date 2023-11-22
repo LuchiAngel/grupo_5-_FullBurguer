@@ -18,13 +18,7 @@ const validateRegistroForm = [
     body('address').notEmpty().withMessage('Ingrese su domicilio'),
     body('email').notEmpty().isEmail().withMessage('Ingrese un email valido'),
     body('contraseña').notEmpty().isLength({ min: 8 }).withMessage('Escriba una contraseña'),
-    body('recontraseña').custom((value, { req }) => {
-        if (value !== req.check.password) {
-          throw new Error('Las contraseñas no coinciden');
-        }
-        return true;
-      }),
-];
+   ];
 
 
 const userStorage = multer.diskStorage({
