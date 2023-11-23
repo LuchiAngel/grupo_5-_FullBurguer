@@ -22,6 +22,7 @@ const controller = {
                 id:row.id,
                 name:row.name,
                 description:row.description,
+                imagen:row.images,
                 tipo:row.Tipo,
                 detail: '/api/product/detalle/'+row.id
             }

@@ -1,12 +1,12 @@
 import React from 'react'
-function Genre(props) {
-    console.log(props);
+function Genre({genero}) {
+   
     return (
-        
+       
         <div className="col-lg-6 mb-4">
             <div className="card bg-dark text-white shadow">
                 <div className="card-body">
-                    {props.name} rank:{props.ranking}
+                    {genero}
                 </div>
             </div>
         </div>
@@ -15,7 +15,15 @@ function Genre(props) {
 
 
 
+
+
+
+
 }
 
 
+
+
 export default Genre
+
+

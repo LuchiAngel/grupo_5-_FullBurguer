@@ -1,25 +1,50 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import image from '../assets/images/LOGO.jpeg';
 import { Link, Route,Switch } from 'react-router-dom';
 import ContentWrapper from './ContentWrapper';
-import ContentRowTop from './ContentRowTop';
 import GenresInDb from './GenresInDb';
 
+
 function SideBar(){
+
+
+const [burguerInfo, setBurguerInfo] = useState({
+            count: 0,
+            countByTipo: {},
+            productos: [],
+})
+    async function fetchApi(){
+        let respuesta = await fetch("/api/product")
+        let data = await respuesta.json()
+        setBurguerInfo(data)
+    }
+    useEffect(() =>{
+        fetchApi()
+    },[])
+
+
+    console.log(burguerInfo);
+
+
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <br/>
+
 
                 {/*<!-- Sidebar - Brand -->*/}
+                <br/>
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
                         <img className="w-100" src={image} alt="Digital House"/>
                     </div>
                 </a>
 
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider my-0"/>
+
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
@@ -28,44 +53,42 @@ function SideBar(){
                         <span>Dashboard - DH movies</span></a>
                 </li>
 
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
+
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <br/>
+                <div className="sidebar-heading">Acciones</div>
+
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="/contentRowTop">
+                    <Link className="nav-link collapsed" to="/">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Información</span>
                     </Link>
                 </li>
+
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to ="/genresInDB">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Tipo de Productos</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
-                </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             <Switch>
-                <Route path="/" exact={true} ><ContentWrapper></ContentWrapper></Route>
-                <Route path="/contentRowTop" exact={true} ><ContentRowTop/></Route>
-                <Route path="/genresInDB" exact={true} ><GenresInDb/></Route>
+                <Route path="/" exact={true} ><ContentWrapper burguerInfo = {burguerInfo}></ContentWrapper></Route>
+                <Route path="/genresInDB" exact={true} ><GenresInDb generos = {burguerInfo.countByTipo}/></Route>
             </Switch>
             {/*<!-- End of Sidebar -->*/}
-            
+           
         </React.Fragment>
     )
 }
