@@ -13,7 +13,7 @@
                         <h2 class="editarUsuario">Editar Usuario</h2>
                         <ul class="errores"></ul>
                         <br>
-                        <form class="form-edit-users" action="/users/edit/<%- Usuario.id %>?_method=put" method="post">
+                        <form class="form-edit-users" action="/users/edit/<%- Usuario.id %>?_method=put" method="post" enctype="multipart/form-data">
                             <br>
                             <label class="subtitulosEdit" for="name"> Nombre del usuario</label>
                             <p><input type="text" name="name" id="name" value="<%= Usuario.name %>" ></p>
