@@ -38,8 +38,8 @@ const productsControllers = {
        const tipos= await db.Tipo.findAll();
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            const errorMessages = errors.array().map((error) => error.msg);
-            res.render('productCreate',{errors:errorMessages, tipos});
+            //const errorMessages = errors.array().map((error) => error.msg);
+            res.render('productCreate',{errors:errors.array(), tipos, oldData: req.body });
            console.log(errors);
           }else{
         const comboNuevo = await db.Producto.create({

@@ -5,33 +5,10 @@ const multer = require("multer");
 const path = require ("path");
 const authMiddleware = require ('../middleware/authMiddleware');
 const isAdmin = require ('../middleware/adminMiddleware');
-
+const uploadFile =require ('../middleware/multerProduct');
 
 //Para validar el back
-const {body} = require('express-validator')
-
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        let folder = path.join(__dirname, '../../public/images/products')
-        cb(null, folder);
-    },
-    filename: function (req, file, cb) {
-        const uniqueSuffix = Date.now() + Math.round(Math.random()*1E9)
-        cb(null,uniqueSuffix + path.extname(file.originalname));
-    }
-})
-const uploadFile = multer({storage});
-//Validaciones
-
-const validateCreateProductForm = [
-    body('nombreProducto').notEmpty().withMessage('Debes ingresar el nombre del producto'),
-    body('descripcion').notEmpty().withMessage('Debes ingresar la descripción del producto'),
-    body('id_categoria').notEmpty().withMessage('Debes seleccionar una categoria'),
-    body('precio').notEmpty().isNumeric().withMessage('Debes ingresar el precio del producto'),
-   /* body('images').notEmpty().withMessage('Debes ingresar una foto del producto'),*/
-];
-
+const validateCreateProductForm = require ( '../../validations/productCreateValidation')
 
 
 router.get("/list", productsControllers.productList);

@@ -1,7 +1,7 @@
 const path = require('path');
 let fs = require('fs');
 const db = require('../database/models');
-const { profile } = require('console');
+const { profile, log } = require('console');
 const sequelize = db.sequelize;
 const Usuario = db.Usuario;
 const roles = db.Roles;
@@ -57,11 +57,13 @@ const usersController = {
         const roles = await db.Roles.findAll();
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            const errorMessages = errors.array().map((error) => error.msg);
-            return res.render('register', {
-              errors:errorMessages, roles,
+           // const errorMessages = errors.array().map((error) => error.msg);
+           console.log(errors.errors) 
+           return res.render('register', {
+              errors:errors.array(), roles,
               oldData: req.body,
             });
+             
           }else{
 
         let userInDB = await db.Usuario.findOne({

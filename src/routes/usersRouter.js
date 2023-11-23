@@ -6,32 +6,9 @@ const path = require ("path");
 const guestMiddleware = require ('../middleware/guestMiddleware');
 const authMiddleware = require ('../middleware/authMiddleware');
 const registerMiddleware = require("../middleware/registerMiddleware");
-
+const usersUpload = require ('../middleware/multerMiddleware');
 //Para validar el back
-const {body} = require('express-validator')
-
-//Validaciones
-
-const validateRegistroForm = [
-    body('nombre').notEmpty().withMessage('Escriba su nombre'),
-    body('id_roles').notEmpty().withMessage('Seleccione un rol'),
-    body('address').notEmpty().withMessage('Ingrese su domicilio'),
-    body('email').notEmpty().isEmail().withMessage('Ingrese un email valido'),
-    body('contraseña').notEmpty().isLength({ min: 8 }).withMessage('Escriba una contraseña'),
-   ];
-
-
-const userStorage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        let folder = path.join(__dirname, '../../public/images/users')
-        cb(null, folder);
-    },
-    filename: function (req, file, cb) {
-        const uniqueSuffix = Date.now() + Math.round(Math.random()*1E9)
-        cb(null,uniqueSuffix + path.extname(file.originalname));
-    }
-})
-const usersUpload = multer({storage: userStorage});
+const validateRegistroForm = require ('../../validations/registerValidator');
 
 
 router.get("/register", guestMiddleware, usersController.register);       

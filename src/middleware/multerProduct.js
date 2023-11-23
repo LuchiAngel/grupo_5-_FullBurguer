@@ -1,9 +1,9 @@
 const multer = require("multer");
 const path = require ("path");
 
-const userStorage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        let folder = path.join(__dirname, '../../public/images/users')
+        let folder = path.join(__dirname, '../../public/images/products')
         cb(null, folder);
     },
     filename: function (req, file, cb) {
@@ -19,6 +19,6 @@ const fileFilter = (req,file,cb)=>{
         cb(null, false)
     }
 }
-const usersUpload = multer({fileFilter, storage: userStorage});
+const uploadFile = multer({fileFilter, storage});
 
-module.exports = usersUpload
+module.exports = uploadFile
