@@ -57,8 +57,7 @@ const usersController = {
         const roles = await db.Roles.findAll();
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-           // const errorMessages = errors.array().map((error) => error.msg);
-           console.log(errors.errors) 
+        
            return res.render('register', {
               errors:errors.array(), roles,
               oldData: req.body,
@@ -121,9 +120,12 @@ const usersController = {
 
 
     editProcess: async function (req, res) {
+        console.log(req.body)
         const usuario = await db.Usuario.findByPk(req.params.id)
-        const usuarioEditado = await db.Usuario.update({
+        
 
+
+        const usuarioEditado = await db.Usuario.update({            
             "name": req.body.name,
             "birthday": req.body.birthday,
             "address": req.body.address,
