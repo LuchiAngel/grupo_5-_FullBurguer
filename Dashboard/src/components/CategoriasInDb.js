@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Genre from './Genre'
+import Categorias from './Categorias'
 
-class GenresInDb extends Component{
+class CategoriasInDb extends Component{
 
     constructor(){
      super()
@@ -20,12 +20,12 @@ class GenresInDb extends Component{
         <div className="col-lg-6 mb-4">                    
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800">Tipo de producto</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800">Categorias</h5>
                                 </div>
                                 <div className="card-body">
                                     <div className="row">
                                         {this.state.generos.map((genero,i)=> {
-                                            return (<Genre key={genero+i}{...genero}/>)
+                                            return (<Categorias key={genero+i}{...genero}/>)
                                         })}
                                     </div>
                                 </div>
@@ -36,6 +36,6 @@ class GenresInDb extends Component{
 
 
 
-export default GenresInDb
+export default CategoriasInDb
 
 

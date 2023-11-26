@@ -1,6 +1,7 @@
 import React from 'react';
 import Cards from './Cards';
-import GenresInDb from './GenresInDb';
+import CategoriasInDb from './CategoriasInDb';
+import ListaProductos from './ListaProductos';
 
 
 
@@ -67,10 +68,17 @@ function ContentRowTop({burguerInfo}){
                         {/*<!-- End content row last movie in Data Base -->*/}
 
 
-                        {/*<!-- Genres in DB -->*/}
-                        <GenresInDb/>
+                        {/*<!-- Categorias in DB -->*/}
+                        <CategoriasInDb/>
                     </div>
                 </div>
+
+
+                   {/*<!-- Productos in DB -->*/}
+                   <ListaProductos/>
+                    <div/>
+        
+
                 {/*<!--End Content Row Top-->*/}
 
 

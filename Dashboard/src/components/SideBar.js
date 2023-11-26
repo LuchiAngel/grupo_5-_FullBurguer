@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import image from '../assets/images/LOGO.jpeg';
 import { Link, Route,Switch } from 'react-router-dom';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
+import CategoriasInDb from './CategoriasInDb';
+import ListaProductos from './ListaProductos';
 
 
 function SideBar(){
@@ -50,7 +51,7 @@ const [burguerInfo, setBurguerInfo] = useState({
                 <li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></a>
+                        <span>Dashboard </span></a>
                 </li>
 
 
@@ -74,9 +75,16 @@ const [burguerInfo, setBurguerInfo] = useState({
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to ="/genresInDB">
+                    <Link className="nav-link" to ="/CategoriasInDb">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Tipo de Productos</span></Link>
+                        <span>Categorias</span></Link>
+                </li>
+
+                    {/*<!-- Nav Item - Charts -->*/}
+                    <li className="nav-item">
+                    <Link className="nav-link" to ="/ListaProductos">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>Listado de Productos</span></Link>
                 </li>
 
 
@@ -85,7 +93,8 @@ const [burguerInfo, setBurguerInfo] = useState({
             </ul>
             <Switch>
                 <Route path="/" exact={true} ><ContentWrapper burguerInfo = {burguerInfo}></ContentWrapper></Route>
-                <Route path="/genresInDB" exact={true} ><GenresInDb generos = {burguerInfo.countByTipo}/></Route>
+                <Route path="/CategoriasInDb" exact={true} ><CategoriasInDb/></Route>
+                <Route path="/ListaProductos" exact={true} ><ListaProductos/></Route>
             </Switch>
             {/*<!-- End of Sidebar -->*/}
            

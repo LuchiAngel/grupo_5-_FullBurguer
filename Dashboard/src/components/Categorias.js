@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Genre(props) {
+
+function Categorias(props) {
    console.log(props);
     return (
        
@@ -25,6 +26,6 @@ function Genre(props) {
 
 
 
-export default Genre
+export default Categorias
 
 
