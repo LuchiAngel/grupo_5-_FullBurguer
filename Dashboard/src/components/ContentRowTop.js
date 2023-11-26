@@ -5,29 +5,31 @@ import ListaProductos from './ListaProductos';
 
 
 
-let moviesInDB = {
-    titulo: 'Total de productos',
-    color: 'primary',
-    cantidad: 1,
-    icono: "fa-hamburger",
-}
-let totalAwards = {
-    titulo:' Total de categorias',
-    color:'success',
-    cantidad: 79,
-    icono:'fa-list'
-}
-let actorsQuantity = {
-    titulo:'Total de usuarios' ,
-    color:'warning',
-    cantidad:49,
-    icono:'fa-user'
-}
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+
 
 
 function ContentRowTop({burguerInfo}){
     if (burguerInfo.count > 0 ){
+        let moviesInDB = {
+            titulo: 'Total de productos',
+            color: 'primary',
+            cantidad: burguerInfo.count,
+            icono: "fa-hamburger",
+        }
+        let totalAwards = {
+            titulo: ' Total de categorias',
+            color: 'success',
+            cantidad: 79,
+            icono: 'fa-list'
+        }
+        let actorsQuantity = {
+            titulo: 'Total de usuarios',
+            color: 'warning',
+            cantidad: 49,
+            icono: 'fa-user'
+        }
+        let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+
     return(
         <React.Fragment>
                 {/*<!-- Content Row Top -->*/}
