@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Genre from './Genre'
 
-function GenresInDb ({generos}){
+class GenresInDb extends Component{
 
+    constructor(){
+     super()
+        this.state = {generos:[]}
+    }
 
-if(typeof generos == "object"){
-    return(
+    async componentDidMount(){
+        let respuesta = await fetch('/api/product')
+        let countByTipo = await respuesta.json()
+        console.log(countByTipo);
+        this.setState({generos: countByTipo.countByTipo})
+    }
+
+    render(){
+        return(
         <div className="col-lg-6 mb-4">                    
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3">
@@ -13,21 +24,15 @@ if(typeof generos == "object"){
                                 </div>
                                 <div className="card-body">
                                     <div className="row">
-                                        {Object.keys(generos).map((genero,i)=> {
-                                            return (<Genre key={genero+i} genero={genero}/>)
+                                        {this.state.generos.map((genero,i)=> {
+                                            return (<Genre key={genero+i}{...genero}/>)
                                         })}
-
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-    )
+    )}
 }
-
-
-}
-
 
 
 

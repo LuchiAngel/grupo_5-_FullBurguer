@@ -13,8 +13,14 @@ const controller = {
         respuesta.count = productos.length;
         
         tipos.forEach(tipo => {
-            respuesta.countByTipo[tipo.nombre] = tipo.productos.length;
-            
+            respuesta.countByTipo = tipos.map(row =>{
+                return{
+                    tipo:row.nombre,
+                    cantidad:row.productos.length,
+                    
+                }
+            });
+        
         });
         
         respuesta.productos = productos.map(row =>{
@@ -23,7 +29,7 @@ const controller = {
                 name:row.name,
                 description:row.description,
                 imagen:row.images,
-                tipo:row.Tipo,
+                tipo:row.tipo,
                 detail: '/api/product/detalle/'+row.id
             }
         })

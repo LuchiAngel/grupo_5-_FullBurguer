@@ -68,7 +68,7 @@ function ContentRowTop({burguerInfo}){
 
 
                         {/*<!-- Genres in DB -->*/}
-                        <GenresInDb generos = {burguerInfo.countByTipo}/>
+                        <GenresInDb/>
                     </div>
                 </div>
                 {/*<!--End Content Row Top-->*/}
