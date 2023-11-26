@@ -13,6 +13,7 @@ let displayCarrito = function () {
     carrito.forEach(element => {
         carritoConteiner.innerHTML += `
         <article>
+       
         <ul> 
             <li><img class= "fotoProducto" src="/images/products/${element.img}" alt=''></li>
             <li><h4 class="nombreHamburguesa">${element.nombre}</h4></li>    
@@ -73,3 +74,16 @@ let borrar = function (id) {
 
 
 }
+const finalizarCompraButton = document.getElementById('finalizarCompra');
+    
+    finalizarCompraButton.addEventListener('click', function () {
+       
+        
+        const confirmacion = window.confirm('¡Gracias por tu compra! ¿Quieres volver al home?');
+       
+       
+if (confirmacion) {
+localStorage.removeItem('carrito');
+        
+        window.location.href = '/'; }else{window.location.href = '/product/list'}
+    });
