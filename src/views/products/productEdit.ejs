@@ -4,7 +4,7 @@
 
     <body>
         <%- include('../partials/header.ejs')%>
-            <main>
+            <main class="mainEditarProducto">
                 <section id="editProduct">
                     <br>
                     <ul class="erroresProduct"></ul>
@@ -17,22 +17,23 @@
                           </ul>
                         </div>
                       <% } %>
-                    <br>
-                    <form class="form-create" action="/product/edit/<%= combo.id %>?_method=put" method="post" enctype="multipart/form-data">
-                        <br>
-                        <h2 class="crearproducto">Editar Producto</h2><br>
-                        <div><label for="Nombre del producto"></label>
+                      <br>
+                      <h2 class="editarproducto">Editar Producto</h2>
+                    
+                    <form class="form-edit" action="/product/edit/<%= combo.id %>?_method=put" method="post" enctype="multipart/form-data">
+                      <br>
+                        <div><label class="editarproductoSubtitulos" for="Nombre del producto">Nombre del producto</label>
                             <input value="<%=combo.name%>" type="text" name="nombreProducto"
                                 id="nombreProducto" placeholder="Nombre del producto">
                         </div><br>
-                        <div class="crearproducto"><label for="Descripcion">Descripción del producto:</label><br>
-                            <textarea class="crearproductoD" id="descripcion" name="descripcion" rows="4"
+                        <div><label class="editarproductoSubtitulos" for="Descripcion">Descripción del producto</label><br>
+                            <textarea class="editarproductoD"  id="descripcion" name="descripcion" rows="4"
                                 cols="50vw"><%=combo.description%></textarea>
                         </div>
-                        <div class="crearproducto"><label for="images">Imagen</label>
+                        <div><label  class="editarproductoSubtitulos" for="images">Imagen</label>
                             <input type="file" name="images" id="images" accept=".jpg, .png">
                             
-                            <h2 class="form">Categoría</h2>
+                            <h2 class="form" class="editarproductoSubtitulos">Categoría</h2>
                             <label for="id_categoria"></label>
                             <select class= 'categoria' id="id_categoria" name="id_categoria" >
                                 <% tipos.forEach(tipo => { %>
@@ -40,8 +41,8 @@
                                 <% }); %>
                               </select>
                               <br>  
-                            <label for="precio">Precio del producto:</label>
-                            <input class='form' value="<%=combo.price%>" type="number" id="precio" name="precio" step="0.01"
+                            <label for="precio" class="editarproductoSubtitulos">Precio del producto</label>
+                            <input class="form" value="<%=combo.price%>" type="number" id="precio" name="precio" step="0.01"
                                 ><br>
 
 
@@ -54,13 +55,7 @@
                         <button type="submit"> Eliminar</button>
                   </form>
                     
-                    
-    
-    
-                        
-
                 </section>
-
 
             </main>
 

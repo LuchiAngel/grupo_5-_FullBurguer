@@ -57,13 +57,13 @@ main{
     width: 100vw;
     height: 40vw;
     display: flex;    
-    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGER1.jpg);
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .5)), url(../images/BURGER1.jpg);
     background-size: cover;
     background-position: center;
 }
 .wrap-texto h1{
     color: yellowgreen;
-    text-transform: uppercase;
+    text-transform:initial;
     font-size: 4rem;
     text-align: center;
     margin-top: 10px;
@@ -73,7 +73,7 @@ main{
 }
 .wrap-texto p{
     color: yellowgreen;
-    text-transform:lowercase;
+    text-transform: initial;
     font-size: 2rem;
     text-align: end;
     margin-left: 680px;
@@ -82,7 +82,7 @@ main{
 }
 .wrap-texto a{
     color: yellowgreen;
-    text-transform: uppercase;
+    text-transform: initial;
     font-size: 4rem;
     text-align: end;
     -webkit-text-stroke: 2px yellowgreen;
@@ -113,7 +113,7 @@ main{
 }
 .wrap-texto2 h2{
     color: yellowgreen;
-    text-transform: uppercase;
+    text-transform: initial;
     font-size: 3rem;
     text-align: center;
     margin-top: 80px;
@@ -123,7 +123,7 @@ main{
 }
 .wrap-texto2 p{
     color: yellowgreen;
-    text-transform: lowercase;
+    text-transform: initial;
     font-size: 2rem;
     text-align: center;
     margin-left: 10px;
@@ -257,15 +257,25 @@ main{
 /*CREACION PRODUCTO*/
 main{
     width: 100vw;
-    height: auto;    
-    background: black;
+    height: 60vw;    
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .3)), url(../images/salsaEspecial.jpg);
     background-size: cover;
     background-position: center;
   }
 .crearproductoD{
-    width: 50%;
+    color: #000;
+    width: 60%;
+    border: 5px solid yellowgreen;
+    padding: 6px;
+    font-size: 15px;
 }
-
+.crearproductoTitulo{
+    text-align: center;
+    font-size: 35px;
+    width: 100%;
+    color: yellowgreen;
+   
+  }
 
 
 .crearproducto{
@@ -273,6 +283,7 @@ main{
     text-align: center; 
     width: auto;
 }
+
 .form-create{ 
     min-width: 300px;
     border-radius: 50px;
@@ -281,7 +292,6 @@ main{
     margin: 80px;
     border: 3px solid yellowgreen;
     height: auto;
-   
     
 
 }
@@ -292,11 +302,7 @@ main{
     text-align: center;
 }
 
-.form-create button:hover{
-    color:yellowgreen;
-    border: 3px solid yellowgreen;
-    background: linear-gradient(yellowgreen);
-}
+
 .form-create button{
     display: block;
     margin: auto;
@@ -312,6 +318,15 @@ main{
     transition: all .5s ease;
     border: 1px solid yellowgreen;
 }
+
+.form-create button:hover{
+    color:black;
+    background-color: yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
+}
+
+
 .form-create input{
     display: block;
     margin: auto;
@@ -362,6 +377,113 @@ input[type="checkbox"]{
     text-align: center;
     align-content: center;
   }
+
+
+/*EDITAR PRODUCTO*/
+
+
+
+.mainEditarProducto{
+    width: 100vw;
+    height: 60vw;  
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .3)), url(../images/paraCompartir.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+
+.editarproducto{
+    color:yellowgreen;
+    text-align: center;
+    align-content: center;
+    font-size: 35px;
+}
+
+.editarproductoD{
+    color: #000;
+    width: 60%;
+    border: 5px solid yellowgreen;
+    padding: 6px;
+    font-size: 15px;
+}
+
+.form-edit{ 
+    min-width: 300px;
+    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 80px;
+    border: 3px solid yellowgreen;
+    height: auto;
+    text-align: center;
+}
+
+
+.editarproductoSubtitulos{
+    color:yellowgreen;
+    text-align: center; 
+    width: 50%;
+    font-size: 20px;
+}
+
+.form-edit input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    font-size: 1rem;
+    outline: none;
+}
+.form-edit input:hover{
+    transition: .5s;
+    border:5px solid yellowgreen;
+    color: yellowgreen;
+
+}
+
+.form-edit button:hover{
+    color:black;
+    background-color: yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
+}
+.form-edit button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: yellowgreen;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all .5s ease;
+    border: 1px solid yellowgreen;
+}
+
+
+.remember {
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+  }
+
+
+
+
+
+
 
 
 /* Validaciones */

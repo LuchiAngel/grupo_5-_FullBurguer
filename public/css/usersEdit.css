@@ -1,13 +1,11 @@
 /**/
-/*CREACION USUARIO*/
-
-
+/*EDITAR USUARIO*/
 
 
 main{
     width: 100vw;
     height: 80vw;    
-    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .1)), url(../images/BURGERR2.jpg);
+    background: linear-gradient(to bottom , rgb(0 0 0/ 1), rgb(0 0 0/ .3)), url(../images/BURGER3.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -26,10 +24,14 @@ main{
     border-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    margin: 80px;
     height: 50vw;   
     border: 3px solid yellowgreen;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
   }
+
  .eliminForm{
   border: none;
  }
@@ -38,7 +40,7 @@ main{
     display: flex;
     margin: auto;
     height: 50px;
-    width: 50%;
+    width: 75%;
     padding-left: 10px;
     color: yellowgreen;
     border: 1px solid yellowgreen;
@@ -47,7 +49,7 @@ main{
     background-color: transparent;
     border-top-left-radius: 10px;
     border-bottom-right-radius:10px;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
   }
  
@@ -63,32 +65,30 @@ main{
  
   .subtitulosEdit{
     font-size: 25px;
-    margin:auto;
-    padding-left: 8%;
     margin-top: 50px;
+    text-align: center;
+    
   }
  
  
- 
- 
   .guardarEditUser:hover {
-    background-color: greenyellow;
-    border: 2px inset;
+    color:black;
+    background-color: yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
   }
  
  
   .guardarEditUser{
-    width: 20%;
-    padding: 10px;
-    margin: 40%;
-    border-radius: 5px;
-    font-size: 17px;
-    color: #000;
-    background-color: white;
     display: block;
+    margin: auto;
     margin-top: 25px;
     margin-bottom: 30px;
     height: 40px;
+    width: 80%;
+    background: transparent;
+    color: yellowgreen;
+    border-radius: 2px;
     cursor: pointer;
     outline: none;
     transition: all .5s ease;
@@ -98,25 +98,23 @@ main{
  
  
   .eliminarUser:hover {
-    background-color: greenyellow;
-    border: 2px inset;
+    color:black;
+    background-color: yellowgreen;
+    border: 3px solid yellowgreen;
+    background: linear-gradient(yellowgreen);
   }
  
  
   .eliminarUser{
- 
- 
-    width: 20%;
-    padding: 10px;
-    margin: 40%;
-    border-radius: 5px;
-    font-size: 17px;
-    color: #000;
-    background-color: white;
     display: block;
+    margin: auto;
     margin-top: 25px;
     margin-bottom: 30px;
     height: 40px;
+    width: 80%;
+    background: transparent;
+    color: yellowgreen;
+    border-radius: 2px;
     cursor: pointer;
     outline: none;
     transition: all .5s ease;

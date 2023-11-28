@@ -15,16 +15,7 @@ function Categorias(props) {
     )
 
 
-
-
-
-
-
-
 }
-
-
-
 
 export default Categorias
 

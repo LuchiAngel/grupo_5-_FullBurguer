@@ -48,7 +48,7 @@ const productsControllers = {
             "description": req.body.descripcion,
             "price": req.body.precio,
             "discount": 27,
-            "images": req.file ? req.file.filename : 'DobleAngus.JPG',
+            "images": req.file ? req.file.filename : 'Cargando.png',
             "id_categoria": req.body.id_categoria,
             "borrado":false
         })
@@ -80,7 +80,7 @@ const productsControllers = {
             "description": req.body.descripcion,
             "price": req.body.precio,
             "discount": 27,
-            "images": req.file ? req.file.filename : 'DobleAngus.JPG',
+            "images": req.file ? req.file.filename : 'Cargando.png',
             "id_categoria": req.body.id_categoria,
             "borrado":false
         },{where:{

@@ -50,15 +50,6 @@ window.onload = function (){
         }
 
 
-        if(form.images.value == ''){
-            form.images.classList.remove('is-valid');
-            form.images.classList.add('is-invalid');
-            errores.push('Seleccione una imagen para el producto.')
-        } else {
-            form.images.classList.remove('is-invalid');
-            form.images.classList.add('is-valid');
-        }
-
 
         const ul = document.querySelector(".erroresProduct");
 
