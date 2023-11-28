@@ -2,10 +2,7 @@ import React from 'react';
 import Cards from './Cards';
 import CategoriasInDb from './CategoriasInDb';
 import ListaProductos from './ListaProductos';
-
-
-
-
+import Users from './Users';
 
 
 function ContentRowTop({burguerInfo}){
@@ -19,13 +16,13 @@ function ContentRowTop({burguerInfo}){
         let totalAwards = {
             titulo: ' Total de categorias',
             color: 'success',
-            cantidad: 79,
+            cantidad: burguerInfo.countByTipo.length,
             icono: 'fa-list'
         }
         let actorsQuantity = {
             titulo: 'Total de usuarios',
             color: 'warning',
-            cantidad: 49,
+            cantidad: Users.count,
             icono: 'fa-user'
         }
         let cartProps = [moviesInDB, totalAwards, actorsQuantity];
@@ -78,6 +75,13 @@ function ContentRowTop({burguerInfo}){
 
                    {/*<!-- Productos in DB -->*/}
                    <ListaProductos/>
+                    <div/>
+
+
+
+
+                           {/*<!-- Productos in DB -->*/}
+                           <Users/>
                     <div/>
         
 
