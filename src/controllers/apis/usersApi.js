@@ -13,6 +13,7 @@ const controller = {
                 name:row.name,
                 email:row.email,
                 detail:'/api/user/profile/'+row.id
+                
             }
         })
 

@@ -57,7 +57,7 @@ function ContentRowTop({burguerInfo}){
                                 <div className="card-body">
 								<p>{burguerInfo.productos[burguerInfo.productos.length -1].name}</p>
                                     <div className="text-center">
-                                    <img className="imagenHamburguesa" style={{width: 40 +'rem'}} src={burguerInfo.productos[burguerInfo.productos.length -1].imagen} alt="Imagen-Ultima-Hamburguesa"></img>
+                                    <img className="imagenHamburguesa" style={{width: 20 +'rem'}} src={burguerInfo.productos[burguerInfo.productos.length -1].imagen} alt="Imagen-Ultima-Hamburguesa"></img>
                                     </div>
                                     <p>{burguerInfo.productos[burguerInfo.productos.length -1].description}</p>
                                     <a className="btn btn-danger" target="_blank" rel="nofollow" href="/VerDetalle">Ver detalle</a>

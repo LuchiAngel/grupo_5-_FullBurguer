@@ -28,7 +28,7 @@ const controller = {
                 id:row.id,
                 name:row.name,
                 description:row.description,
-                imagen:row.images,
+                imagen:'images/products/'+ row.images,
                 tipo:row.tipo,
                 detail: '/api/product/detalle/'+row.id
             }
@@ -42,7 +42,7 @@ const controller = {
         let producto = await db.Producto.findByPk(req.params.id)
         let respuesta = {
             ...producto,
-            url_imagen:'/images/'+producto.images,
+            url_imagen:'/images/products/'+producto.images,
         }
         res.json(respuesta)
         
