@@ -1,12 +1,12 @@
 window.onload = function (){
 
     let formulario = document.querySelector('#editProduct');
-    let titulo = document.querySelector('.crearproducto');  
+    let titulo = document.querySelector('.editarproducto');  
 
 
     const inputNombre = document.querySelector("#nombreProducto");
     inputNombre.focus();
-    const form = document.querySelector('.form-create');
+    const form = document.querySelector('.form-edit');
     form.addEventListener('submit', (e) => {
         
         let errores = [];

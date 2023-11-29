@@ -121,18 +121,25 @@ main{
     border: 1px solid yellowgreen;
    
   }
- 
+  .is-valid {
+    color: #198754;
+    border: #198754 3px solid;
+  }
+  
+  .is-invalid {
+    color: #842029;
+    border: #842029 3px solid;
+  }
+  
   .alert-warning{
     color: red;
     font-size: 18px;
     background-color: transparent;
-    text-align: left;
+    text-align: center;
     display: block;
     margin: auto;
     height: 40px;
     width: 60%;
     margin-top: 2px;
-
-    
     
 }

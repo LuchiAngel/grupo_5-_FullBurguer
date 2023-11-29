@@ -24,7 +24,7 @@ router.get("/list", usersController.list)
 //Create, Edit y Delete.
 
 router.get("/edit/:id", usersController.editUsers);
-router.put("/edit/:id", usersUpload.single('avatar'), usersController.editProcess);
+router.put("/edit/:id", usersUpload.single('avatar'),validateRegistroForm, usersController.editProcess);
 
 router.delete("/delete/:id", usersController.deleteProcess);
 

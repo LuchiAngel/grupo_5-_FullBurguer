@@ -21,15 +21,6 @@ window.onload = function (){
             form.name.classList.add('is-valid');
         }
 
-        if(form.birthday.value == ''){
-            form.birthday.classList.remove('is-valid');
-            form.birthday.classList.add('is-invalid');
-            errores.push('Debe colocar su fecha de nacimiento.')
-        } else {
-            form.birthday.classList.remove('is-invalid');
-            form.birthday.classList.add('is-valid');
-        }
-
         if(form.address.value == ''){
             form.address.classList.remove('is-valid');
             form.address.classList.add('is-invalid');
@@ -37,6 +28,15 @@ window.onload = function (){
         } else {
             form.address.classList.remove('is-invalid');
             form.address.classList.add('is-valid');
+        }
+
+        if(form.avatar.value == ''){
+            form.avatar.classList.remove('is-valid');
+            form.avatar.classList.add('is-invalid');
+            errores.push('Seleccione una imagen para el producto.')
+        } else {
+            form.avatar.classList.remove('is-invalid');
+            form.avatar.classList.add('is-valid');
         }
 
         if(form.password.value == '' || form.password.value.length < 8 ){

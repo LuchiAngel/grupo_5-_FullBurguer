@@ -11,6 +11,17 @@
             <main>
                 <section id="editarUsuario">
                     <br>
+                    <ul class="erroresUsers"></ul>
+                    <br> <% if (locals.errors && locals.errors.length > 0) { %>
+                        <div class="text-dangerMsg">
+                          <ul>
+                            <% locals.errors.forEach((error) => { %>
+                              <li><%= error %></li>
+                            <% }); %>
+                          </ul>
+                        </div>
+                      <% } %>
+                    <br>
                     <h2 class="editarUsuario">Editar Usuario</h2>
                     <ul class="errores"></ul>
                     <br>
