@@ -1,11 +1,10 @@
-
 import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
 
 
-function ContentWrapper({burguerInfo}){
+function ContentWrapper({burguerInfo , userInfo}){
     return (
         <React.Fragment>
             {/*<!-- Content Wrapper -->*/}
@@ -13,7 +12,7 @@ function ContentWrapper({burguerInfo}){
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <TopBar />
-                    <ContentRowTop burguerInfo = {burguerInfo}/>
+                    <ContentRowTop burguerInfo = {burguerInfo}  userInfo = {userInfo}/>
                     <Footer />
                 </div>
             </div>    

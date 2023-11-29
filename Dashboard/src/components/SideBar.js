@@ -19,12 +19,27 @@ const [burguerInfo, setBurguerInfo] = useState({
         let data = await respuesta.json()
         setBurguerInfo(data)
     }
-    useEffect(() =>{
+    
+
+const[userInfo, setUserInfo] = useState({
+        count: 0,
+        users: [],
+    })
+    async function fetchUserApi(){
+
+    let respuesta = await fetch('/api/user')
+    let data = await respuesta.json()
+    setUserInfo(data)
+    
+   
+    }
+    useEffect(()=>{
+        fetchUserApi()
         fetchApi()
     },[])
 
+    console.log();
 
-    console.log(burguerInfo);
 
 
     return(
@@ -92,7 +107,7 @@ const [burguerInfo, setBurguerInfo] = useState({
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             <Switch>
-                <Route path="/" exact={true} ><ContentWrapper burguerInfo = {burguerInfo}></ContentWrapper></Route>
+                <Route path="/" exact={true} ><ContentWrapper burguerInfo = {burguerInfo} userInfo = {userInfo}></ContentWrapper></Route>
                 <Route path="/CategoriasInDb" exact={true} ><CategoriasInDb/></Route>
                 <Route path="/ListaProductos" exact={true} ><ListaProductos/></Route>
             </Switch>

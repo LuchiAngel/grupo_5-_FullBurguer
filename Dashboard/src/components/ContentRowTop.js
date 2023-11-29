@@ -5,7 +5,7 @@ import ListaProductos from './ListaProductos';
 import Users from './Users';
 
 
-function ContentRowTop({burguerInfo}){
+function ContentRowTop({burguerInfo , userInfo}){
     if (burguerInfo.count > 0 ){
         let moviesInDB = {
             titulo: 'Total de productos',
@@ -22,7 +22,7 @@ function ContentRowTop({burguerInfo}){
         let actorsQuantity = {
             titulo: 'Total de usuarios',
             color: 'warning',
-            cantidad: Users.count,
+            cantidad: userInfo.count,
             icono: 'fa-user'
         }
         let cartProps = [moviesInDB, totalAwards, actorsQuantity];

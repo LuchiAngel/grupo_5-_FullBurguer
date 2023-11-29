@@ -20,7 +20,7 @@ router.get("/productDetail/:id", productsControllers.detalle);
 router.get("/restore/:id", isAdmin, productsControllers.restore);
 
 //PUT Y DELETE
-router.put("/edit/:id", isAdmin, uploadFile.single('images'), productsControllers.editProcess);
+router.put("/edit/:id", isAdmin, uploadFile.single('images'),validateCreateProductForm, productsControllers.editProcess);
 router.delete("/delete/:id", isAdmin, productsControllers.deleteProcess);
 
 
