@@ -52,15 +52,16 @@ function ContentRowTop({burguerInfo , userInfo}){
                         <div className="col-lg-6 mb-4">
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800">Ultima hamburguesa cargada</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800">Último producto cargado</h5>
                                 </div>
                                 <div className="card-body">
 								<p>{burguerInfo.productos[burguerInfo.productos.length -1].name}</p>
                                     <div className="text-center">
                                     <img className="imagenHamburguesa" style={{width: 20 +'rem'}} src={burguerInfo.productos[burguerInfo.productos.length -1].imagen} alt="Imagen-Ultima-Hamburguesa"></img>
                                     </div>
+                                    <br/>
                                     <p>{burguerInfo.productos[burguerInfo.productos.length -1].description}</p>
-                                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/VerDetalle">Ver detalle</a>
+                                  
                                 </div>
                             </div>
                         </div>
