@@ -74,9 +74,11 @@ let borrar = function (id) {
 
 
 }
+
+
 const finalizarCompraButton = document.getElementById('finalizarCompra');
     
-    finalizarCompraButton.addEventListener('click', function () {
+/*    finalizarCompraButton.addEventListener('click', function () {
        
         
         const confirmacion = window.confirm('¡Gracias por tu compra! ¿Quieres volver al home?');
@@ -87,3 +89,40 @@ localStorage.removeItem('carrito');
         
         window.location.href = '/'; }else{window.location.href = '/product/list'}
     });
+
+*/
+finalizarCompraButton.addEventListener('click', function () {
+    const confirmacion =
+
+
+    Swal.fire(
+        {icon: 'success',
+        title: 'Gracias por tu compra!',
+        text:  'Tu pedido ha sido realizado.',
+        }).then(() => {
+
+        if (confirmacion) {
+            localStorage.removeItem('carrito');
+                    
+                    window.location.href = '/'; }else{window.location.href = '/product/list'}})
+                });
+       
+
+
+        
+    
+    
+
+
+        
+       
+      
+    
+    
+  
+
+
+      
+     
+   
+
